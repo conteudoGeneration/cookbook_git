@@ -8,7 +8,7 @@ Antes de falarmos sobre terminal, vamos definir alguns conceitos importantes
 
 Hardware **é a parte física do computador, ou seja, o conjunto de aparatos eletrônicos, peças e equipamentos que fazem o computador funcionar**. A palavra hardware pode se referir também como o conjunto de equipamentos acoplados em produtos que precisam de algum tipo de processamento computacional.
 
-<div align="center"><img src="mudar" title="source: imgur.com" width="60%"/></div>
+<div align="center"><img src="https://i.imgur.com/M6BJRdi.png" title="source: imgur.com" width="60%"/></div>
 
 Os computadores da Apple mais atuais utilizam os processadores M1 e M2, baseado na Arquitetura ARM. Ele possui 8 núcleos de processamento e o chip tem “um dos núcleos mais rápidos do mundo” e “uma das melhores performances por watt”, consumindo pouquíssima energia. Em 2023, deve chegar ao mercado o processador M3.
 
@@ -31,13 +31,13 @@ Software é a parte virtual, lógica, imaterial da Informática. Corresponde ao 
 
 Quando pensamos em sistema, normalmente pensamos em uma interface visual, que é o elemento de interação com um ser humano, mas um software pode existir sem nada visual. Ele pode estar embutido em um micro-controlador que comanda um circuito eletrônico, mas não é ligado em um monitor. Ou ele pode ser simplesmente um software feito para computador, mas sem interface, como um programa robô que fica checando alguma atividade do computador. Existem diferentes tipos de software para diversas finalidades.
 
-<div align="center"><img src="mudar" title="source: imgur.com" width="60%"/></div>
+<div align="center"><img src="https://i.imgur.com/QKmo44o.png" title="source: imgur.com" width="60%"/></div>
 
 <h2>Sistema Operacional</h2>
 
-O Sistema operacional é um tipo especial de software. Ele é um software de base que possui diferentes funções. Uma dela é controlar o equipamento, provendo uma interface de controle para o usuário realizar suas  configurações e utilizar o equipamento. Outra é permitir um protocolo  para que outros softwares, os software-aplicativos, sejam instalados  sobre o sistema operacional, como um editor de texto ou um game, por exemplo.
+O Sistema operacional é um tipo especial de software. Ele é um software de base que possui diferentes funções. Uma delas é controlar o equipamento, provendo uma interface de controle para o usuário realizar suas  configurações e utilizar o equipamento. Outra é permitir um protocolo  para que outros softwares, os software-aplicativos, sejam instalados  sobre o sistema operacional, como um editor de texto ou um game, por exemplo.
 
-<div align="center"><img src="mudar" title="source: imgur.com" width="60%"/></div>
+<div align="center"><img src="https://i.imgur.com/4uvIv9K.png" title="source: imgur.com" width="60%"/></div>
 
 Observe na imagem acima que o Sistema Operacional está localizado entre o Hardware e os Softwares aplicativos.
 
@@ -45,11 +45,9 @@ Observe na imagem acima que o Sistema Operacional está localizado entre o Hardw
 
 O **kernel é o  componente principal de um sistema operacional e a interface  central entre o hardware e os processos executados por um computador**. Ele estabelece a comunicação entre ambos, gerenciando recursos com a maior eficiência possível.
 
-<h3>Aplicativos</h3>
+<h3>Utilitários do Sistema</h3>
 
-Com exceção do sistema operacional, quase todo o software que você  pensar é um software-aplicativo. Editor de texto, de planilha, de  apresentação, ferramenta de e-mail, game, navegador.
-
-Uma característica dos software-aplicativos é que eles são instalados sobre um sistema operacional, assim, um software-aplicativo depende mais do sistema  operacional do que hardware do equipamento. 
+São os aplicativos auxiliares do Sistema Operacional.
 
 Os principais sistemas operacionais para computadores são: 
 
@@ -62,13 +60,13 @@ Os principais sistemas operacionais para computadores são:
     <tr>
     	<td><div align="center"><b>Windows</b></div></td>
         <td><div align="center"><b>Linux</b></div></td>
-        <td><div align="center"><b>macOS</b></div></td>
+        <td><div align="center"><b>MacOS</b></div></td>
     </tr>
 </table>
 
 
 
-<h2>macOS</h2>
+<h2>MacOS</h2>
 
 O Mac OS é um sistema operacional desenvolvido, fabricado e comercializado pela Apple. Ele é projetado para funcionar em computadores Macintosh. Ao comprar um computador da Apple, o macOS vem pré-instalado desde 2002. O Mac OS é o segundo sistema operacional de desktop mais usado no mundo depois do Windows.
 
@@ -193,7 +191,6 @@ Dentro do Terminal do Mac, 99% dos comandos são inseridos via teclado. O mouse 
 |  ^ + r               |Busca  comando no histórico.|
 | ⌘ + "              |Navegação  entre comandos.|
 | ⌘ + #              |Navegação  entre comandos.|
-
 
 <br /><br />
 
