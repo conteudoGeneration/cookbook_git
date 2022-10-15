@@ -195,4 +195,6 @@ Dentro do Terminal do Mac, 99% dos comandos são inseridos via teclado. O mouse 
 | ⌘ + #              |Navegação  entre comandos.|
 
 
+<br /><br />
 
+<div align="left"><a href="../README.md"><img src="https://i.imgur.com/XMgF3gl.png" title="source: imgur.com" width="3%"/>Voltar</a></div>
