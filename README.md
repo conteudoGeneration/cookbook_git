@@ -8,7 +8,7 @@
 <table width="100%">
 	<tr>
         <td width="10%"><img src="https://i.imgur.com/9VM3pgl.png" title="source: imgur.com" /></td>
-        <td width="90%"><a href="mac/01_terminal_mac.md">01-Intrdução ao Terminal do Mac OS</a></td>
+        <td width="90%"><a href="mac/01_terminal_mac.md">01-Introdução ao Terminal do Mac OS</a></td>
     </tr>
     <tr>
         <td width="10%"><img src="https://i.imgur.com/9VM3pgl.png" title="source: imgur.com" /></td>
