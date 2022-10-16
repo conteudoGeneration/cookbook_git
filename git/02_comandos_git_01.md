@@ -1,4 +1,4 @@
-<h1>Comandos do Git</h1>
+<h1>Comandos do Git - Parte 01</h1>
 
 
 
@@ -101,9 +101,9 @@ git config --list
 
 O Github utiliza o modelo de Criptografia Assimétrica, ou seja, utiliza duas chaves secretas separadas. **Essas chaves servem tanto para codificar quanto para decodificar o processo de comunicação entre o cliente e o servidor.** Ambas são conhecidas como chave-pública e chave-privada. Unidas, elas formam o par pública-privada.
 
-<div align="center"><img src="mudar" title="source: imgur.com" /></div>
+<div align="center"><img src="https://i.imgur.com/snWEIxN.png" title="source: imgur.com" /></div>
 
-Ao acessar o Github via terminal, será solicitada a frase (senha da chave) , que foi definida no processo de criação do par de Chaves. Após este passo, as Chaves são comparadas e se estiverem OK, libera o acesso. Fazendo uma analogia, é como se fosse um cadeaddo, que só pode ser aberto pela sua própria chave.
+Ao enviar o conteúdo do Repositório Local para o Github, será solicitada a frase (senha da chave), que será definida no processo de criação do par de Chaves. Após este passo, as Chaves são comparadas e se a comparação for bem sucedida, o Github libera o acesso e o conteúdo é enviado para o seu repositório. Fazendo uma analogia, é como se a Chave Pública fosse um cadeado, que só pode ser aberto pela sua própria chave (Chave Privada).
 
 <h3>2.1.Criar o par de Chaves SSH</h3>
 
@@ -557,6 +557,11 @@ git remote -v
 git push origin main
 ```
 
+Observe que no comando **git push** foram adicionados 2 parâmetros:
+
+- **origin:** O Repositório Remoto;
+- **main:** A Branch do Repositório Local, que será enviada para o Repositório Remoto.
+
 2. Observe na imagem abaixo, que será solicitada a frase que foi cadastrada na chave ssh que você cadastrou. Digite a frase cadastrada.
 
 <div align="left"><img src="https://i.imgur.com/fMX0XQ7.png" title="source: imgur.com" /></div>
@@ -568,5 +573,8 @@ git push origin main
 <br />
 
 <div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-remote/pt_BR" target="_blank"><b>Documentação: <i>Git Remote</i></b></a>
-<br />
-<br />
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-push/pt_BR" target="_blank"><b>Documentação: <i>Git Push</i></b></a>
+
+<br /><br />
+
+<div align="left"><a href="../README.md"><img src="https://i.imgur.com/XMgF3gl.png" title="source: imgur.com" width="3%"/>Voltar</a></div>
