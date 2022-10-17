@@ -4,13 +4,13 @@
 
 <h2>1.Configurando o Git</h2>
 
-Para verificar se o Git está instalado no sistema e a versão, digite o comando:
+1. Para verificar se o Git está instalado no sistema e a versão, digite o comando:
 
 ```bash
 git version
 ```
 
-Para listar todas as configurações do Git, digite o comando:
+2. Para listar todas as configurações do Git, digite o comando:
 
 ```bash
 git config --list 
@@ -18,7 +18,7 @@ git config --list
 
 *Caso não apareça nenhuma configuração, você ainda não configurou o seu Git.*
 
-Para configurar o seu **nome** no Git, digite o comando:
+3. Para configurar o seu **nome** no Git, digite o comando:
 
 ```bash
 git config --global user.name "Seu_Nome"
@@ -26,13 +26,13 @@ git config --global user.name "Seu_Nome"
 
 *Substitua Seu_Nome, pelo seu nome. Exemplo: João*
 
-Para verificar se o seu **nome** foi configurado corretamente no Git, digite o comando:
+4. Para verificar se o seu **nome** foi configurado corretamente no Git, digite o comando:
 
 ```bash
 git config user.name
 ```
 
-Para configurar o seu **e-mail** no Git, digite o comando:
+5. Para configurar o seu **e-mail** no Git, digite o comando:
 
 ```bash
 git config --global user.email "seu_email@email.com"
@@ -40,33 +40,33 @@ git config --global user.email "seu_email@email.com"
 
 *Substitua seu_email, pelo seu e-mail cadastrado no Github. Exemplo: joao@email.com*
 
-Para verificar se o seu **e-mail** foi configurado corretamente no Git, digite o comando:
+6. Para verificar se o seu **e-mail** foi configurado corretamente no Git, digite o comando:
 
 ```bash
 git config user.email
 ```
 
-Para configurar o **Editor de Código padrão** do Git, digite o comando:
+7. Para configurar o **Editor de Código padrão** do Git, digite o comando:
 
-Configurar o Nano:
+**Configurar o Nano:**
 
 ```bash
 git config --global core.editor nano
 ```
 
-Configurar o VSCode:
+**Configurar o VSCode:**
 
 ```bash
 git config --global core.editor 'code --wait'
 ```
 
-Para verificar se o seu **Editor de Código** foi configurado corretamente no Git, digite o comando:
+8. Para verificar se o seu **Editor de Código** foi configurado corretamente no Git, digite o comando:
 
 ```bash
 git config core.editor
 ```
 
-Para configurar o **nome padrão da branch principal** do repositório Git, digite o comando:
+9. Para configurar o **nome padrão da branch principal** do repositório Git, digite o comando:
 
 ```bash
 git config --global init.defaultBranch main
@@ -74,19 +74,27 @@ git config --global init.defaultBranch main
 
 > Esta configuração é importante para que todes os seus repositórios, a branch principal seja definida como **main**.
 
-Para verificar se o **nome padrão da branch principal** foi configurado como main, digite o comando:
+10. Para verificar se o **nome padrão da branch principal** foi configurado como main, digite o comando:
 
 ```bash
 git config init.defaultBranch
 ```
 
-Para listar todas as configurações do Git, digite o comando:
+11. Para listar todas as configurações do Git, digite o comando:
 
 ```bash
 git config --list 
 ```
 
 *Observe que desta vez será exibida uma lista com todas as configurações você fez no seu Git.*
+
+12. Para utilizar a estratégia de mesclagem de repositórios padrão ao invés de usar a estratégia de mesclagem rebase, digite o comando:
+
+```bash
+git config pull.rebase false
+```
+
+*Como a estratégia rebase pode afetar os commits do repositório remoto de outros usuários, aumentando a probabilidade de conflitos, é recomendado utilizar a estratégia padrão. O comando acima desativa a estratégia rebase como estratégia padrão.*
 
 <br />
 
@@ -99,11 +107,17 @@ git config --list
 
 **SSH - Secure Socket Shell**, é um dos protocolos  específicos para implementar a segurança na troca de arquivos entre cliente e servidor  na Internet, usando criptografia. O objetivo do SSH é permitir que  pessoas desenvolvedoras ou outros usuários realizem alterações em sites e  servidores utilizando uma conexão simples e segura.
 
-O Github utiliza o modelo de Criptografia Assimétrica, ou seja, utiliza duas chaves secretas separadas. **Essas chaves servem tanto para codificar quanto para decodificar o processo de comunicação entre o cliente e o servidor.** Ambas são conhecidas como chave-pública e chave-privada. Unidas, elas formam o par pública-privada.
+O Github utiliza o modelo de Criptografia Assimétrica, ou seja, utiliza duas chaves secretas separadas. **Essas chaves servem tanto para codificar quanto para decodificar o processo de comunicação entre o cliente e o servidor.** Ambas são conhecidas como chave-pública e chave-privada. 
+
+As chaves SSH são geradas através de algoritmos complexos, de modo que seja improvável falsificar ou identificar a chave privada, ainda que a chave pública seja conhecida. Dessa maneira, é necessário manter a chave privada em segredo, sendo utilizada apenas por usuário autorizado. Já as chaves públicas podem ser compartilhadas com outras pessoas. 
+
+Para gerar as **chaves SSH**, é necessário inserir informações como senhas, a chamadas de frase. Geralmente, utilizam-se frases curtas para gerar chaves públicas e privadas.
 
 <div align="center"><img src="https://i.imgur.com/snWEIxN.png" title="source: imgur.com" /></div>
 
-Ao enviar o conteúdo do Repositório Local para o Github, será solicitada a frase (senha da chave), que será definida no processo de criação do par de Chaves. Após este passo, as Chaves são comparadas e se a comparação for bem sucedida, o Github libera o acesso e o conteúdo é enviado para o seu repositório. Fazendo uma analogia, é como se a Chave Pública fosse um cadeado, que só pode ser aberto pela sua própria chave (Chave Privada).
+Para iniciar uma conexão em SSH no Github, é realizada uma negociação do protocolo, os algoritmos criptográficos e a chave da sessão, além de autenticar o servidor com uma chave de host e o usuário com autenticação de chave pública ou senha. Depois disso, trocam-se as informações, inclusive gráficos, arquivos e dados do terminal. Fazendo uma analogia, é como se a Chave Pública fosse um cadeado, que só pode ser aberto pela sua própria chave (Chave Privada).
+
+A autenticação por meio de chave pública garante mais segurança do que outros meios de autenticação, como é o caso das senhas. Além disso, esse tipo de autenticação é amplamente utilizado para acesso privilegiado humano e máquina a máquina. 
 
 <h3>2.1.Criar o par de Chaves SSH</h3>
 
@@ -119,7 +133,7 @@ cd ~
 ssh-keygen -t rsa -b 2048
 ```
 
-3. Na criação da Chave SSH será solicitado o cadastramento de uma frase, que funcionará como uma senha da Chave, como indicado na imagem abaixo:
+3. Na criação da Chave SSH será solicitado o cadastramento de uma **frase**, que funcionará como uma senha da Chave, como indicado na imagem abaixo:
 
 <div align="center"><img src="https://i.imgur.com/Sn6kj2U.png" title="source: imgur.com" /></div>
 
@@ -128,6 +142,10 @@ ssh-keygen -t rsa -b 2048
 ```bash
 cat ~/.ssh/id_rsa.pub
 ```
+
+5. Será exibido no console o conteúdo da chave SSH pública. Selecione e copie o conteúdo do arquivo.
+
+<br />
 
 <h3>2.2.Adicionar a Chave Pública no Github</h3>
 
@@ -144,51 +162,55 @@ cat ~/.ssh/id_rsa.pub
 
 <div align="center"><img src="https://i.imgur.com/XX0KSUm.png" title="source: imgur.com" /></div>
 
-4. Digite um nome para Chave no item **Title** e cole a Chave que foi copiada no item **Key**.
+5. Digite um nome para Chave no item **Title** (macOS, por exemplo) e cole a Chave que foi copiada no item **Key**.
 
 <div align="center"><img src="https://i.imgur.com/GR2sByz.png" title="source: imgur.com" /></div>
 
-4. A Chave foi adicionada no GitHub!
+6. A Chave foi adicionada no GitHub!
 
 <div align="center"><img src="https://i.imgur.com/D57g5d2.png" title="source: imgur.com" /></div>
 
+<br />
 
+<div align="left"><img src="https://i.imgur.com/JACNZiR.png" title="source: imgur.com" width="25px"/> <a href="https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank"><b>Documentação: <i>Gerando a Chave SSH</i></b></a>
+
+<br />
 
 <h2>3.Criando o seu primeiro repositório local</h2>
 
-Vamos checar qual é a sua pasta atual. Digite o comando:
+1. Vamos checar qual é a sua pasta atual. Digite o comando:
 
 ```bash
 pwd
 ```
 
-Verifique se você está na pasta do seu usuário (Home Directory). 
+*Verifique se você está na pasta do seu usuário (Home Directory).* 
 
-Caso não esteja, digite o comando:
+2. Caso não esteja na pasta do seu usuário, digite o comando:
 
 ```bash
 cd ~
 ```
 
-Vamos criar o nosso primeiro repositório nesta pasta. Vamos criar a pasta **aulagit**, através do comando:
+3. Vamos criar o nosso primeiro repositório na pasta do usuário. Vamos criar a pasta **aulagit**, através do comando:
 
 ```bash
 mkdir aulagit
 ```
 
-Na sequência vamos acessar esta pasta através do comando:
+4. Na sequência vamos acessar esta pasta através do comando:
 
 ```bash
 cd aulagit
 ```
 
-Dentro da pasta **aulagit**, vamos criar o nosso **Repositório Git Local**, através do comando:
+5. Dentro da pasta **aulagit**, vamos criar o nosso **Repositório Git Local**, através do comando:
 
 ```bash
 git init
 ```
 
-Para verificar se o repositório foi criado, utilize o comando:
+6. Para verificar se o repositório foi criado, utilize o comando:
 
 ```bash
 git status
@@ -196,66 +218,72 @@ git status
 
 O comando **git status** mostra se a pasta atual é um repositório e qual é o status atual (vazio, possui arquivos aguardando para serem versionados, entre outros).
 
-Uma outra forma de verificar se o repositório foi criado é através do comando:
+7. Uma outra forma de verificar se o repositório foi criado é através do comando:
 
 ```bash
 ls -a
 ```
 
-Este comando, lista todos os arquivos presentes na pasta, inclusive os arquivos e pastas ocultos. Observe que dentro da pasta aula git, foi criada uma pasta oculta com o nome **.git**
+*Observe que dentro da pasta aula git, foi criada uma pasta oculta com o nome **.git***
 
-O comando **git init** criou a pasta `.git` (oculta), contendo as subpastas `objects`, `refs/heads`, `refs/tags` e alguns arquivos modelo.  Também foi criado um arquivo inicial chamado `HEAD`, que guarda a referencia `HEAD` da branch principal. o Head funciona como um ponteiro, indicando qual é a branch atual. Para descobrir qual é a sua branch atual, utilize o  comando:
+O comando **git init** criou a pasta `.git` (oculta), contendo as subpastas `objects`, `refs/heads`, `refs/tags` e alguns arquivos modelo.  Também foi criado um arquivo inicial chamado `HEAD`, que guarda a referencia `HEAD` da branch principal. o Head funciona como um ponteiro, indicando qual é a branch atual. 
+
+8. Para descobrir qual é a sua branch atual, utilize o  comando:
 
 ```bash
 git branch --show-current
 ```
 
-O comando acima exibirá que no momento, o HEAD do repositório está na **branch Main**, ou seja, a branch atual do repositório.
+O comando acima exibirá que no momento, o **HEAD** do repositório está na branch **Main**, ou seja, a branch atual do repositório.
 
-Importante: O arquivo HEAD é um arquivo interno do Git, portanto, não deve ser manipulado manualmente.
+| <img src="https://i.imgur.com/hOgWvSc.png" title="source: imgur.com" width="100px"/> | <div align="left"> **ATENÇÃO:** * O arquivo HEAD é um arquivo interno do Git, portanto, não deve ser manipulado manualmente.* </div> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 <br />
 
 <div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-init/pt_BR" target="_blank"><b>Documentação: <i>Git Init</i></b></a>
 
 <div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-status/pt_BR" target="_blank"><b>Documentação: <i>Git Status</i></b></a>
-
 <div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-branch/pt_BR" target="_blank"><b>Documentação: <i>Git Branch</i></b></a>
+
 <br />
+
 
 <h2>4.Versionando os arquivos no repositório local</h2>
 
-Antes começarmos a versionar, vamos criar alguns arquivos dentro do nosso repositório, através do comando abaixo:
+1. Antes começarmos a versionar, vamos criar alguns arquivos dentro do nosso repositório, através do comando abaixo:
 
 ```bash
 touch portugol.txt java.txt mysql.txt
 ```
 
-Na sequência, vamos editar os arquivos através do comando:
+2. Na sequência, vamos editar os arquivos através do comando:
 
 ```bash
 code .
 ```
 
-A pasta **aulagit** será aberta no **VSCode**, como mostra a imagem abaixo:
+3. A pasta **aulagit** será aberta no **VSCode**, como mostra a imagem abaixo:
 
 <div align="center"><img src="https://i.imgur.com/z6LMMQn.png" title="source: imgur.com" width="90%"/></div>
 
-Vamos editar os 3 arquivos e adicionar as seguintes frases em cada arquivo:
+4. Vamos editar os 3 arquivos e adicionar as seguintes frases em cada arquivo:
 
 - **portugol.txt:** Portugol é uma pseudo linguagem.
 - **java.txt:** Java é uma Linguagem de programação.
 - **mysql.txt:** MySQL é um Sistema Gerenciador de Banco de dados.
 
-Na sequência, vamos adicionar os arquivos no índice do repositório, através do comando:
+5. Na sequência, vamos adicionar os arquivos no índice do repositório (Staging), através do comando:
 
 ```bash
 git add .
 ```
 
-O comando **git add** atualiza o índice do repositório com o conteúdo atual encontrado na árvore de trabalho para preparar o conteúdo para o próximo commit. O ponto após o comando git add, indica que será adicionado todo o conteúdo atual, incluindo os arquivos e pastas.
+O comando **git add** atualiza o índice do repositório com o conteúdo atual encontrado na árvore de trabalho para preparar o conteúdo para o próximo commit. O **ponto** após o comando git add, indica que será adicionado todo o conteúdo atual, incluindo os arquivos e pastas.
 
-Para verificar se os arquivos e pastas foram adicionados ao índice do repositório, utilize o comando:
+O conteúdo adicionado é enviado para o **Staging**, que é um espaço temporário onde você determina quais mudanças serão adicionadas ao repositório. Utilizar o staging é muito simples com o comando **git add** você adiciona os arquivos para o staging, e quando estiver satisfeito com as alterações efetua um commit, que veremos na sequência.
+
+6. Para verificar se os arquivos e pastas foram adicionados ao índice do repositório, utilize o comando:
 
 ```bash
 git status
@@ -265,13 +293,15 @@ O comando **git status** retornará que existem arquivos aguardando para serem "
 
 <div align="left"><img src="https://i.imgur.com/WpqHlSQ.png" title="source: imgur.com" /></div>
 
-Para "commitar" os arquivos, utilize o comando:
+7. Para "commitar" os arquivos, utilize o comando:
 
 ```bash
 git commit -m "Meu primeiro commit"
 ```
 
 O comando **git commit** cria um novo commit com todos os conteúdos atuais do índice e a mensagem informada entre aspas no registro log descrevendo todas as alterações que foram realizadas. Um novo commit é um herdeiro direto do `HEAD` que em geral é o topo do branch atual e o branch é atualizado para apontar para este novo commit.
+
+> Os **commits** são as principais unidades de bloco de construção de uma linha do tempo do projeto Git. Os commits podem ser considerados instantâneos ou marcos ao longo da linha do tempo de um projeto Git. Os commits são criados com o comando **git commit** para capturar o estado de um projeto naquele momento.
 
 Para verificar se os arquivos e pastas foram "commitados", utilize o comando:
 
@@ -313,7 +343,7 @@ Os seus repositórios locais consistem em três "árvores" mantidas pelo git:
 - A segunda é a `Index` ou índice, que funciona como uma área temporária onde ficam armazenados os arquivos que foram criados, atualizados ou apagados, desde o ultimo commit.
 - A terceira é a `HEAD` que aponta para o último *commit* (confirmação) que você fez.        
 
-![img](https://rogerdudler.github.io/git-guide/img/trees.png)
+<div align="left"><img src="https://i.imgur.com/GKHWuOW.png" title="source: imgur.com" /></div>
 
 A **HEAD** aponta para o **último commit**, que foi realizado no repositório, logo quando você executa o comando **git commit você está dizendo para a HEAD que este novo commit é o mais atual e será a nova HEAD** do seu repositório.
 
@@ -457,46 +487,47 @@ Observe que o **HEAD** do repositório passou a ser o **"Meu terceiro commit"**.
 <br />
 
 <div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-diff/pt_BR" target="_blank"><b>Documentação: <i>Git Diff</i></b></a>
+
 <br />
+
 
 <h2>7.Desfazendo um commit</h2>
 
-
-Vamos desfazer o commit **Meu terceiro commit**, através do comando:
+1. Vamos desfazer o commit **Meu terceiro commit**, através do comando:
 
 ```bash
 git reset HEAD~1
 ```
 
-Para checar o status do repositório, utilize o comando:
+2. Para checar o status do repositório, utilize o comando:
 
 ```bash
 git status
 ```
 
-O comando **git status** retornará que o arquivo **spring.txt** voltou a ficar disponível para ser adicionado, como mostra a imagem abaixo:
+3. O comando **git status** retornará que o arquivo **spring.txt** voltou a ficar disponível para ser adicionado, como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/xETINlK.png" title="source: imgur.com" /></div>
 
-Para visualizar as informações dos commits, utilize o comando:
+4. Para visualizar as informações dos commits, utilize o comando:
 
 ```bash
 git log
 ```
 
-Observe na imagem abaixo, que o **HEAD** do repositório passou a ser o **"Meu segundo commit"**, após o **Meu terceiro commit** ser desfeito:
+5. Observe na imagem abaixo, que o **HEAD** do repositório passou a ser o **"Meu segundo commit"**, após o **Meu terceiro commit** ser desfeito:
 
 <div align="left"><img src="https://i.imgur.com/esS7wBR.png" title="source: imgur.com" /></div>
 
 O comando **git reset HEAD~1** redefiniu o `HEAD` atual para um commit anterior (~1) ao commit atual, desfazendo o mesmo.
 
-Vamos refazer o commit **Meu terceiro commit**, através do comando:
+6. Vamos refazer o commit **Meu terceiro commit**, através do comando:
 
 ```bash
 git commit -a -m "Meu terceiro commit"
 ```
 
-A opção **-a** é o equivalente a fazer o git add . junto com o comando git commit.
+*A opção **-a** é o equivalente a fazer o **git add** . junto com o comando **git commit**.*
 
 <br />
 
@@ -573,7 +604,9 @@ Observe que no comando **git push** foram adicionados 2 parâmetros:
 <br />
 
 <div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-remote/pt_BR" target="_blank"><b>Documentação: <i>Git Remote</i></b></a>
+
 <div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-push/pt_BR" target="_blank"><b>Documentação: <i>Git Push</i></b></a>
+
 
 <br /><br />
 
