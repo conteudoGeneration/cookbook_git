@@ -118,7 +118,7 @@ Para listar todo o conteúdo da pasta atual, adicionando uma pasta e/ou arquivo 
 ls -1
 ```
 
-Para listar todo o conteúdo da pasta atual, adicionando uma pasta e/ou arquivo em cada linha, exibindo as informações de cada arquivo e/ou pasta (permissões, dono, data de criação e/ou modificação, tamanho, entre outros.), digite o comando:
+Para listar todo o conteúdo da pasta atual, adicionando uma pasta e/ou arquivo em cada linha, exibindo as informações de cada arquivo e/ou pasta (permissões, dono, data de criação e/ou modificação, tamanho, entre outros), digite o comando:
 
 ```bash
 ls -l
