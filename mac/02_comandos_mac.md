@@ -554,6 +554,16 @@ ls
 
 No exemplo acima, o comando **rmdir** funcionou, porque a pasta **python** está vazia.
 
+<br />
+
+<h2>17. Comando date</h2>
+
+Para ver a data e a hora do sistema, utilize o comando **date**:
+
+```bash
+date
+```
+
 <br /><br />
 
 <div align="left"><a href="../README.md"><img src="https://i.imgur.com/XMgF3gl.png" title="source: imgur.com" width="3%"/>Voltar</a></div>
