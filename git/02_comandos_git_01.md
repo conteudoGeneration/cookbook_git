@@ -133,17 +133,41 @@ cd ~
 ssh-keygen -t rsa -b 2048
 ```
 
-3. Na criação da Chave SSH será solicitado o cadastramento de uma **frase**, que funcionará como uma senha da Chave, como indicado na imagem abaixo:
+3. Após executar o comando, será indicada a pasta onde será gravado o par de chaves, como mostra a imagem abaixo:
 
-<div align="center"><img src="https://i.imgur.com/Sn6kj2U.png" title="source: imgur.com" /></div>
+<div align="center"><img src="https://i.imgur.com/ZixCQrm.png" title="source: imgur.com" /></div>
 
-4. Após a criação da Chave, utilize o comando abaixo para visualizar o conteúdo da Chave pública:
+4. Pressione a tecla **enter** do teclado para continuar. Na sequência, será solicitado o cadastramento de uma **frase**, que funcionará como uma senha da Chave, como mostra a imagem abaixo:
+
+<div align="center"><img src="https://i.imgur.com/3LYQWgA.png" title="source: imgur.com" /></div>
+
+5. Cadastre uma senha, ou pressione a tecla enter para deixar sem a senha. Na sequência será solicitada a confirmação da frase, como mostra a imagem abaixo:
+
+<div align="center"><img src="https://i.imgur.com/sAizmSJ.png" title="source: imgur.com" /></div>
+
+6. Digite a senha novamente, ou pressione a tecla enter para deixar sem a senha. Na sequência, será exibida a a confirmação da criação do par de chaves SSH, como mostra a imagem abaixo:
+
+<div align="center"><img src="https://i.imgur.com/H3ezS1J.png" title="source: imgur.com" /></div>
+
+<br />
+
+| <img src="https://i.imgur.com/RfjtOFi.png" title="source: imgur.com" width="120px"/> | <div align="left">**DICA:** Caso você cadastre a frase na Chave SSH, todas as vezes que você efetuar comandos como o git push e o git pull, esta frase será solicitada pelo github.</div> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+
+<br />
+
+7. Após a criação da Chave, utilize o comando abaixo para visualizar o conteúdo da Chave pública:
 
 ```bash
 cat ~/.ssh/id_rsa.pub
 ```
 
-5. Será exibido no console o conteúdo da chave SSH pública. Selecione e copie o conteúdo do arquivo.
+8. Será exibido no console o conteúdo da chave SSH pública. Selecione e copie o conteúdo do arquivo.
+
+<br />
+
+| <img src="https://i.imgur.com/RfjtOFi.png" title="source: imgur.com" width="120px"/> | <div align="left">**DICA:** Para recriar a chave SSH, apague a pasta .ssh através do comando rm -rf .ssh e repita os passos acima.</div> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 <br />
 
@@ -218,23 +242,27 @@ git status
 
 O comando **git status** mostra se a pasta atual é um repositório e qual é o status atual (vazio, possui arquivos aguardando para serem versionados, entre outros).
 
-7. Uma outra forma de verificar se o repositório foi criado é através do comando:
+7. Observe na imagem abaixo, que o repositório foi criado, não existe nenhum commit e não existe nenhuma pasta ou arquivo para ser "commitada" 
+
+<div align="center"><img src="https://i.imgur.com/ZI8l3R8.png" title="source: imgur.com" width="90%"/></div>
+
+8. Uma outra forma de verificar se o repositório foi criado é através do comando:
 
 ```bash
 ls -a
 ```
 
-*Observe que dentro da pasta aula git, foi criada uma pasta oculta com o nome **.git***
+*Observe que dentro da pasta aula git, foi criada uma pasta oculta com chamada **.git***
 
 O comando **git init** criou a pasta `.git` (oculta), contendo as subpastas `objects`, `refs/heads`, `refs/tags` e alguns arquivos modelo.  Também foi criado um arquivo inicial chamado `HEAD`, que guarda a referencia `HEAD` da branch principal. o Head funciona como um ponteiro, indicando qual é a branch atual. 
 
-8. Para descobrir qual é a sua branch atual, utilize o  comando:
+9. Para descobrir qual é a sua branch atual, utilize o  comando:
 
 ```bash
 git branch --show-current
 ```
 
-O comando acima exibirá que no momento, o **HEAD** do repositório está na branch **Main**, ou seja, a branch atual do repositório.
+O comando acima exibirá que no momento, o **HEAD** do repositório está na branch **main**, ou seja, a branch atual do repositório.
 
 | <img src="https://i.imgur.com/hOgWvSc.png" title="source: imgur.com" width="100px"/> | <div align="left"> **ATENÇÃO:** * O arquivo HEAD é um arquivo interno do Git, portanto, não deve ser manipulado manualmente.* </div> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -242,13 +270,12 @@ O comando acima exibirá que no momento, o **HEAD** do repositório está na bra
 <br />
 
 <div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-init/pt_BR" target="_blank"><b>Documentação: <i>Git Init</i></b></a>
+
 <div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-status/pt_BR" target="_blank"><b>Documentação: <i>Git Status</i></b></a>
 
 <div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-branch/pt_BR" target="_blank"><b>Documentação: <i>Git Branch</i></b></a>
 
-
 <br />
-
 
 <h2>4.Versionando os arquivos no repositório local</h2>
 
@@ -258,11 +285,18 @@ O comando acima exibirá que no momento, o **HEAD** do repositório está na bra
 touch portugol.txt java.txt mysql.txt
 ```
 
-2. Na sequência, vamos editar os arquivos através do comando:
+2. Na sequência, vamos editar os arquivos no VSCode, através do comando:
 
 ```bash
 code .
 ```
+
+<br />
+
+| <img src="https://i.imgur.com/RfjtOFi.png" title="source: imgur.com" width="120px"/> | <div align="left">**DICA:** Caso o comando code . não funcione no macOS X, abra o VSCode, execute a combinação de teclas: command + shift + P, filtre pela palavra "shell" e selecione a opção "Install 'code' comand in PATH".</div> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+
+<br />
 
 3. A pasta **aulagit** será aberta no **VSCode**, como mostra a imagem abaixo:
 
@@ -284,17 +318,20 @@ O comando **git add** atualiza o índice do repositório com o conteúdo atual e
 
 O conteúdo adicionado é enviado para o **Staging**, que é um espaço temporário onde você determina quais mudanças serão adicionadas ao repositório. Utilizar o staging é muito simples com o comando **git add** você adiciona os arquivos para o staging, e quando estiver satisfeito com as alterações efetua um commit, que veremos na sequência.
 
-6. Para verificar se os arquivos e pastas foram adicionados ao índice do repositório, utilize o comando:
+| <img src="https://i.imgur.com/RfjtOFi.png" title="source: imgur.com" width="120px"/> | <div align="left">**DICA:** O git não versiona pastas vazias. Para versionar uma pasta é necessário adicionar arquivos dentro dela.</div> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+
+6. Para verificar as alterações no repositório, utilize o comando:
 
 ```bash
 git status
 ```
 
-O comando **git status** retornará que existem arquivos aguardando para serem "commitados" no índice do repositório, como mostra a imagem abaixo:
+7. O comando **git status** retornará que existem arquivos aguardando para serem "commitados" no índice do repositório, como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/WpqHlSQ.png" title="source: imgur.com" /></div>
 
-7. Para "commitar" os arquivos, utilize o comando:
+8. Para "commitar" os arquivos, utilize o comando:
 
 ```bash
 git commit -m "Meu primeiro commit"
@@ -304,23 +341,27 @@ O comando **git commit** cria um novo commit com todos os conteúdos atuais do �
 
 > Os **commits** são as principais unidades de bloco de construção de uma linha do tempo do projeto Git. Os commits podem ser considerados instantâneos ou marcos ao longo da linha do tempo de um projeto Git. Os commits são criados com o comando **git commit** para capturar o estado de um projeto naquele momento.
 
-Para verificar se os arquivos e pastas foram "commitados", utilize o comando:
+9. Após executar o comando, será exibida a mensagem abaixo:
+
+<div align="left"><img src="https://i.imgur.com/F5lijPS.png" title="source: imgur.com" /></div>
+
+10. Para verificar se os arquivos e pastas foram "commitados", utilize o comando:
 
 ```bash
 git status
 ```
 
-O comando **git status** retornará que não existem arquivos aguardando para serem "commitados", como mostra a imagem abaixo:
+11. O comando **git status** retornará que não existem arquivos aguardando para serem "commitados", como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/BOIgZ5Y.png" title="source: imgur.com" /></div>
 
-Para visualizar as informações do commit, utilize o comando:
+12. Para visualizar as informações do histórico de commits, utilize o comando:
 
 ```bash
 git log
 ```
 
-Observe na imagem abaixo, que serão exibidos todos os detalhes do commit:
+13. Observe na imagem abaixo, que serão exibidos todos os detalhes do commit:
 
 <div align="left"><img src="https://i.imgur.com/IxI238Z.png" title="source: imgur.com" /></div>
 
@@ -340,150 +381,152 @@ Observe na imagem abaixo, que serão exibidos todos os detalhes do commit:
 
 Os seus repositórios locais consistem em três "árvores" mantidas pelo git:
 
-- A primeira é o seu `Working Directory`, ou seja, a pasta onde você criou o seu repositório e estão armazenados todos os arquivos do repositório (independente de estarem commitados).
-- A segunda é a `Index` ou índice, que funciona como uma área temporária onde ficam armazenados os arquivos que foram criados, atualizados ou apagados, desde o ultimo commit.
-- A terceira é a `HEAD` que aponta para o último *commit* (confirmação) que você fez.        
+- A primeira é o seu **Working Directory** (pasta de trabalho), ou seja, a pasta onde você criou o seu repositório e estão armazenados todos os arquivos do repositório (independente de estarem commitados). No nosso exemplo é a pasta **aulagit**, que foi criada na pasta do seu usuário (home directory) e inicializada como um repositório git.
+- A segunda é a **Index** (índice) ou Staging Area, que funciona como uma área temporária onde ficam armazenados os arquivos que foram criados, atualizados ou apagados, desde o ultimo commit. As alterações no Stage são simplesmente alterações no **working Directory**, em que se pretende “avisar” ao repositório sobre essas alterações que foram realizadas. 
+- A terceira é a **HEAD**, que funciona como uma espécie de ponteiro, possui a função de apontar para o último *commit* (confirmação) que você fez.        
 
 <div align="left"><img src="https://i.imgur.com/GKHWuOW.png" title="source: imgur.com" /></div>
 
 A **HEAD** aponta para o **último commit**, que foi realizado no repositório, logo quando você executa o comando **git commit você está dizendo para a HEAD que este novo commit é o mais atual e será a nova HEAD** do seu repositório.
 
-Vamos entender o fluxo na prática! Crie mais 2 arquivos dentro do nosso repositório, através do comando abaixo:
+Vamos entender o fluxo na prática! 
+
+1. Crie mais 2 arquivos dentro do nosso repositório, através do comando abaixo:
 
 ```bash
 touch spring.txt docker.txt
 ```
 
-Na sequência, volte para **VSCode**, abra os 2 arquivos e adicione as seguintes frases em cada arquivo:
+2. Na sequência, volte para **VSCode**, abra os 2 arquivos e adicione as seguintes frases em cada arquivo:
 
 - **spring.txt:** Spring é um framwework.
 - **docker.txt:** Docker é um gerenciador de containers.
 
-Para checar o status do repositório, utilize o comando:
+3. Para verificar as alterações no repositório, utilize o comando:
 
 ```bash
 git status
 ```
 
-O comando **git status** retornará que existem arquivos que não foram adicionados no índice do repositório, como mostra a imagem abaixo:
+4. O comando **git status** retornará que existem arquivos que não foram adicionados no índice do repositório, como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/JIpTtvE.png" title="source: imgur.com" /></div>
 
-Na sequência, vamos adicionar os arquivos no índice do repositório, através do comando:
+5. Na sequência, vamos adicionar os arquivos no índice do repositório, através do comando:
 
 ```bash
 git add .
 ```
 
-Para verificar se os arquivos e pastas foram adicionados ao índice do repositório, utilize o comando:
+6. Para verificar as alterações no repositório, utilize o comando:
 
 ```bash
 git status
 ```
 
-O comando **git status** retornará que existem arquivos aguardando para serem "commitados" no índice do repositório, como mostra a imagem abaixo:
+7. O comando **git status** retornará que existem arquivos aguardando para serem "commitados" no índice do repositório, como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/kAbUDmf.png" title="source: imgur.com" /></div>
 
-Para "commitar" os arquivos, utilize o comando:
+8. Para "commitar" os arquivos, utilize o comando:
 
 ```bash
 git commit -m "Meu segundo commit"
 ```
 
-Para verificar se os arquivos e pastas foram "commitados", utilize o comando:
+9. Para verificar as alterações no repositório, utilize o comando:
 
 ```bash
 git status
 ```
 
-O comando **git status** retornará que não existem arquivos aguardando para serem "commitados", como mostra a imagem abaixo:
+10. O comando **git status** retornará que não existem arquivos aguardando para serem "commitados", como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/BOIgZ5Y.png" title="source: imgur.com" /></div>
 
-Para visualizar as informações do commit, utilize o comando:
+11. Para visualizar as informações do histórico de commits, utilize o comando:
 
 ```bash
 git log
 ```
 
-Observe na imagem abaixo, que serão exibidos todos os detalhes do commit:
+12. Observe na imagem abaixo, que serão exibidos todos os detalhes do commit:
 
 <div align="left"><img src="https://i.imgur.com/esS7wBR.png" title="source: imgur.com" /></div>
 
-Observe que o **HEAD** do repositório passou a ser o **"Meu segundo commit"**.
+*Observe que o **HEAD** do repositório passou a ser o **"Meu segundo commit"**.*
 
 <br />
 
 <h2>6.Atualizar o conteúdo de um arquivo</h2>
 
-Volte para **VSCode**, abra o arquivo **spring.txt** e atualize o seu conteúdo:
+1. Volte para **VSCode**, abra o arquivo **spring.txt** e atualize o seu conteúdo:
 
 - **spring.txt:** Spring é um framwework Java.
 
-Para checar as mudanças que aconteceram no arquivo spring.txt, utilize o comando:
+2. Para checar as mudanças que aconteceram no arquivo **spring.txt**, utilize o comando:
 
 ```bash
 git diff
 ```
 
-O comando **git diff** retornará que o arquivo **spring.txt** foi modificado e indica quais foram as alterações, como mostra a imagem abaixo:
+3. O comando **git diff** retornará que o arquivo **spring.txt** foi modificado e indica quais foram as alterações, como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/B7tUQdv.png" title="source: imgur.com" /></div>
 
-Para checar o status do repositório, utilize o comando:
+4. Para verificar as alterações no repositório, utilize o comando:
 
 ```bash
 git status
 ```
 
-O comando **git status** retornará que o arquivo **spring.txt** foi atualizado e ainda não foi adicionado no índice do repositório, como mostra a imagem abaixo:
+5. O comando **git status** retornará que o arquivo **spring.txt** foi atualizado e ainda não foi adicionado no índice do repositório, como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/xETINlK.png" title="source: imgur.com" /></div>
 
-Na sequência, vamos adicionar **apenas o arquivo spring.txt** no índice do repositório, através do comando:
+6. Na sequência, vamos adicionar **apenas o arquivo spring.txt** no índice do repositório, através do comando:
 
 ```bash
 git add spring.txt
 ```
 
-Para verificar se o arquivo **spring.txt** foi adicionado ao índice do repositório, utilize o comando:
+7. Para verificar as alterações no repositório, utilize o comando:
 
 ```bash
 git status
 ```
 
-O comando **git status** retornará que o arquivo **spring.txt** está aguardando para ser "commitado" no índice do repositório, como mostra a imagem abaixo:
+8. O comando **git status** retornará que o arquivo **spring.txt** está aguardando para ser "commitado" no índice do repositório, como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/XC8uxsD.png" title="source: imgur.com" /></div>
 
-Para "commitar" o arquivo **spring.txt**, utilize o comando:
+9. Para "commitar" o arquivo **spring.txt**, utilize o comando:
 
 ```bash
 git commit -m "Meu terceiro commit"
 ```
 
-Para verificar se os arquivos e pastas foram "commitados", utilize o comando:
+10. Para verificar as alterações no repositório, utilize o comando:
 
 ```bash
 git status
 ```
 
-O comando **git status** retornará que não existem arquivos aguardando para serem "commitados", como mostra a imagem abaixo:
+11. O comando **git status** retornará que não existem arquivos aguardando para serem "commitados", como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/BOIgZ5Y.png" title="source: imgur.com" /></div>
 
-Para visualizar as informações do commit, utilize o comando:
+12. Para visualizar o histórico de commits, utilize o comando:
 
 ```bash
 git log
 ```
 
-Observe na imagem abaixo, que serão exibidos todos os detalhes do commit:
+13. Observe na imagem abaixo, que serão exibidos todos os detalhes do commit:
 
 <div align="left"><img src="https://i.imgur.com/RtYyCxQ.png" title="source: imgur.com" /></div>
 
-Observe que o **HEAD** do repositório passou a ser o **"Meu terceiro commit"**.
+14. Observe que o **HEAD** do repositório passou a ser o **"Meu terceiro commit"**.
 
 <br />
 
@@ -510,7 +553,7 @@ git status
 
 <div align="left"><img src="https://i.imgur.com/xETINlK.png" title="source: imgur.com" /></div>
 
-4. Para visualizar as informações dos commits, utilize o comando:
+4. Para visualizar o histórico dos commits, utilize o comando:
 
 ```bash
 git log
@@ -520,7 +563,10 @@ git log
 
 <div align="left"><img src="https://i.imgur.com/esS7wBR.png" title="source: imgur.com" /></div>
 
-O comando **git reset HEAD~1** redefiniu o `HEAD` atual para um commit anterior (~1) ao commit atual, desfazendo o mesmo.
+*O comando **git reset HEAD~1** redefiniu o `HEAD` atual para um commit anterior (~1) ao commit atual, desfazendo o mesmo.*
+
+| <img src="https://i.imgur.com/RfjtOFi.png" title="source: imgur.com" width="120px"/> | <div align="left">**DICA:** Para desfazer o commit e apagar todos os arquivos e pastas que foram commitados, utilize o comando git reset HEAD~1 -- hard.</div> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 6. Vamos refazer o commit **Meu terceiro commit**, através do comando:
 
@@ -530,10 +576,12 @@ git commit -a -m "Meu terceiro commit"
 
 *A opção **-a** é o equivalente a fazer o **git add** . junto com o comando **git commit**.*
 
+| <img src="https://i.imgur.com/RfjtOFi.png" title="source: imgur.com" width="120px"/> | <div align="left">**DICA:** A opção -a funciona apenas se for um commit de atualização do arquivo. Para arquivos novos é necessário usar os comandos git add e na sequência o git commit.</div> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+
 <br />
 
 <div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-reset/pt_BR" target="_blank"><b>Documentação: <i>Git Reset</i></b></a>
-
 <br />
 
 
@@ -605,8 +653,8 @@ Observe que no comando **git push** foram adicionados 2 parâmetros:
 <br />
 
 <div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-remote/pt_BR" target="_blank"><b>Documentação: <i>Git Remote</i></b></a>
-
 <div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-push/pt_BR" target="_blank"><b>Documentação: <i>Git Push</i></b></a>
+
 <br /><br />
 
 <div align="left"><a href="../README.md"><img src="https://i.imgur.com/XMgF3gl.png" title="source: imgur.com" width="3%"/>Voltar</a></div>
