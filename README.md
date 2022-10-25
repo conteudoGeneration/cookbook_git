@@ -41,7 +41,7 @@
         <td width="90%"><a href="redes/01_introducao_redes.md">01-Introdução a Redes de Computadores</a></td>
     </tr>
     <tr>
-        <td width="10%"><img src="https://i.imgur.com/cDPH4tl.png" title="source: imgur.com" /></td>
+        <td width="10%"><img src="https://i.imgur.com/9VM3pgl.png" title="source: imgur.com" /></td>
         <td width="90%"><a href="redes/02_comandos_rede.md">02-Comandos do Terminal do Mac OS - Redes</a></td>
     </tr>
     <tr>
