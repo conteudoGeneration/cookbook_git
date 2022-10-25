@@ -178,7 +178,7 @@ git status
 7. Faça o Commit das alterações, através do comando:
 
 ```bash
-git commit -a -m "Criar a branch ramo1"
+git commit -a -m "Atualizar a branch ramo1"
 ```
 
 8. Para enviar a branch **ramo1** para o Repositório Remoto no Github, utilize o comando:
@@ -235,7 +235,6 @@ git push origin main
 <br />
 
 <div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-merge/pt_BR" target="_blank"><b>Documentação: <i>Git Merge</i></b></a>
-
 <br />
 
 <h2>4. Como funciona uma branch</h2>
@@ -246,10 +245,10 @@ O `git branch`comando permite criar, listar, renomear e excluir ramificações. 
 
 Vamos analisar o que aconteceu no nosso exemplo:
 
-<div align="left"><img src="https://i.imgur.com/RAI6QBX.png" title="source: imgur.com" /></div>
+<div align="left"><img src="https://i.imgur.com/jBH0Jjp.png" title="source: imgur.com" /></div>
 
-1. A branch main recebeu 3 commits;
-2. A partir do commit 3, foi criada a branch ramo1;
+1. A branch main recebeu 4 commits;
+2. A partir do commit 4, foi criada a branch ramo1. Este commit será uma cópia do commit 3;
 3. A branch ramo1 recebeu um commit contendo a atualização do arquivo docker.txt;
 4. Esta atualização não está visível na Branch main
 5. Ao efetuar o git merge, a branch main recebe as alterações que foram realizadas na branch ramo1.
@@ -344,6 +343,78 @@ git push origin main
 
 | <img src="https://i.imgur.com/RfjtOFi.png" title="source: imgur.com" width="120px"/> | <div align="left">**DICA:** Para evitar conflitos, uma boa prática é tentar fazer com que todos na equipe sempre estejam atualizados com o repositório remoto através da execução do comando git pull regularmente no Repositório Local.</div> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
+
+<br />
+
+
+
+<h2>6. Comandos úteis</h2>
+
+  1. Criar uma Branch no Github
+```bash
+git push origin task3:nova_branch
+```
+
+ 2. Apagar uma Branch no github
+```bash
+git push origin:nome_branch
+```
+
+ 3. Renomear uma Branch
+```bash
+git branch -m novo_nome
+```
+4. Apagar uma Branch no Repositório Local
+
+```bash
+git branch -d nome_branch
+```
+
+5. Forçar uma atualização no Repositório Remoto
+
+```bash
+git push -f origin main
+```
+
+6. Forçar uma atualização no Repositório Local
+
+```bash
+git pull -f origin main
+```
+
+7. Alterar a mensagem do ultimo commit
+
+```bash
+git commit --amend
+```
+
+*O Editor padrão do Git será aberto. Altere a mensagem e feche o editor.*
+
+8. Renomear a Branch master para main
+
+```bash
+git branch -M master main
+```
+
+9. Remover arquivos e/ou pasta da árvore, sem remover da pasta de trabalho.
+
+```bash
+git rm --cached <nome da pasta ou arquivo>
+```
+
+Este comando é muito útil para resolver o problema da **"pasta presa"** no Github, ou seja, a pasta possui a pasta oculta .git, gerando uma duplicidade de repositório. Quando isto acontece, a pasta fica inacessível e o ícone muda para <img src="https://i.imgur.com/OzRhQuP.png" title="source: imgur.com" width="30px"/> uma pasta com uma seta. Veja a representação gráfica na imagem abaixo:
+
+<div align="center"><img src="https://i.imgur.com/s7VnPfi.png" title="source: imgur.com" /></div>
+
+O comando acima elimina a pasta oculta **.git** da subpasta e disponibiliza o conteúdo da pasta para ser "commitado" novamente.
+
+<br />
+
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-rm/pt_BR" target="_blank"><b>Documentação: <i>Git rm</i></b></a>
+
+<br />
+
+
 
 <br /><br />
 
