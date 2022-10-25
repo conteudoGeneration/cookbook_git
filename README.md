@@ -27,6 +27,10 @@
         <td width="10%"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" /></td>
         <td width="90%"><a href="git/03_comandos_git_02.md">05-Comandos do Git - Parte 02</a></td>
     </tr>
+    <tr>
+        <td width="10%"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" /></td>
+        <td width="90%"><a href="https://i.imgur.com/NQWvY8Y.png">06-Atividade Git - Ilustrada</a></td>
+    </tr>
 </table>
 
 <br />
