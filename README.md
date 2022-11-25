@@ -31,6 +31,10 @@
         <td width="10%"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" /></td>
         <td width="90%"><a href="https://i.imgur.com/NQWvY8Y.png">06-Atividade Git - Ilustrada</a></td>
     </tr>
+    <tr>
+        <td width="10%"><img src="https://i.imgur.com/JACNZiR.png" title="source: imgur.com" /></td>
+        <td width="90%"><a href="https://i.imgur.com/NQWvY8Y.png">07-Revisão - Fluxo git</a></td>
+    </tr>
 </table>
 
 <br />
