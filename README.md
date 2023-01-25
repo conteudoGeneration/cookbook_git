@@ -7,8 +7,8 @@
 
 <table width="100%">
     <tr>
-        <td width="10%"><img src="https://i.imgur.com/za4tPUA.png" title="source: imgur.com"/></td>
-        <td width="90%"><a href="windows/README.md">Windows</a></td>
+        <td width="15%"><img src="https://i.imgur.com/za4tPUA.png" title="source: imgur.com"/></td>
+        <td width="85%"><a href="windows/README.md">Windows</a></td>
     </tr>
     <tr>
         <td><img src="https://i.imgur.com/9VM3pgl.png" title="source: imgur.com"/></td>
