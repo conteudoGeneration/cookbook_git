@@ -29,7 +29,7 @@
     </tr>
     <tr>
         <td width="10%"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" /></td>
-        <td width="90%"><a href="imagens/git_exe_01.png">06-Atividade Git - Ilustrada</a></td>
+        <td width="90%"><a href="https://drive.google.com/file/d/19SovW2Hncdp9vfd4hmgfQ38yfhr0iYta/view?usp=share_link">06-Atividade Git - Ilustrada</a></td>
     </tr>
     <tr>
         <td width="10%"><img src="https://i.imgur.com/JACNZiR.png" title="source: imgur.com" /></td>
