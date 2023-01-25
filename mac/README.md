@@ -1,6 +1,6 @@
 <div align="center">
-    <img src="https://i.imgur.com/288YABI.png" title="source: imgur.com" width="40%"/>
-    <img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="35%"/> 
+    <img src="https://i.imgur.com/9VM3pgl.png" title="source: imgur.com" width="30%"/>
+    <h1>Git e Terminal - MacOS</h1>
 </div>
 
 <h1>Conteúdos</h1>
@@ -65,3 +65,8 @@
         <td width="90%"><a href="redes/03_ferramentas_dev.md">03-Ferramentas de Desenvolvimento</a></td>
     </tr>
 </table>
+
+<br /><br />
+	
+<div align="center"><a href="../README.md"><img src="https://i.imgur.com/kfHCxif.png" title="source: imgur.com" width="5%"/></a></div>
+<div align="center">Home</div>
