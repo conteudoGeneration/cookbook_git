@@ -12,7 +12,7 @@
     </tr>
     <tr>
         <td><img src="https://i.imgur.com/9VM3pgl.png" title="source: imgur.com"/></td>
-        <td><a href=mac/README.md">MAC</a></td>
+        <td><a href="mac/README.md">MAC</a></td>
     </tr>
 </table>
 
