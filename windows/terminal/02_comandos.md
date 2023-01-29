@@ -646,104 +646,101 @@ dir linguagens
 
 <h2>17. Apagando Arquivos</h2>
 
-O comando **rm** é utilizado para apagar um ou mais arquivos. 
+O comando **del** é utilizado para apagar arquivos. 
 
 **Sintaxe:**
 
 ```bash
-rm nome_do_arquivo
+del nome_do_arquivo
 ```
 
-**Exemplo 01:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 01:**
 
 Apagar o arquivo **primavera_chegou.txt** localizado na pasta **aula_terminal**:
 
 ```bash
-rm primavera_chegou.txt
+del primavera_chegou.txt
 ```
 
 Na sequência, digite o comando abaixo, para checar se o arquivo **primavera_chegou.txt** foi apagado:
 
 ```bash
-ls
+dir
 ```
 
-**Exemplo 02:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 02:**
 
-Apagar todos os arquivos **.txt** da pasta **python**:
+Apagar todos os arquivos **.txt** da pasta **linguagens\python**:
 
 ```bash
-rm ~/python/*.txt
+del linguagens\python\*.txt
 ```
-
-| <img src="https://i.imgur.com/vVDBDG0.png" title="source: imgur.com" width="150px"/> | <div align="left"> **ALERTA DE BSM:** *Mantenha a Atenção aos Detalhes. Observe no exemplo acima que o caminho da pasta veio antes do tipo do arquivo, porque estamos fora da pasta python.** </div> |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 Na sequência, digite o comando abaixo, para checar se todos os arquivos **.txt** da pasta **python** foram apagados:
 
 ```bash
-ls python
+dir linguagens\python
 ```
 
-
+<br />
 
 <h2>18. Apagando Pastas</h2>
 
-Os comandos **rm -Rf** e **rmdir** são utilizados para apagar pastas. A diferença é que o primeiro apaga todo o conteúdo da pasta (incluindo as subpastas), enquanto o segundo exige que a pasta esteja vazia.
+O comando **rd** é utilizado para apagar pastas. 
 
 **Sintaxe:**
 
 ```bash
-rm -Rf nome_do_pasta
+rd <opções> nome_da_pasta
 ```
+
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 01:**
+
+Apagar a pasta **outono** localizada na pasta **aula_terminal**:
 
 ```bash
-rmdir nome_do_pasta
+rd outono
 ```
 
-**Exemplo 01:**
+Na sequência, digite o comando abaixo, para checar se a pasta **outono** foi apagada:
+
+```bash
+dir
+```
+
+<br />
+
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 02:**
 
 Apagar a pasta **inverno** localizada na pasta **aula_terminal**:
 
-Experimente apagar a pasta com o comando **rmdir**:
-
 ```bash
-rmdir inverno
+rd inverno
 ```
 
-Será exibida a mensagem abaixo, indicando que a pasta **inverno** não pode ser apagada porquê não está vazia
+Será exibida a mensagem abaixo, indicando que a pasta **inverno** não pode ser apagada porquê não está vazia:
 
-<div align="left"><img src="https://i.imgur.com/NuxbQKT.png" title="source: imgur.com" /></div>
+<div align="left"><img src="https://i.imgur.com/vpEnM0X.png" title="source: imgur.com" /></div>
 
-Experimente apagar a pasta com o comando **rm -Rf**:
+Experimente apagar a pasta com o comando abaixo:
 
 ```bash
-rm -Rf inverno
+rd /s inverno
 ```
+
+Será exibida a mensagem abaixo, perguntando se você tem certeza que deseja apagar a pasta **inverno**, seus arquivos e subpastas:
+
+<div align="left"><img src="https://i.imgur.com/HZLZvkA.png" title="source: imgur.com" /></div>
+
+Digite **s** para confirmar.
 
 Na sequência, digite o comando abaixo, para checar se a pasta **inverno** foi apagada:
 
 ```bash
-ls
+dir
 ```
 
 Observe que desta vez a pasta **inverno** e todo o seu conteúdo foi apagado.
-
-**Exemplo 02:**
-
-Apagar a pasta **python** localizada na pasta **aula_terminal**:
-
-```bash
-rmdir python
-```
-
-Na sequência, digite o comando abaixo, para checar se a pasta **python** foi apagada:
-
-```bash
-ls
-```
-
-No exemplo acima, o comando **rmdir** funcionou, porque a pasta **python** está vazia.
 
 <br /><br />
 
