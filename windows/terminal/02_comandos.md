@@ -90,7 +90,7 @@ md nome_da_pasta
 
 <br />
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 01:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 01:**
 
 Criar a pasta **primavera** na pasta **aula_git**: 
 
@@ -101,7 +101,7 @@ md primavera
 
 <br />
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 02:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 02:**
 
 Criar as pastas **verao**, **outono** e **inverno** na pasta **aula_git**: 
 
@@ -111,7 +111,7 @@ md verao outono inverno python
 
 <br />
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 03:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 03:**
 
 Criar as pastas **sol** dentro da pasta **verao** e **frio** dentro da pasta **inverno**: 
 
@@ -136,7 +136,7 @@ cd <opções>
 
 <br />
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 01:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 01:**
 
 Para acessar a pasta **primavera**, digite o comando: 
 
@@ -146,7 +146,7 @@ cd primavera
 
 <br />
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 02:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 02:**
 
 Para acessar a unidade principal (diretório raiz - C:), digite o comando: 
 
@@ -156,7 +156,7 @@ cd /
 
 <br />
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 03:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 03:**
 
 Para acessar a pasta do usuário (home directory), utilize o comando: 
 
@@ -166,7 +166,7 @@ cd %USERPROFILE%
 
 <br />
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 04:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 04:**
 
 Para acessar uma pasta localizada dentro da pasta do usuário (primavera, por exemplo), utilize o comando: 
 
@@ -176,7 +176,7 @@ cd %USERPROFILE%/aula_terminal/primavera
 
 <br />
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 05:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 05:**
 
 Para voltar para a pasta anterior a pasta primavera (no exemplo, a pasta **aula_terminal**), digite o comando: 
 
@@ -199,7 +199,7 @@ notepad nome_do_arquivo
 
 <br />
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 01:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 01:**
 
 Criar o arquivo **verao.txt** na pasta **aula_git**: 
 
@@ -215,7 +215,7 @@ Clique no botão **Sim**, para criar o arquivo. Na sequência, feche o arquivo.
 
 <br />
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 02:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 02:**
 
 Criar os arquivos **verao.txt, outono.txt, inverno.txt, python.txt e django.txt** na pasta **aula_git**: 
 
@@ -231,7 +231,7 @@ Cada arquivo deve ser criado individualmente.
 
 <br />
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 03:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 03:**
 
 Criar os arquivos **java.txt** na pasta **verao\sol** e **sql.txt** na pasta **inverno\frio**: 
 
@@ -256,7 +256,7 @@ dir <opções>
 
 <br />
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplos:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplos:**
 
 Para listar os arquivos e pastas da sua pasta atual, digite o comando:
 
@@ -334,7 +334,7 @@ comando /?
 
  <br />
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo:**
 
 Obter ajuda para o comando **dir**:
 
@@ -363,7 +363,7 @@ notepad nome_do_arquivo.txt
 
  <br />
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo:**
 
 **Passo 01:** Edite o arquivo **primavera.txt** localizado na pasta **aula_terminal**:
 
@@ -393,7 +393,7 @@ O comando **type** é utilizado para apresentar no terminal o conteúdo de um ar
 type nome_do_arquivo
 ```
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo:**
 
 Exibir o conteúdo do arquivo **primavera.txt**:
 
@@ -419,7 +419,7 @@ Para efetuar a cópia de um arquivo ou um grupo de arquivos e pastas inteiras, u
 copy arquivo_original pasta_destino_da_cópia
 ```
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 01:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 01:**
 
 Copie o arquivo **primavera.txt** localizado na pasta **aula_terminal**, para a pasta **primavera**, também localizada na pasta  **aula_terminal**:
 
@@ -435,7 +435,7 @@ dir primavera
 
 <br />
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 02:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 02:**
 
 Copie o arquivo **primavera.txt** localizado na pasta **aula_terminal**, para a pasta **verao/sol**, também localizada na pasta  **aula_terminal**:
 
@@ -451,7 +451,7 @@ dir verao /s
 
 <br />
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 03:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 03:**
 
 Criar uma cópia do arquivo **primavera.txt** dentro da pasta **aula_terminal**. A cópia será criada com o nome **primavera_2023.txt**:
 
@@ -477,7 +477,7 @@ Para efetuar a cópia de múltiplos arquivos, utilize o comando **copy**, indica
 copy critério pasta_destino_da_cópia
 ```
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo:**
 
 Copie todos os arquivos **.txt** localizados na pasta **aula_terminal**, para a pasta **inverno/frio**, também localizada na pasta **aula_terminal**:
 
@@ -502,7 +502,7 @@ Para efetuar a cópia de pastas e os seus sub-pastas, inclusive os arquivos, uti
 xcopy <opções> pasta_origem pasta_destino
 ```
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo:**
 
 Crie uma nova pasta chamada **java**:
 
@@ -546,7 +546,7 @@ ren arquivo_original novo_nome
 ren pasta_original novo_nome
 ```
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 01:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 01:**
 
 Renomear o arquivo **primavera_2023.txt** localizado na pasta **aula_terminal**, para **primavera_chegou.txt**:
 
@@ -562,7 +562,7 @@ dir
 
 <br />
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 02:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 02:**
 
 Renomear a pasta **java** localizada na pasta **aula_terminal**, para **java_2023**:
 
@@ -596,7 +596,7 @@ move nome_do_arquivo pasta_destino
 ren nome_da_pasta pasta_destino
 ```
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 01:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 01:**
 
 Mover o arquivo **python.txt** localizado na pasta **aula_terminal**, para a pasta **python**, também localizada na pasta **aula_terminal**:
 
@@ -616,7 +616,7 @@ Observe que o arquivo **python.txt** não existe mais na pasta atual. Na sequên
 dir python
 ```
 
-<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="4%"/>**Exemplo 02:**
+<img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 02:**
 
 Crie uma nova pasta chamada **linguagens**:
 
