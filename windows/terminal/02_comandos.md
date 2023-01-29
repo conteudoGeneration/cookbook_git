@@ -546,6 +546,8 @@ ren arquivo_original novo_nome
 ren pasta_original novo_nome
 ```
 
+<br />
+
 <img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 01:**
 
 Renomear o arquivo **primavera_2023.txt** localizado na pasta **aula_terminal**, para **primavera_chegou.txt**:
@@ -596,6 +598,8 @@ move nome_do_arquivo pasta_destino
 ren nome_da_pasta pasta_destino
 ```
 
+<br />
+
 <img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 01:**
 
 Mover o arquivo **python.txt** localizado na pasta **aula_terminal**, para a pasta **python**, também localizada na pasta **aula_terminal**:
@@ -615,6 +619,8 @@ Observe que o arquivo **python.txt** não existe mais na pasta atual. Na sequên
 ```bash
 dir python
 ```
+
+<br />
 
 <img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 02:**
 
@@ -654,6 +660,8 @@ O comando **del** é utilizado para apagar arquivos.
 del nome_do_arquivo
 ```
 
+<br />
+
 <img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 01:**
 
 Apagar o arquivo **primavera_chegou.txt** localizado na pasta **aula_terminal**:
@@ -667,6 +675,8 @@ Na sequência, digite o comando abaixo, para checar se o arquivo **primavera_che
 ```bash
 dir
 ```
+
+<br />
 
 <img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 02:**
 
@@ -693,6 +703,8 @@ O comando **rd** é utilizado para apagar pastas.
 ```bash
 rd <opções> nome_da_pasta
 ```
+
+<br />
 
 <img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 01:**
 
