@@ -116,7 +116,7 @@ md verao outono inverno python
 Criar as pastas **sol** dentro da pasta **verao** e **frio** dentro da pasta **inverno**: 
 
 ```bash
-md verao/sol & md inverno/frio
+md verao\sol & md inverno\frio
 ```
 
 O operador **&** (E lógico), inserido entre 2 comandos, permite executar os 2 comandos de uma única vez. No exemplo acima, estamos executando 2 comandos. 
