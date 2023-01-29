@@ -16,20 +16,40 @@ Na imagem abaixo, temos os principais componentes de um computador:
 - **Monitor:** Dispositivo de saída;
 - **Teclado e Mouse:** Dispositivos de entrada.
 
-Os computadores da Apple mais atuais utilizam os processadores M1 e M2, baseado na **Arquitetura ARM**. Ele possui 8 núcleos de processamento e o chip tem “um dos núcleos mais rápidos do mundo” e “uma das melhores performances por watt”, consumindo pouquíssima energia. Em 2023, deve chegar ao mercado o processador M3.
+Os computadores Windows mais atuais utilizam os processadores Intel.
+
+Os Processadores Intel mais atuais, são baseados na **Arquitetura Hibrida**. O Processador I9 (mais rápido da família), da 13º geração, possui 24 núcleos (**sendo 12 p-cores e 12 e-cores**) de processamento e o chip tem “um dos núcleos mais rápidos do mundo”.
+
+> **Arquitetura Hibrida**
+>
+> Os processadores Intel da 13ª Geração se adaptam à maneira como você utiliza o computador. Ao jogar, o processador impede que tarefas em segundo plano interrompam ou usem núcleos de alto  desempenho, resultando em uma jogabilidade mais estável. Quando você  está usando seu sistema para tarefas genéricas, ele oferece uma experiência mais suave no nível do  sistema.
+>
+> A Arquitetura hibrida possui dois tipos de  núcleos em um único processador: 
+>
+> - **Performance-cores (P-cores)** poderosos;
+> - **Efficient-cores (E-cores)** flexíveis. 
+>
+> **Performance-cores são:**
+>
+> - Núcleos de alto desempenho e fisicamente maiores, projetados para velocidade enquanto mantêm a eficiência.
+> - Ideal para processar o trabalho pesado exigido por muitos mecanismos de jogos.
+>
+> **Os Efficient-cores são:**
+>
+> - Fisicamente menores, com vários E-cores se encaixando no espaço físico de um P-core.
+> - Ideais para desempenho escalável. Eles trabalham em  conjunto com os P-cores para acelerar tarefas que exigem muito do núcleo (como ao renderizar um vídeo, por exemplo).
+> - Otimizado para executar tarefas em segundo plano com eficiência.  Tarefas menores podem ser transferidas para E-cores (por exemplo, lidar  com Discord ou software antivírus), deixando os P-cores livres para  impulsionar o desempenho dos jogos.
 
 <table width="100%" align="center">  
   <tr>    
-    <td width="33%"><div align="center"><img src="https://i.imgur.com/j8d4MiZ.jpg" title="source: imgur.com" width="60%"/></div></td>    
-    <td width="33%"><div align="center"><img src="https://i.imgur.com/horESg7.jpg" title="source: imgur.com" width="60%"/></div></td>
-    <td width="33%"><div align="center"><img src="https://i.imgur.com/Vsp2Vl3.jpg" title="source: imgur.com" width="60%"/></div></td>
+    <td width="25%"><div align="center"><img src="https://i.imgur.com/88JsuRM.png" title="source: imgur.com" width="80%"/></div></td>    
+    <td width="25%"><div align="center"><img src="https://i.imgur.com/2zzoWY2.png" title="source: imgur.com" width="80%"/></div></td>
+    <td width="25%"><div align="center"><img src="https://i.imgur.com/VmtmjAg.png" title="source: imgur.com" width="80%"/></div></td>    
+    <td width="25%"><div align="center"><img src="https://i.imgur.com/J1KVFFW.png" title="source: imgur.com" width="80%"/></div></td>
   </tr>  
 </table>
 
-
-> A sigla **ARM** quer dizer **Advanced RISC Machine** (Máquina RISC Avançada), e o termo RISC diz respeito a um conjunto de instruções de processadores. Esse padrão é utilizado em todos os processadores ARM, uma vez que é uma demanda da arquitetura.
->
-> **RISC** é um conjunto de instruções reduzido, mais limitado, fazendo as instruções serem mais simples que o sistema CISC (conjunto de instruções complexas), utilizado nos PCs. O sistema RISC exige menos do processador, assim o chip não precisa de tanta energia, o que é essencial em dispositivos móveis que possuem bateria.
+<br />
 
 <h2>2. Software</h2>
 
@@ -39,21 +59,27 @@ Quando pensamos em sistema, normalmente pensamos em uma interface visual, que é
 
 <div align="center"><img src="https://i.imgur.com/QKmo44o.png" title="source: imgur.com" width="60%"/></div>
 
+<br />
+
 <h2>3. Sistema Operacional</h2>
 
 O **Sistema operacional** é um tipo especial de software. Ele é um software de base, que possui diferentes funções. Uma delas é controlar o equipamento, provendo uma interface de controle para o usuário realizar suas configurações e utilizar o equipamento. Outra é oferecer um protocolo para que outros softwares, software-aplicativos, sejam instalados sobre o sistema operacional, como um editor de texto ou um game, por exemplo.
 
-<div align="center"><img src="https://i.imgur.com/4uvIv9K.png" title="source: imgur.com" width="60%"/></div>
+<div align="center"><img src="https://i.imgur.com/Bw3Wsd8.png" title="source: imgur.com" width="60%"/></div>
 
 Observe na imagem acima que o Sistema Operacional está localizado entre o Hardware e os Softwares aplicativos. Sem o sistema operacional, o computador não consegue realizar nenhuma tarefa.
 
-<h3>3.1. Kernel</h3>
+<h3>3.1. Kernel Mode</h3>
 
-O **kernel é o componente principal de um sistema operacional e a interface central entre o hardware e os processos executados por um computador**. Ele estabelece a comunicação entre ambos, gerenciando recursos com a maior eficiência possível.
+O **kernel Mode é o componente principal de um sistema operacional e a interface central entre o hardware e os processos executados por um computador**. Ele estabelece a comunicação entre ambos, gerenciando recursos com a maior eficiência possível.
 
-<h3>3.2. Utilitários do Sistema</h3>
+<h3>3.2. User Mode</h3>
 
-São os aplicativos auxiliares, que complementam o Sistema Operacional, oferecendo recursos adicionais para um melhor funcionamento do sistema.
+O User Mode é composto por 2 subsistemas:
+
+**Os subsistemas integrais** incluem processos de suporte de sistema fixo (como gerenciador de  sessão e processo de login), processos de serviço (como agendador de  tarefas e serviço de spooler de impressão), subsistema de segurança  (para tokens de segurança e gerenciamento de acesso) e aplicativos de  usuário.
+
+**O subsistema de ambiente** atua como um link entre os aplicativos do modo de usuário e as funções do kernel do sistema operacional. Existem quatro subsistemas de ambiente primário, ou seja, Win32, POSIX, OS/2 e subsistema Windows para LINUX (WSL2).
 
 <h3>3.3. Principais Sistemas Operacionais</h3>
 
@@ -74,43 +100,23 @@ Os principais sistemas operacionais para computadores disponíveis no mercado s�
 
 <br />
 
-<h2>4. MacOS</h2>
+<h2>4. Windows</h2>
 
-O Mac OS é um sistema operacional desenvolvido, fabricado e comercializado pela Apple. Ele é projetado para funcionar em computadores Macintosh. Ao comprar um computador da Apple, o macOS vem pré-instalado desde 2002. O Mac OS é o segundo sistema operacional de desktop mais usado no mundo depois do Windows.
+O Windows é um sistema operacional desenvolvido, fabricado e comercializado pela Microsoft. Ele é projetado para funcionar em computadores Intel, AMD e alguns Macintosh. Ao comprar um computador atualmente, é quase certo que o Windows virá pré-instalado. O Windows é o sistema operacional desktop mais usado no mundo. Atualmente, ele está na versão 11.
 
-<div align="center"><img src="https://i.imgur.com/pVKLEnp.png" title="source: imgur.com" /></div>
+<div align="center"><img src="https://i.imgur.com/V4YsorU.jpg" title="source: imgur.com" /></div>
 
 <h3>4.1. Sistema de Arquivos</h3>
 
-O sistema de arquivos do Mac OS é composto por diversas pastas, como mostra a tabela abaixo:
+O sistema de arquivos do Windows é composto por diversas pastas, todas localizadas dentro da unidade de disco local c:, como mostra a tabela abaixo:
 
-| Pasta                       | Descrição                                                    |
-| --------------------------- | ------------------------------------------------------------ |
-| **/**                       | Raiz do Sistema de arquivos. O equivalente ao c:\ do Windows. |
-| **/Applications**           | Softwares e aplicativos globais.                             |
-| **/Applications/Utilities** | Aplicativos utilitários globais.                             |
-| **/bin**                    | Pasta do Terminal. Nesta pasta ficam os principais comandos do Terminal do Mac OS. |
-| **/dev**                    | Dispositivos do computador, como o HD por exemplo.           |
-| **/Library**                | Bibliotecas essenciais compartilhadas pelos programas e módulos do kernel. |
-| **/Network**                | Lista de computadores conectados na mesma rede.              |
-| **/System**                 | Arquivos do Sistema Operacional - Mac OS                     |
-| **/Users**                  | Pasta onde ficam armazenadas as pastas dos usuários (Home directory). |
-| **/Users/name**             | Diretório privado do usuário (Home directory), onde name é o nome o usuário. |
-| **/usr/local**              | Aplicativos Local                                            |
-| **/Volumes**                | Ponto de montagem para montar um sistema de arquivos temporariamente, como um drive de DVD, por exemplo. |
-| **/Volumes/name**           | Volume montado, identificado pelo nome, onde name é o nome do volume. |
-
-<br />
-
-<h3>4.2. Meta Directories</h3>
-
-Existem alguns diretórios especiais, que embora não sejam diretórios reais, eles apontam para diretórios reais, funcionando como uma espécie de atalho. Veja na tabela abaixo:
-
-| Path   | Descrição                       |
-| ------ | ------------------------------- |
-| **.**  | Pasta atual                     |
-| **..** | Pasta anterior                  |
-| **~**  | Home Directory do usuário atual |
+| Pasta                           | Descrição                                                    |
+| ------------------------------- | ------------------------------------------------------------ |
+| **Arquivos de Programas**       | Softwares e aplicativos globais - 64 bits.                   |
+| **Arquivos de Programas (x86)** | Softwares e aplicativos globais - 32 bits.                   |
+| **PerfLogs**                    | Pasta do sistema usada pelo Monitor de desempenho do Windows para armazenar logs / relatórios. |
+| **Usuarios**                    | Pasta onde ficam armazenadas as pastas dos usuários (Home Directory). |
+| **Windows**                     | Pasta onde fica armazenado o Sistema Operacional Windows.    |
 
 <br />
 
@@ -118,84 +124,49 @@ Existem alguns diretórios especiais, que embora não sejam diretórios reais, e
 
 Todas as pastas dos usuários possuem algumas pastas padrão, como mostra a tabela abaixo:
 
-| Path               | Descrição                                                 |
-| ------------------ | --------------------------------------------------------- |
-| **~/Applications** | Aplicativos do usuário                                    |
-| **~/Desktop**      | Área de trabalho do usuário                               |
-| **~/Documents**    | Documentos e arquivos do usuário                          |
-| **~/Downloads**    | Arquivos do usuário obtidos via download                  |
-| **~/Library**      | Arquivos específicos dos aplicativos do usuário           |
-| **~/Movies**       | Arquivos de vídeo do usuário                              |
-| **~/Music**        | Arquivos de audio do usuário                              |
-| **~/Pictures**     | Imagens do usuário                                        |
-| **~/Public**       | Arquivos que o usuário deseja compartilhar sem restrições |
-| **~/Sites**        | Páginas da Web, usadas para compartilhamento na Web       |
+| Path               | Descrição                                       |
+| ------------------ | ----------------------------------------------- |
+| **Área de Trabalho**      | Área de trabalho do usuário                     |
+| **Documentos**    | Documentos e arquivos do usuário                |
+| **Downloads**    | Arquivos do usuário obtidos via download        |
+| **Vídeos**       | Arquivos de vídeo do usuário                    |
+| **Músicas**        | Arquivos de audio do usuário                    |
+| **Imagens**        | Imagens do usuário                              |
+| **Favoritos** | Links dos sites salvos no Favoritos do Edge |
 
 <br />
 
-<h2>5. Terminal do Mac</h2>
+<h2>5. Terminal do Windows</h2>
 
 Todos os computadores pessoais hoje em dia vêm com uma interface gráfica de usuário (GUI - Graphical User Interface), embora nem sempre tenha sido assim. Antigamente os computadores eram inicializados em um terminal, somente texto. Tudo o que aparecia na tela era um cursor piscando. Sem um manual do usuário, não era possível saber quais comandos você deveria digitar, porquê o sistema não era nada intuitivo. 
 
-O sistema operacional vem com muitos aplicativos pré-instalados. Alguns deles você conhece, tais como: Calendário, Mail, Fotos e Navegador de Internet. Outros, são mais comumente conhecidos como comandos do Terminal, tais como: **cat, cp, rm, entre outros**. Para ter acesso a estes comandos, utilizaremos o aplicativo que é chamado de **Terminal**, como mostra a imagem abaixo:
+O sistema operacional vem com muitos aplicativos pré-instalados. Alguns deles você conhece, tais como: Calendário, Fotos e Navegador de Internet. Outros, são mais comumente conhecidos como comandos do Terminal, tais como: **dir, copy, ren, entre outros**. Para ter acesso a estes comandos, utilizaremos o aplicativo que é chamado de **Prompt de Comando - CMD**, como mostra a imagem abaixo:
 
-<div align="center"><img src="https://i.imgur.com/fcldjTw.png" title="source: imgur.com" /></div>
+<div align="center"><img src="https://i.imgur.com/1FB25fg.png" title="source: imgur.com" /></div>
 
 O terminal ou Shell nada mais é do que um aplicativo que encaminha os comandos para o Sistema Operacional. Ele
 interpreta os comandos enviados e retorna os resultados. Apesar de não possuir uma interface gráfica elaborada
 ele possui uma infinidade de funcionalidades. O conhecimento dos comandos poderá auxiliá-lo para o aumento da
 produtividade, pois muitas tarefas podem ser automatizadas.
 
-O terminal do Mac OS X pode ser acessado através da interface gráfica através do **Finder**, em **Applications 🡲 utilities**, clicando no ícone do **Terminal**.
-
-<div align="center"><img src="https://i.imgur.com/uuFWeAt.png" title="source: imgur.com" /></div>
-
-O macOS e o Linux têm muito em comum, e isso é evidente com o Terminal. O Linux e o macOS são baseados no sistema operacional UNIX. A maioria dos comandos do Terminal do Mac são os mesmos utilizados no Linux.
-
-<h3>5.1. O teclado do MAC</h3>
-
-O teclado dos computadores da Apple, são um pouco diferentes do teclado padrão Windows. Veja na imagem abaixo:
-
-<div align="center"><img src="https://i.imgur.com/XjevLFE.jpg" title="source: imgur.com" /></div>
-
-A principal diferença estão nas teclas modificadoras, que utilizam símbolos específicos, como mostra a figura abaixo:
-
-| Tecla              | Símbolos |
-| ------------------ | -------- |
-| **Command (Cmd)**  | ⌘        |
-| **Shift**          | ⇧        |
-| **Option (Alt)**   | ⌥        |
-| **Control (Ctrl)** | ⌃        |
-| **Caps Lock**      | ⇪        |
-| **Fn**             |          |
-
-<br />
-
-<h3>5.2. Atalhos do Terminal</h3>
+<h3>5.1. Atalhos do Terminal</h3>
 
 Dentro do Terminal do Mac, 99% dos comandos são inseridos via teclado. O mouse praticamente não possui funcionalidade dentro do Terminal, no máximo selecionar o texto para copiar ou colar comandos. Todo o resto é feito via teclado. Abaixo, temos uma tabela contendo os principais atalhos do Terminal do Mac:
 
 | Atalho                           | Descrição                           |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **setas direcionais**                 |Mover o cursor.|
-| **^ + a** |Mover o cursor para o início da linha de comandos.|
-| **^ + e** |Mover o cursor para o fim da linha de comandos.|
-|  **^ + p**              |Busca o comando anterior.|
-|  **^ + n**               |Busca o próximo comando.|
-| **^ + b** |Mover o cursor um caractere para a esquerda.|
-| **^ + f** |Mover o cursor um caractere para a direita.|
-|  **^ + l**                         |Apaga a tela.|
-|  **^ + u**  |Apaga os caracteres a esquerda do cursor.|
-| **^ + k** |Apaga os caracteres a direita do cursor|
-|  **^ + delete**  |Apaga o caractere abaixo do cursos.|
-| **backspace**              |Apaga caractere a esquerda.|
-|  **^ + h**           |Apaga caractere a esquerda.|
-|  **^ + w**       |Recorta e copia para o clipboard.|
-|  **^ + y**          |Cola o conteúdo do clipboard|
-|  **^ + c**   |Interrompe a execução de um comando|
-|  **^ + r**           |Busca comando no histórico.|
-| **⌘ + "**          |Navegação entre comandos.|
-| **⌘ + #**          |Navegação entre comandos.|
+| **🠈 / 🠊 / 🠉 / 🠋** |Mover o cursor.|
+| **Ctrl + V ou Shift + Insert** | Cola o texto na posição do cursor.                           |
+| **Ctrl + C ou Ctrl + Insert**   | Copia o texto selecionado para a área de transferência.      |
+| **Ctrl + A**                    | Selecionar todo o texto na linha atual, se a linha contém texto. Se é  uma linha vazia, selecione todo o texto no prompt de comando. |
+| **Shift + 🠈 / 🠊 / 🠉 / 🠋**       | Move o cursor para a esquerda ou direita de um caractere, para cima ou  para baixo de uma linha, selecionando o texto ao longo do caminho. |
+| **Ctrl + Shift + 🠈 / 🠊**        | Move o cursor uma palavra para a esquerda ou para a direita, selecionando essa palavra ao longo do caminho. |
+| **Shift + Home / End**          | Move o cursor para o início ou fim da linha atual, selecionando o texto ao longo do caminho. |
+| **Shift + Page Up / Page Down** | Move o cursor para cima ou para baixo uma tela, selecionando o texto. |
+| **Ctrl + Shift + Home / End**   | Move o cursor para o início ou fim do "buffer de tela", selecionando  todo o texto entre o cursor e o início ou o final do Prompt de Comando. |
+| **Ctrl + 🠉 / 🠋**                | Move uma linha para cima ou para baixo no histórico do Prompt de Comando (é como usar a barra de rolagem). |
+| **Ctrl + Page Up / Page Down**  | Move uma página para cima ou para baixo na história do Prompt de Comando (é como rolar ainda mais longe). |
+| **Alt + F4**                    | Fecha a janela do prompt de comando.                         |
 
 <br /><br />
 
