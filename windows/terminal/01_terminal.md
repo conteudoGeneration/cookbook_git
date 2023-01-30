@@ -40,6 +40,8 @@ Os Processadores Intel mais atuais, são baseados na **Arquitetura Hibrida**. O 
 > - Ideais para desempenho escalável. Eles trabalham em  conjunto com os P-cores para acelerar tarefas que exigem muito do núcleo (como ao renderizar um vídeo, por exemplo).
 > - Otimizado para executar tarefas em segundo plano com eficiência.  Tarefas menores podem ser transferidas para E-cores (por exemplo, lidar  com Discord ou software antivírus), deixando os P-cores livres para  impulsionar o desempenho dos jogos.
 
+<br />
+
 <table width="100%" align="center">  
   <tr>    
     <td width="25%"><div align="center"><img src="https://i.imgur.com/88JsuRM.png" title="source: imgur.com" width="80%"/></div></td>    

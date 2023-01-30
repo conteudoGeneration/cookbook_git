@@ -98,109 +98,11 @@ git config pull.rebase false
 
 <br />
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-config/pt_BR" target="_blank"><b>Documentação: <i>Git Config</i></b></a>
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-config/pt_BR" target="_blank"><b>Documentação: <i>Git Config</i></b></a></div>
 
 <br />
 
-
-<h2>2.Configurando a Chave SSH</h2>
-
-**SSH - Secure Socket Shell**, é um dos protocolos  específicos para implementar a segurança na troca de arquivos entre cliente e servidor  na Internet, usando criptografia. O objetivo do SSH é permitir que  pessoas desenvolvedoras ou outros usuários realizem alterações em sites e  servidores utilizando uma conexão simples e segura.
-
-O Github utiliza o modelo de Criptografia Assimétrica, ou seja, utiliza duas chaves secretas separadas. **Essas chaves servem tanto para codificar quanto para decodificar o processo de comunicação entre o cliente e o servidor.** Ambas são conhecidas como chave-pública e chave-privada. 
-
-As chaves SSH são geradas através de algoritmos complexos, de modo que seja improvável falsificar ou identificar a chave privada, ainda que a chave pública seja conhecida. Dessa maneira, é necessário manter a chave privada em segredo, sendo utilizada apenas por usuário autorizado. Já as chaves públicas podem ser compartilhadas com outras pessoas. 
-
-Para gerar as **chaves SSH**, é necessário inserir informações como senhas, a chamadas de frase. Geralmente, utilizam-se frases curtas para gerar chaves públicas e privadas.
-
-<div align="center"><img src="https://i.imgur.com/snWEIxN.png" title="source: imgur.com" /></div>
-
-Para iniciar uma conexão em SSH no Github, é realizada uma negociação do protocolo, os algoritmos criptográficos e a chave da sessão, além de autenticar o servidor com uma chave de host e o usuário com autenticação de chave pública ou senha. Depois disso, trocam-se as informações, inclusive gráficos, arquivos e dados do terminal. Fazendo uma analogia, é como se a Chave Pública fosse um cadeado, que só pode ser aberto pela sua própria chave (Chave Privada).
-
-A autenticação por meio de chave pública garante mais segurança do que outros meios de autenticação, como é o caso das senhas. Além disso, esse tipo de autenticação é amplamente utilizado para acesso privilegiado humano e máquina a máquina. 
-
-<h3>2.1.Criar o par de Chaves SSH</h3>
-
-1. Acesse a pasta do usuário, através do comando abaixo:
-
-```bash
-cd ~
-```
-
-2. Para criar a Chave SSH, utilize o comando abaixo:
-
-```bash
-ssh-keygen -t rsa -b 2048
-```
-
-3. Após executar o comando, será indicada a pasta onde será gravado o par de chaves, como mostra a imagem abaixo:
-
-<div align="center"><img src="https://i.imgur.com/ZixCQrm.png" title="source: imgur.com" /></div>
-
-4. Pressione a tecla **enter** do teclado para continuar. Na sequência, será solicitado o cadastramento de uma **frase**, que funcionará como uma senha da Chave, como mostra a imagem abaixo:
-
-<div align="center"><img src="https://i.imgur.com/3LYQWgA.png" title="source: imgur.com" /></div>
-
-5. Cadastre uma senha, ou pressione a tecla enter para deixar sem a senha. Na sequência será solicitada a confirmação da frase, como mostra a imagem abaixo:
-
-<div align="center"><img src="https://i.imgur.com/sAizmSJ.png" title="source: imgur.com" /></div>
-
-6. Digite a senha novamente, ou pressione a tecla enter para deixar sem a senha. Na sequência, será exibida a a confirmação da criação do par de chaves SSH, como mostra a imagem abaixo:
-
-<div align="center"><img src="https://i.imgur.com/H3ezS1J.png" title="source: imgur.com" /></div>
-
-<br />
-
-| <img src="https://i.imgur.com/RfjtOFi.png" title="source: imgur.com" width="120px"/> | <div align="left">**DICA:** Caso você cadastre a frase na Chave SSH, todas as vezes que você efetuar comandos como o git push e o git pull, esta frase será solicitada pelo github.</div> |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-
-<br />
-
-7. Após a criação da Chave, utilize o comando abaixo para visualizar o conteúdo da Chave pública:
-
-```bash
-cat ~/.ssh/id_rsa.pub
-```
-
-8. Será exibido no console o conteúdo da chave SSH pública. Selecione e copie o conteúdo do arquivo.
-
-<br />
-
-| <img src="https://i.imgur.com/RfjtOFi.png" title="source: imgur.com" width="120px"/> | <div align="left">**DICA:** Para recriar a chave SSH, apague a pasta .ssh através do comando rm -rf .ssh e repita os passos acima.</div> |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-
-<br />
-
-<h3>2.2.Adicionar a Chave Pública no Github</h3>
-
-1. Acesse a sua conta do Github
-2. Na Barra de Navegação superior da Conta do Github, clique no menu do seu Perfil, ao lado do botão **+**, e no menu que será aberto, clique na opção **Settings**.
-
-<div align="center"><img src="https://i.imgur.com/QRPnPdA.png" title="source: imgur.com" /></div>
-
-3. Na próxima tela, no menu localizado na lateral esquerda, clique na opção **SSH and GPG Keys**.
-
-<div align="center"><img src="https://i.imgur.com/thbauWb.png" title="source: imgur.com" /></div>
-
-4. Na próxima tela, clique no botão **New SSH Key**.
-
-<div align="center"><img src="https://i.imgur.com/XX0KSUm.png" title="source: imgur.com" /></div>
-
-5. Digite um nome para Chave no item **Title** (macOS, por exemplo) e cole a Chave que foi copiada no item **Key**.
-
-<div align="center"><img src="https://i.imgur.com/GR2sByz.png" title="source: imgur.com" /></div>
-
-6. A Chave foi adicionada no GitHub!
-
-<div align="center"><img src="https://i.imgur.com/D57g5d2.png" title="source: imgur.com" /></div>
-
-<br />
-
-<div align="left"><img src="https://i.imgur.com/JACNZiR.png" title="source: imgur.com" width="25px"/> <a href="https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank"><b>Documentação: <i>Gerando a Chave SSH</i></b></a>
-
-<br />
-
-<h2>3.Criando o seu primeiro repositório local</h2>
+<h2>2.Criando o seu primeiro repositório local</h2>
 
 1. Vamos checar qual é a sua pasta atual. Digite o comando:
 
@@ -269,17 +171,18 @@ O comando acima exibirá que no momento, o **HEAD** do repositório está na bra
 
 <br />
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-init/pt_BR" target="_blank"><b>Documentação: <i>Git Init</i></b></a>
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-init/pt_BR" target="_blank"><b>Documentação: <i>Git Init</i></b></a></div>
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-status/pt_BR" target="_blank"><b>Documentação: <i>Git Status</i></b></a>
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-status/pt_BR" target="_blank"><b>Documentação: <i>Git Status</i></b></a></div>
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-branch/pt_BR" target="_blank"><b>Documentação: <i>Git Branch</i></b></a>
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-branch/pt_BR" target="_blank"><b>Documentação: <i>Git Branch</i></b></a></div>
+
 
 <br />
 
-<h2>4.Versionando os arquivos no repositório local</h2>
+<h2>3.Versionando os arquivos no repositório local</h2>
 
-1. Antes começarmos a versionar, vamos criar alguns arquivos dentro do nosso repositório, através do comando abaixo:
+1. Antes começarmos a versionar, vamos criar alguns arquivos dentro do nosso repositório, através dos comandos abaixo:
 
 ```bash
 touch portugol.txt java.txt mysql.txt
@@ -290,11 +193,6 @@ touch portugol.txt java.txt mysql.txt
 ```bash
 code .
 ```
-
-<br />
-
-| <img src="https://i.imgur.com/RfjtOFi.png" title="source: imgur.com" width="120px"/> | <div align="left">**DICA:** Caso o comando code . não funcione no macOS X, abra o VSCode, execute a combinação de teclas: command + shift + P, filtre pela palavra "shell" e selecione a opção "Install 'code' comand in PATH".</div> |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 <br />
 
@@ -367,17 +265,18 @@ git log
 
 <br />
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-add/pt_BR" target="_blank"><b>Documentação: <i>Git Add</i></b></a>
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-add/pt_BR" target="_blank"><b>Documentação: <i>Git Add</i></b></a></div>
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-status/pt_BR" target="_blank"><b>Documentação: <i>Git Status</i></b></a>
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-status/pt_BR" target="_blank"><b>Documentação: <i>Git Status</i></b></a></div>
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-commit/pt_BR" target="_blank"><b>Documentação: <i>Git Commit</i></b></a>
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-commit/pt_BR" target="_blank"><b>Documentação: <i>Git Commit</i></b></a></div>
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-log/pt_BR" target="_blank"><b>Documentação: <i>Git log</i></b></a>
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-log/pt_BR" target="_blank"><b>Documentação: <i>Git log</i></b></a></div>
+
 
 <br />
 
-<h2>5.Entendendo o fluxo de trabalho do Git</h2>
+<h2>4.Entendendo o fluxo de trabalho do Git</h2>
 
 Os seus repositórios locais consistem em três "árvores" mantidas pelo git:
 
@@ -391,7 +290,7 @@ A **HEAD** aponta para o **último commit**, que foi realizado no repositório, 
 
 Vamos entender o fluxo na prática! 
 
-1. Crie mais 2 arquivos dentro do nosso repositório, através do comando abaixo:
+1. Crie mais 2 arquivos dentro do nosso repositório, através dos comandos abaixo:
 
 ```bash
 touch spring.txt docker.txt
@@ -458,7 +357,7 @@ git log
 
 <br />
 
-<h2>6.Atualizar o conteúdo de um arquivo</h2>
+<h2>5.Atualizar o conteúdo de um arquivo</h2>
 
 1. Volte para **VSCode**, abra o arquivo **spring.txt** e atualize o seu conteúdo:
 
@@ -530,12 +429,12 @@ git log
 
 <br />
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-diff/pt_BR" target="_blank"><b>Documentação: <i>Git Diff</i></b></a>
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-diff/pt_BR" target="_blank"><b>Documentação: <i>Git Diff</i></b></a></div>
+
 
 <br />
 
-
-<h2>7.Desfazendo um commit</h2>
+<h2>6.Desfazendo um commit</h2>
 
 1. Vamos desfazer o commit **Meu terceiro commit**, através do comando:
 
@@ -581,13 +480,13 @@ git commit -a -m "Meu terceiro commit"
 
 <br />
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-reset/pt_BR" target="_blank"><b>Documentação: <i>Git Reset</i></b></a>
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-reset/pt_BR" target="_blank"><b>Documentação: <i>Git Reset</i></b></a></div>
+
 <br />
 
+<h2>7.Publicando o Repositório Local no Github</h2>
 
-<h2>8.Publicando o Repositório Local no Github</h2>
-
-<h3>8.1.Criar o Repositório Remoto no Github</h3>
+<h3>7.1.Criar o Repositório Remoto no Github</h3>
 
 
 Vamos criar o repositório no Github:
@@ -605,16 +504,16 @@ Vamos criar o repositório no Github:
 4. Em seguida clique no botão **Create Repository** no final da tela.
 4. Será aberta uma tela semelhante a imagem abaixo:
 
-<div align="center"><img src="https://i.imgur.com/RgrjbyQ.png" title="source: imgur.com" /></div>
+<div align="center"><img src="https://i.imgur.com/BnhGA2n.png" title="source: imgur.com" /></div>
 
-6. Copie o endereço do Repositório indicado pela seta amarela. Observe que foi copiado o endereço **ssh**.
+6. Copie o endereço do Repositório indicado pela seta amarela. Observe que foi copiado o endereço **HTTPS**.
 
-<h3>8.2.Conectar o Repositório Local com o Repositório Remoto</h3>
+<h3>7.2.Conectar o Repositório Local com o Repositório Remoto</h3>
 
 1. Crie a conexão do Repositório Local com o Repositório Remoto, através do comando:
 
 ```bash
-git remote add origin git@github.com:rafaelq80/aulagit.git
+git remote add origin https://github.com/rafaelq80/aulagit.git
 ```
 
 *Observe que depois da palavra origin foi inserido o **endereço SSH do Repositório Remoto** que foi copiado do Github.*
@@ -627,9 +526,9 @@ git remote -v
 
 3. Observe na imagem abaixo, que será exibido o endereço do Repositório Remoto, confirmando a conexão:
 
-<div align="left"><img src="https://i.imgur.com/jXhsgBV.png" title="source: imgur.com" /></div>
+<div align="left"><img src="https://i.imgur.com/rURPm9E.png" title="source: imgur.com" /></div>
 
-<h3>8.3.Enviar o conteúdo do Repositório Local para o Github</h3>
+<h3>7.3.Enviar o conteúdo do Repositório Local para o Github</h3>
 
 1. Envie o conteúdo do Repositório Local para o Repositório Remoto, através do comando:
 
@@ -642,18 +541,16 @@ Observe que no comando **git push** foram adicionados 2 parâmetros:
 - **origin:** O Repositório Remoto;
 - **main:** A Branch do Repositório Local, que será enviada para o Repositório Remoto.
 
-2. Observe na imagem abaixo, que será solicitada a frase que foi cadastrada na chave ssh que você cadastrou. Digite a frase cadastrada.
-
-<div align="left"><img src="https://i.imgur.com/fMX0XQ7.png" title="source: imgur.com" /></div>
-
-3. Volte para o Github e verifique se os arquivos estão disponíveis no Repositório Remoto, no Github, como mostra a imagem abaixo:
+2. Volte para o Github e verifique se os arquivos estão disponíveis no Repositório Remoto, no Github, como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/5ou5Nhd.png" title="source: imgur.com" /></div>
 
 <br />
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-remote/pt_BR" target="_blank"><b>Documentação: <i>Git Remote</i></b></a>
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-push/pt_BR" target="_blank"><b>Documentação: <i>Git Push</i></b></a>
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-remote/pt_BR" target="_blank"><b>Documentação: <i>Git Remote</i></b></a></div>
+
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-push/pt_BR" target="_blank"><b>Documentação: <i>Git Push</i></b></a></div>
+
 
 <br /><br />
 

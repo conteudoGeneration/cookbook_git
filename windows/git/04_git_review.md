@@ -1,9 +1,8 @@
 <h1>Fluxo de Trabalho no Git - Prática</h1>
 
+Nesta atividade, você irão trabalhar em grupo, dentro dos grupos do Projeto Integrador, para entenderem como funciona um Fluxo Git dentro de um Time de pessoas desenvolvedoras.
 
-<h2>1. Configurando o Git Local</h2>
-
-<h3>1.1. Criando repositório Central no Github</h3>
+<h2>1. Criando repositório revisao</h2>
 
 
 Vamos configurar o repositório Central no Github:
@@ -45,7 +44,7 @@ Neste passo, vamos adicionar o time nos Repositórios do Projeto.
 
 5. Clique no botão **Add** (botão verde), para concluir.
 
-<h2>2. Atividade Prática</h2>
+<h2>2. Atividade Prática - Fluxo Git</h2>
 
 **Siga as instruções:**
 
@@ -55,13 +54,13 @@ Neste passo, vamos adicionar o time nos Repositórios do Projeto.
 git clone <endereço_do_repositório>
 ```
 
-2. Crie uma Branch no seu Repositório local com o seu nome
+2. Crie uma Branch no seu Repositório local com **o seu nome**
 
 ```bash
 git checkout -b <seu_nome>
 ```
 
-3. Edite o arquivo **README.md** e adicione o seu nome
+3. Edite o arquivo **README.md** e **adicione o seu nome**
 
 4. Execute os comando abaixo, para atualizar a sua Branch local
 
@@ -71,13 +70,25 @@ git add .
 git commit -m "Meu nome"
 ```
 
-5. Envie a sua Branch local para o Repositório remoto (revisao)
+5. Envie a sua Branch local para o **Repositório Remoto revisao**
 
 ```bash
 git push -u origin <seu_nome>
 ```
 
-6. Após todes enviarem as suas respectivas Branches, atualize o seu repositório local e baixe a Branch remota de um membro do seu grupo no seu Repositório local. 
+6. Após todes enviarem as suas respectivas Branches, atualize o seu repositório local e baixe a Feature Branch Remota de um membro do seu grupo no seu Repositório local. Cada participante baixa a Feature Branch de um membro diferente do grupo.
+
+**Exemplo:**
+
+| Participante |      | Feature Branch |
+| ------------ | :--: | -------------- |
+| João         |  🡆   | Pedro          |
+| Pedro        |  🡆   | Manuela        |
+| Manuela      |  🡆   | Juliana        |
+| Juliana      |  🡆   | Mariana        |
+| Mariana      |  🡆   | João           |
+
+<br />
 
 ```bash
 git fetch origin
@@ -92,8 +103,8 @@ git branch
 ```bash
 git checkout <nome_branch_local>
 ```
-8. Edite o arquivo **README.md** e adicione o seu sobrenome
-9. Atualize a Branch local com o seu nome
+8. Edite o arquivo **README.md** e **adicione o seu sobrenome**
+9. Atualize a **Branch local com o seu nome**
 
 ```bash
 git add .
@@ -102,8 +113,8 @@ git commit -m "Meu Sobrenome"
 ```
 
 10. Volte para o Repositório remoto e acesse a sua Branch remota
-11. Edite o arquivo **README.md** e adicione o nome da sua turma
-12. Faça o Commit da atualização no Github, adicionando a mensagem: "Minha turma"
+11. Edite o arquivo **README.md** e adicione o **nome da sua turma**
+12. Faça o Commit da atualização no Github, adicionando a mensagem: **"Minha turma"**
 13. Execute o comando git pull na sua Branch local
 
 ```bash
@@ -127,7 +138,7 @@ git checkout main
 git merge <nome_branch_local>
 ```
 
-17. Peça para um participante do grupo executa o comando git push
+17. Peça para um participante do grupo executar o comando git push
 
 ```bash
 git push origin main
@@ -139,7 +150,7 @@ git push origin main
 git pull origin main
 ```
 
-19. Será gerado um conflito. Resolva o conflito aceitando as duas alterações.
+19. Será gerado um novo conflito. Resolva o conflito aceitando as duas alterações.
 
 20. Atualize a Branch main remota, com os comandos abaixo:
 
@@ -151,7 +162,7 @@ git commit -m "Conflito resolvido - Seu nome"
 git push origin main
 ```
 
-21. Repita o processo a partir do passo 18 até que todes os integrantes do grupo tenham feito.
+21. Repita o processo a partir do passo 18 até que todes os integrantes do grupo tenham feito a tarefa.
 
 22. Ao finalizar, todes os integrantes do grupo, exceto o ultimo participante, farão o git pull para atualizar o repositório local.
 
@@ -166,8 +177,6 @@ git log
 ```
 
 24. Para sair do git log, pressione a tecla **q** do seu teclado.
-25. Envie um Print do Repositório no canal do Spring.
-
 
 <br /><br />
 

@@ -21,24 +21,24 @@ rm -Rf aulagit
 3. Para confirmar que a pasta foi apagada, utilize o comando abaixo:
 
 ```bash
-ls 
+ls
 ```
 
-4. Volte para o repositório remoto **aulagit** no Github e copie o endereço **SSH** do repositório, como indicado na imagem abaixo:
+4. Volte para o repositório remoto **aulagit** no Github e copie o endereço **HTTPS** do repositório, como indicado na imagem abaixo:
 
-<div align="center"><img src="https://i.imgur.com/Sqegcmb.png" title="source: imgur.com" /></div>
+<div align="center"><img src="https://i.imgur.com/VKmyqsN.png" title="source: imgur.com" /></div>
 
 5. Para clonar o repositório, utilize o comando abaixo:
 
 ```bash
-git clone git@github.com:rafaelq80/aulagit.git
+git clone https://github.com/rafaelq80/aulagit.git
 ```
 
 *Observe que o endereço do repositório remoto foi adicionado depois do comando **git clone**.*
 
 6. Ao efetuar a clonagem (cópia do repositório), será exibida a mensagem abaixo:
 
-<div align="left"><img src="https://i.imgur.com/g6PKsvt.png" title="source: imgur.com" /></div>
+<div align="left"><img src="https://i.imgur.com/f2HWeaP.png" title="source: imgur.com" /></div>
 
 7. Para confirmar que a clonagem foi bem sucedida, utilize o comando abaixo:
 
@@ -48,7 +48,7 @@ ls
 
 *Observe que a pasta **aulagit** foi restaurada.*
 
-8. Para cessar a pasta, utilize o comando:
+8. Para acessar a pasta, utilize o comando:
 
 ```bash
 cd aulagit
@@ -62,12 +62,14 @@ git remote -v
 
 10. Ao executar o comando acima, será exibida a mensagem abaixo:
 
-<div align="left"><img src="https://i.imgur.com/LPyiUZW.png" title="source: imgur.com" /></div>
+<div align="left"><img src="https://i.imgur.com/rURPm9E.png" title="source: imgur.com" /></div>
 
 <br />
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-clone/pt_BR" target="_blank"><b>Documentação: <i>Git Clone</i></b></a>
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-clone/pt_BR" target="_blank"><b>Documentação: <i>Git Clone</i></b></a></div>
+
 <br />
+
 
 <h2>2. Atualizando o Repositório Local</h2>
 
@@ -96,7 +98,7 @@ git fetch
 
 6. Ao executar o comando acima, será exibida a mensagem abaixo:
 
-<div align="left"><img src="https://i.imgur.com/p5YNdhO.png" title="source: imgur.com" /></div>
+<div align="left"><img src="https://i.imgur.com/wmd3A23.png" title="source: imgur.com" /></div>
 
 7. Para confirmar se as atualizações foram efetuadas, utilize o comando abaixo:
 
@@ -122,7 +124,7 @@ git pull origin main
 
 10. Ao executar o comando git pull, será exibida a mensagem abaixo:
 
-<div align="left"><img src="https://i.imgur.com/Oimvwlj.png" title="source: imgur.com" /></div>
+<div align="left"><img src="https://i.imgur.com/CL3Mikh.png" title="source: imgur.com" /></div>
 
 *Observe que as alterações foram confirmadas, como indicado (seta amarela), na imagem acima.*
 
@@ -132,10 +134,12 @@ git pull origin main
 
 <br />
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-fetch/pt_BR" target="_blank"><b>Documentação: <i>Git Fetch</i></b></a>
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-fetch/pt_BR" target="_blank"><b>Documentação: <i>Git Fetch</i></b></a></div>
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-pull/pt_BR" target="_blank"><b>Documentação: <i>Git Pull</i></b></a>
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-pull/pt_BR" target="_blank"><b>Documentação: <i>Git Pull</i></b></a></div>
+
 <br />
+
 
 <h2>3. Trabalhando com Branch</h2>
 
@@ -197,10 +201,9 @@ git push origin ramo1
 
 <br />
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-branch/pt_BR" target="_blank"><b>Documentação: <i>Git branch</i></b></a>
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-branch/pt_BR" target="_blank"><b>Documentação: <i>Git branch</i></b></a></div>
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-checkout/pt_BR" target="_blank"><b>Documentação: <i>Git Checkout</i></b></a>
-
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-checkout/pt_BR" target="_blank"><b>Documentação: <i>Git Checkout</i></b></a></div>
 
 <br />
 
@@ -234,8 +237,10 @@ git push origin main
 
 <br />
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-merge/pt_BR" target="_blank"><b>Documentação: <i>Git Merge</i></b></a>
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-merge/pt_BR" target="_blank"><b>Documentação: <i>Git Merge</i></b></a></div>
+
 <br />
+
 
 <h2>4. Como funciona uma branch</h2>
 
@@ -254,6 +259,8 @@ Vamos analisar o que aconteceu no nosso exemplo:
 5. Ao efetuar o git merge, a branch main recebe as alterações que foram realizadas na branch ramo1.
 
 A branch ramo1 é um universo paralelo até que o git merge seja executado na branch main.
+
+<br />
 
 <h2>5. Resolução de Conflitos</h2>
 
@@ -299,7 +306,7 @@ git pull origin main
 
 5. Após executar o comando acima, observe que no final da mensagem aparece a palavra **CONFLICT**, indicando que foi encontrado um conflito entre o conteúdo do repositório local e o conteúdo do repositório remoto:
 
-<div align="left"><img src="https://i.imgur.com/UWWlOKC.png" title="source: imgur.com" /></div>
+<div align="left"><img src="https://i.imgur.com/A4sImKx.png" title="source: imgur.com" /></div>
 
 6. Volte para o arquivo **docker.txt** no **VSCode** e verifique os conflitos encontrados:
 
@@ -345,8 +352,6 @@ git push origin main
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 <br />
-
-
 
 <h2>6. Comandos úteis</h2>
 
@@ -410,12 +415,9 @@ O comando acima elimina a pasta oculta **.git** da subpasta e disponibiliza o co
 
 <br />
 
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-rm/pt_BR" target="_blank"><b>Documentação: <i>Git rm</i></b></a>
-
-<br />
-
-
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-rm/pt_BR" target="_blank"><b>Documentação: <i>Git rm</i></b></a></div>
 
 <br /><br />
+
 
 <div align="left"><a href="../README.md"><img src="https://i.imgur.com/XMgF3gl.png" title="source: imgur.com" width="3%"/>Voltar</a></div>

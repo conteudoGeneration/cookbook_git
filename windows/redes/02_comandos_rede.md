@@ -9,7 +9,7 @@ hostname
 2. Para visualizar a lista de placas de rede e os respectivos Endereços IP, utilize o comando:
 
 ```bash
-ifconfig
+ipconfig
 ```
 
 3. Para visualizar o Endereço MAC das placas de rede, utilize o comando:
@@ -37,20 +37,24 @@ ping www.generation.org
 **Passo 01:** Visualize a lista de placas de rede do seu compuatdor, através do comando:
 
 ```bash
-ifconfig
+ipconfig
 ```
 
 **Passo 02:** Identifique o endereço IP da sua máquina, como mostra a imagem abaixo (o IP está destacado em verde):
 
-<div aling="center"><img src="https://i.imgur.com/gwhKZK9.png" title="source: imgur.com" /></div>
+<div aling="center"><img src="https://i.imgur.com/XdKxwPv.png" title="source: imgur.com" /></div>
 
 **Passo 03:** Execute o comando abaixo, indicando o endereço da sua placa de rede:
 
 ```bash
-ping 172.20.192.119
+ping 192.168.0.114
 ```
 
-Com o comando ping nós podemos medir o tempo de ida e volta (round time trip) que um pacote demora para ir do seu host para outro. Você pode usar tanto o endereço IP do host ou o endereço Web. 
+Com o comando ping nós podemos medir o tempo de ida e volta (round time trip) que um pacote demora para ir do seu host para outro. Você pode usar tanto o endereço IP do host ou o endereço Web. Observe a imagem abaixo:
+
+<div align="center"><img src="https://i.imgur.com/HUjguy3.png" title="source: imgur.com" /></div>
+
+Observe que o tempo de resposta está excelente ( < 1ms) e nenhum pacote se perdeu.
 
 **Endereços IP Privados**
 
@@ -66,13 +70,13 @@ A tabela de endereços abaixo, são exclusivos para uso interno, ou seja, sites 
 5. Para visualizar os caminhos do seu host até um destino, utilize o comando:
 
 ```bash
-traceroute <endereço_destino>
+tracert <endereço_destino>
 ```
 
 **Exemplo:**
 
 ```bash
-traceroute www.generation.org
+tracert www.uol.com.br
 ```
 
 6. Para fazer o rastreamento das portas que são utilizadas no seu computador, utilize o comando:

@@ -595,7 +595,7 @@ move nome_do_arquivo pasta_destino
 **Pasta:**
 
 ```bash
-ren nome_da_pasta pasta_destino
+move nome_da_pasta pasta_destino
 ```
 
 <br />

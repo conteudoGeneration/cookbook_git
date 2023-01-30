@@ -42,15 +42,20 @@ O **Git** é o Sistema de Controle de Versões mais popular e utilizado no mundo
 
 O **Git** é um projeto de código aberto, maduro e com manutenção ativa e constante, que foi desenvolvido em 2005 por Linus Torvalds, o famoso criador do kernel do  sistema operacional Linux. Um número impressionante de projetos de  software depende do Git para controle de versão, incluindo projetos  comerciais e de código-fonte aberto. 
 
-Como o Git possui uma arquitetura distribuída, ele é um exemplo de **DVCS**  (portanto, Sistema de Controle de Versão Distribuído). Em vez de ter  apenas um único local para o histórico completo da versão do software,  como é comum em sistemas de controle de versão **CVS** como o **Subversion**, no Git, a cópia de  trabalho de todo desenvolvedor do código também é um repositório que  pode conter o histórico completo de todas as alterações.
+O Git é um sistema de versionamento com arquitetura distribuída (**DVCS - Distributed Version Control System**. Em vez de ter  apenas um único repositório armazenando o histórico completo da versão do software, muito comum nos sistemas de controle de versão com arquitetura simultânea (**CVCS - Concurrent Version Control System**), como o **Subversion** por exemplo, no Git a cópia do repositório de cada pessoa desenvolvedora do código, também é um repositório local que pode conter o histórico completo de todas as alterações (locais e remotas).
 
 <h3>2.1. Fluxo de trabalho de ramificação de recurso</h3>
 
-Uma das maiores vantagens do Git são seus recursos de **branch (ramificação)**. Ao  contrário dos sistemas de controle de versão centralizados, os branches  do Git são simples e o merge (fusão) entre branches é fácil. Essas características facilitam o fluxo de trabalho e é um dos principais motivos da popularidade do Git.
+Uma das maiores vantagens do Git são seus recursos de **branch (ramificação)**. Ao  contrário dos sistemas de controle de versão centralizados, as branches do Git são simples e o processo de merge (fusão) entre as branches é muito fácil. Essas características facilitam o fluxo de trabalho e é um dos principais motivos da popularidade do Git. Na imagem abaixo, vemos um exemplo de um repositório composto por 2 branches:
 
 <div align="center"><img src="https://i.imgur.com/OExTNsh.png" title="source: imgur.com" /></div>
 
-Branches de recursos (Feature) oferecem um ambiente isolado para cada  alteração na base de código. Quando um desenvolvedor quer começar a  trabalhar em algo, não importa o tamanho da empreitada, ele cria um novo branch. Assim, é garantido que o branch principal (Main) sempre contenha  código de qualidade de produção.
+Ao criar um novo repositório, automaticamente é criada a **Branch Principal (Branch Main)**, que na prática é uma branch igual a qualquer outra. A única diferença é que ela é padrão em qualquer repositório git.
+
+| <img src="https://i.imgur.com/hOgWvSc.png" title="source: imgur.com" width="120px"/> | <div align="left"> **ATENÇÃO:** *Antigamente, a Branch Main era nomeada como Branch Master (Mestre). O Github, buscando remover termos racistas, renomeou a "Branch Master” para “Branch Main”. Observe que o Git ainda não adotou esta prática por padrão, mas existem formas de criar esta configuração na sua máquina local, como veremos na sessão prática.* </div> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+
+**Branches de Recursos (Feature Branch)** oferecem um ambiente isolado para cada  alteração na base do código. Quando uma pessoa desenvolvedora inicia a implementação de um código, independente do tamanho do projeto, ele cria uma nova branch (feature branch), isolando o código em desenvolvimento do código testado e aprovado. Assim, é garantido que a branch principal (branch main) sempre contenha código de produção.
 
 Uma branch de recurso é como se fosse um universo paralelo, que caminha de forma independente, sem interferir no ramo principal, a branch main. O merge, seria um commit onde a branch de recurso passa a fazer parte da branch principal, criando uma fusão entre as duas, como vemos na imagem abaixo:
 
@@ -60,15 +65,15 @@ Observe que a Feature Branch 01 foi criada a partir do commit versão 02 da Bran
 
 <h3>2.2. Desenvolvimento distribuído</h3>
 
-No Sistemas de  controle de versão centralizados, cada desenvolvedor recebe uma cópia de trabalho que aponta  para um único repositório central. O Git, por sua vez, é um sistema de  controle de versão distribuído. Em vez de uma cópia de trabalho, cada  desenvolvedor obtém seu próprio repositório local, com um histórico  completo de commits.
+No Sistemas de controle de versão centralizados, cada desenvolvedor recebe uma cópia do repositório, que aponta  para um único repositório central. O Git, por sua vez, é um sistema de  controle de versão distribuído. Em vez de uma cópia do repositório, cada  pessoa desenvolvedora tem o seu próprio repositório local, com o seu próprio histórico completo de commits. A imagem abaixo, exemplifica o Modelo Distribuído:
 
 <div align="center"><img src="https://i.imgur.com/6hFtTa0.png" title="source: imgur.com" /></div>
 
-Ter um histórico local completo torna o Git rápido, já que você não  precisa de uma conexão de rede para criar commits, inspecionar versões  anteriores de um arquivo entre commits.
+Ter um histórico local completo torna o Git muito mais rápido, já que você não precisa de uma conexão de rede para criar seus próprios commits e inspecionar as versões anteriores de um arquivo entre os commits.
 
-O desenvolvimento distribuído também facilita a escalabilidade da  equipe de engenharia. Se alguém quebrar o branch de produção no sistema centralizado,  ninguém consegue inserir suas alterações até a  correção. Com o Git, esse tipo de bloqueio não existe. Todos podem  continuar trabalhando em seus próprios repositórios locais e depois enviar as alterações para o repositório remoto.
+O desenvolvimento distribuído também facilita a escalabilidade do projeto e do time de pessoas desenvolvedoras. Se alguém quebrar o branch de produção no sistema centralizado,  ninguém consegue inserir suas alterações até a  correção ser realizada. No Git, esse tipo de bloqueio não existe. Todos podem  continuar trabalhando em seus próprios repositórios locais e depois enviar as alterações para o repositório remoto, assim que as correções forem aplicadas.
 
-E, semelhante aos branches de recursos, o desenvolvimento distribuído cria um ambiente mais confiável. Mesmo que um desenvolvedor destrua seu repositório local, ele pode simplesmente clonar (copiar) o de outra pessoa e  começar de novo.
+Assim como nas branches de recursos (feature branches), o desenvolvimento distribuído cria um ambiente mais confiável. Mesmo que um desenvolvedor destrua seu repositório local, ele pode simplesmente clonar (copiar) o de outra pessoa ou do repositório remoto e começar de novo.
 
 <br />
 
@@ -103,6 +108,40 @@ Além disso, a segurança é levada muito a sério, algo fundamental  quando se 
 Uma das formas de mostrar o seu trabalho para outras pessoas, em  especial, empresas, é pelo seu portfólio. Pelo Github, você pode montar o seu portfólio com projetos que demonstrem as suas habilidades com  código. 
 
 **Não há nada melhor do que provar suas habilidades através do código**. É como diria Linus Torvalds, criador do Linux: *“falar é fácil, me mostre o código”.*
+
+<br />
+
+<h2>4. Git Bash</h2>
+
+
+
+O Git for Windows fornece uma emulação **BASH - Terminal do Linux**, o **Git Bash**, para executar o Git a partir da linha de comando do Linux. A emulação do BASH, no Git Bash, se comporta exatamente como o comando "git" em ambientes LINUX. Na imagem abaixo, temos a tela do Git Bash:
+
+<div align="center"><img src="https://i.imgur.com/6zzIwgN.png" title="source: imgur.com" width="90%"/></div>
+
+Observe que o prompt do Git Bash é diferente do CMD.
+
+<br />
+
+<h3>4.1. Comandos equivalentes no Gitbash</h3>
+
+Como o **Git Bash** emula o BASH, ele utiliza os comandos padrão do Terminal Linux. Na tabela abaixo, vamos conhecer os comandos utilizados pelo Git Bash, que são equivalentes ao comandos do Terminal do Windows - CMD:
+
+| Comando Windows      | Comando Gitbash   | Exemplo                           |
+| -------------------- | ----------------- | --------------------------------- |
+| **date<br />time**   | date              | *date*                            |
+| **cls**              | clear             | *clear*                           |
+| **dir**              | ls                | *ls<br />ls -a<br />ls -la*       |
+| **cd**               | cd                | *cd pasta01*                      |
+| **cd %USERPROFILE%** | cd ~              | *cd ~*                            |
+| **md**               | mkdir             | *mkdir pasta02*                   |
+| **notepad**          | touch             | *touch arquivo1.txt arquivo2.txt* |
+| **copy**             | cp                | *cp arquivo1.txt pasta2*          |
+| **xcopy**            | cp -r             | *cp pasta1 pasta2*                |
+| **ren**              | mv                | *mv arquivo1.txt arquivo3.txt*    |
+| **move**             | mv                | *mv arquivo3.txt pasta2*          |
+| **del**              | rm                | *rm arquivo2.txt*                 |
+| **rd<br />rd /s**    | rmdir<br />rm -rf | *rmdir pasta1<br />rm -rf pasta2* |
 
 <br /><br />
 
