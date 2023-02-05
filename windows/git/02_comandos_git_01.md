@@ -365,7 +365,7 @@ git diff
 
 3. O comando **git diff** retornará que o arquivo **spring.txt** foi modificado e indica quais foram as alterações, como mostra a imagem abaixo:
 
-<div align="left"><img src="https://i.imgur.com/B7tUQdv.png" title="source: imgur.com" /></div>
+<div align="left"><img src="https://i.imgur.com/bw6Sewy.png" title="source: imgur.com" /></div>
 
 4. Para verificar as alterações no repositório, utilize o comando:
 
