@@ -355,7 +355,7 @@ git log
 
 1. Volte para **VSCode**, abra o arquivo **spring.txt** e atualize o seu conteúdo:
 
-- **spring.txt:** Spring é um framwework Java.
+- **spring.txt:** Spring é um framework Java.
 
 2. Para checar as mudanças que aconteceram no arquivo **spring.txt**, utilize o comando:
 
