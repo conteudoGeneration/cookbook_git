@@ -292,7 +292,7 @@ touch spring.txt docker.txt
 
 2. Na sequência, volte para **VSCode**, abra os 2 arquivos e adicione as seguintes frases em cada arquivo:
 
-- **spring.txt:** Spring é um framwework.
+- **spring.txt:** Spring é um framework.
 - **docker.txt:** Docker é um gerenciador de containers.
 
 3. Para verificar as alterações no repositório, utilize o comando:
