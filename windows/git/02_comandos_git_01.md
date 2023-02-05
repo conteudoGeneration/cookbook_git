@@ -48,12 +48,6 @@ git config user.email
 
 7. Para configurar o **Editor de Código padrão** do Git, digite o comando:
 
-**Configurar o Nano:**
-
-```bash
-git config --global core.editor nano
-```
-
 **Configurar o VSCode:**
 
 ```bash
