@@ -16,6 +16,8 @@ git version
 git config --list 
 ```
 
+Para sair da listagem do comando, caso seja necessário, pressione a letra **q** do seu teclado.
+
 *Caso não apareça nenhuma configuração, você ainda não configurou o seu Git.*
 
 3. Para configurar o seu **nome** no Git, digite o comando:
@@ -51,7 +53,13 @@ git config user.email
 **Configurar o VSCode:**
 
 ```bash
-git config --global core.editor 'code --wait'
+git config --global core.editor "code --wait"
+```
+
+**Caso o VSCode não esteja abrindo, utilize o comando abaixo, para atualizar o editor:**
+
+```bash
+git config --global --replace-all core.editor "code --wait"`
 ```
 
 8. Para verificar se o seu **Editor de Código** foi configurado corretamente no Git, digite o comando:
@@ -101,7 +109,7 @@ git config pull.rebase false
 1. Vamos checar qual é a sua pasta atual. Digite o comando:
 
 ```bash
-pwd
+echo %CD%
 ```
 
 *Verifique se você está na pasta do seu usuário (Home Directory).* 
@@ -109,13 +117,13 @@ pwd
 2. Caso não esteja na pasta do seu usuário, digite o comando:
 
 ```bash
-cd ~
+cd %USERPROFILE%
 ```
 
 3. Vamos criar o nosso primeiro repositório na pasta do usuário. Vamos criar a pasta **aulagit**, através do comando:
 
 ```bash
-mkdir aulagit
+md aulagit
 ```
 
 4. Na sequência vamos acessar esta pasta através do comando:
@@ -145,7 +153,7 @@ O comando **git status** mostra se a pasta atual é um repositório e qual é o 
 8. Uma outra forma de verificar se o repositório foi criado é através do comando:
 
 ```bash
-ls -a
+dir /a
 ```
 
 *Observe que dentro da pasta aula git, foi criada uma pasta oculta com chamada **.git***
@@ -176,13 +184,7 @@ O comando acima exibirá que no momento, o **HEAD** do repositório está na bra
 
 <h2>3.Versionando os arquivos no repositório local</h2>
 
-1. Antes começarmos a versionar, vamos criar alguns arquivos dentro do nosso repositório, através dos comandos abaixo:
-
-```bash
-touch portugol.txt java.txt mysql.txt
-```
-
-2. Na sequência, vamos editar os arquivos no VSCode, através do comando:
+1. Antes começarmos a versionar, vamos criar alguns arquivos dentro do nosso repositório, através do VSCode, digitando o comando:
 
 ```bash
 code .
@@ -190,17 +192,17 @@ code .
 
 <br />
 
-3. A pasta **aulagit** será aberta no **VSCode**, como mostra a imagem abaixo:
+2. A pasta **aulagit** será aberta no **VSCode**, como mostra a imagem abaixo:
 
 <div align="center"><img src="https://i.imgur.com/z6LMMQn.png" title="source: imgur.com" width="90%"/></div>
 
-4. Vamos editar os 3 arquivos e adicionar as seguintes frases em cada arquivo:
+3. No VSCode, crie os 3 arquivos indicados abaixo e adicione as seguintes frases em cada arquivo:
 
 - **portugol.txt:** Portugol é uma pseudo linguagem.
 - **java.txt:** Java é uma Linguagem de programação.
 - **mysql.txt:** MySQL é um Sistema Gerenciador de Banco de dados.
 
-5. Na sequência, vamos adicionar os arquivos no índice do repositório (Staging), através do comando:
+4. Na sequência, vamos adicionar os arquivos no índice do repositório (Staging), através do comando:
 
 ```bash
 git add .
@@ -213,17 +215,17 @@ O conteúdo adicionado é enviado para o **Staging**, que é um espaço temporá
 | <img src="https://i.imgur.com/RfjtOFi.png" title="source: imgur.com" width="120px"/> | <div align="left">**DICA:** O git não versiona pastas vazias. Para versionar uma pasta é necessário adicionar arquivos dentro dela.</div> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
-6. Para verificar as alterações no repositório, utilize o comando:
+5. Para verificar as alterações no repositório, utilize o comando:
 
 ```bash
 git status
 ```
 
-7. O comando **git status** retornará que existem arquivos aguardando para serem "commitados" no índice do repositório, como mostra a imagem abaixo:
+6. O comando **git status** retornará que existem arquivos aguardando para serem "commitados" no índice do repositório, como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/WpqHlSQ.png" title="source: imgur.com" /></div>
 
-8. Para "commitar" os arquivos, utilize o comando:
+7. Para "commitar" os arquivos, utilize o comando:
 
 ```bash
 git commit -m "Meu primeiro commit"
@@ -233,27 +235,29 @@ O comando **git commit** cria um novo commit com todos os conteúdos atuais do �
 
 > Os **commits** são as principais unidades de bloco de construção de uma linha do tempo do projeto Git. Os commits podem ser considerados instantâneos ou marcos ao longo da linha do tempo de um projeto Git. Os commits são criados com o comando **git commit** para capturar o estado de um projeto naquele momento.
 
-9. Após executar o comando, será exibida a mensagem abaixo:
+8. Após executar o comando, será exibida a mensagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/F5lijPS.png" title="source: imgur.com" /></div>
 
-10. Para verificar se os arquivos e pastas foram "commitados", utilize o comando:
+9. Para verificar se os arquivos e pastas foram "commitados", utilize o comando:
 
 ```bash
 git status
 ```
 
-11. O comando **git status** retornará que não existem arquivos aguardando para serem "commitados", como mostra a imagem abaixo:
+10. O comando **git status** retornará que não existem arquivos aguardando para serem "commitados", como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/BOIgZ5Y.png" title="source: imgur.com" /></div>
 
-12. Para visualizar as informações do histórico de commits, utilize o comando:
+11. Para visualizar as informações do histórico de commits, utilize o comando:
 
 ```bash
 git log
 ```
 
-13. Observe na imagem abaixo, que serão exibidos todos os detalhes do commit:
+Para sair da listagem do comando **git log**, caso seja necessário, pressione a letra **q** do seu teclado.
+
+12. Observe na imagem abaixo, que serão exibidos todos os detalhes do commit:
 
 <div align="left"><img src="https://i.imgur.com/IxI238Z.png" title="source: imgur.com" /></div>
 
@@ -284,66 +288,60 @@ A **HEAD** aponta para o **último commit**, que foi realizado no repositório, 
 
 Vamos entender o fluxo na prática! 
 
-1. Crie mais 2 arquivos dentro do nosso repositório, através dos comandos abaixo:
-
-```bash
-touch spring.txt docker.txt
-```
-
-2. Na sequência, volte para **VSCode**, abra os 2 arquivos e adicione as seguintes frases em cada arquivo:
+1. Crie mais 2 arquivos dentro do nosso repositório, através do **VSCode** e adicione as seguintes frases em cada arquivo:
 
 - **spring.txt:** Spring é um framework.
 - **docker.txt:** Docker é um gerenciador de containers.
 
-3. Para verificar as alterações no repositório, utilize o comando:
+2. Para verificar as alterações no repositório, utilize o comando:
 
 ```bash
 git status
 ```
 
-4. O comando **git status** retornará que existem arquivos que não foram adicionados no índice do repositório, como mostra a imagem abaixo:
+3. O comando **git status** retornará que existem arquivos que não foram adicionados no índice do repositório, como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/JIpTtvE.png" title="source: imgur.com" /></div>
 
-5. Na sequência, vamos adicionar os arquivos no índice do repositório, através do comando:
+4. Na sequência, vamos adicionar os arquivos no índice do repositório, através do comando:
 
 ```bash
 git add .
 ```
 
-6. Para verificar as alterações no repositório, utilize o comando:
+5. Para verificar as alterações no repositório, utilize o comando:
 
 ```bash
 git status
 ```
 
-7. O comando **git status** retornará que existem arquivos aguardando para serem "commitados" no índice do repositório, como mostra a imagem abaixo:
+6. O comando **git status** retornará que existem arquivos aguardando para serem "commitados" no índice do repositório, como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/kAbUDmf.png" title="source: imgur.com" /></div>
 
-8. Para "commitar" os arquivos, utilize o comando:
+7. Para "commitar" os arquivos, utilize o comando:
 
 ```bash
 git commit -m "Meu segundo commit"
 ```
 
-9. Para verificar as alterações no repositório, utilize o comando:
+8. Para verificar as alterações no repositório, utilize o comando:
 
 ```bash
 git status
 ```
 
-10. O comando **git status** retornará que não existem arquivos aguardando para serem "commitados", como mostra a imagem abaixo:
+9. O comando **git status** retornará que não existem arquivos aguardando para serem "commitados", como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/BOIgZ5Y.png" title="source: imgur.com" /></div>
 
-11. Para visualizar as informações do histórico de commits, utilize o comando:
+10. Para visualizar as informações do histórico de commits, utilize o comando:
 
 ```bash
 git log
 ```
 
-12. Observe na imagem abaixo, que serão exibidos todos os detalhes do commit:
+11. Observe na imagem abaixo, que serão exibidos todos os detalhes do commit:
 
 <div align="left"><img src="https://i.imgur.com/esS7wBR.png" title="source: imgur.com" /></div>
 

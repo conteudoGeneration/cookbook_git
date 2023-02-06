@@ -6,29 +6,32 @@
 
 Antes de clonarmos o repositório remoto, vamos apagar o nosso repositório local, para simularmos um acidente de percurso.
 
-1. Vamos retornar para a pasta do usuário, através do comando:
+1. Feche o **VSCode**, caso esteja aberto
+1. Volte para a pasta do usuário, através do comando:
 
 ```bash
-cd ~
+cd %USERPROFILE%%
 ```
 
-2. Na sequência, vamos apagar a pasta **aulagit** através do comando:
+3. Na sequência, vamos apagar a pasta **aulagit** através do comando:
 
 ```bash
-rm -Rf aulagit
+rd /s aulagit
 ```
 
-3. Para confirmar que a pasta foi apagada, utilize o comando abaixo:
+Será questionado se você tem certeza que deseja excluir a pasta? Responda SIM (**s**).
+
+4. Para confirmar que a pasta foi apagada, utilize o comando abaixo:
 
 ```bash
-ls
+dir
 ```
 
-4. Volte para o repositório remoto **aulagit** no Github e copie o endereço **HTTPS** do repositório, como indicado na imagem abaixo:
+5. Volte para o repositório remoto **aulagit** no Github e copie o endereço **HTTPS** do repositório, como indicado na imagem abaixo:
 
 <div align="center"><img src="https://i.imgur.com/VKmyqsN.png" title="source: imgur.com" /></div>
 
-5. Para clonar o repositório, utilize o comando abaixo:
+6. Para clonar o repositório, utilize o comando abaixo:
 
 ```bash
 git clone https://github.com/rafaelq80/aulagit.git
@@ -36,31 +39,31 @@ git clone https://github.com/rafaelq80/aulagit.git
 
 *Observe que o endereço do repositório remoto foi adicionado depois do comando **git clone**.*
 
-6. Ao efetuar a clonagem (cópia do repositório), será exibida a mensagem abaixo:
+7. Ao efetuar a clonagem (cópia do repositório), será exibida a mensagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/f2HWeaP.png" title="source: imgur.com" /></div>
 
-7. Para confirmar que a clonagem foi bem sucedida, utilize o comando abaixo:
+8. Para confirmar que a clonagem foi bem sucedida, utilize o comando abaixo:
 
 ```bash
-ls
+dir
 ```
 
 *Observe que a pasta **aulagit** foi restaurada.*
 
-8. Para acessar a pasta, utilize o comando:
+9. Para acessar a pasta, utilize o comando:
 
 ```bash
 cd aulagit
 ```
 
-9. Para verificar se o repositório clonado está conectado com o repositório do Github, utilize o comando abaixo:
+10. Para verificar se o repositório clonado está conectado com o repositório do Github, utilize o comando abaixo:
 
 ```bash
 git remote -v
 ```
 
-10. Ao executar o comando acima, será exibida a mensagem abaixo:
+11. Ao executar o comando acima, será exibida a mensagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/rURPm9E.png" title="source: imgur.com" /></div>
 
@@ -394,6 +397,12 @@ git commit --amend
 ```
 
 *O Editor padrão do Git será aberto. Altere a mensagem e feche o editor.*
+
+Outra opção, para não utilizar o editor, é utilizar o comando:
+
+```bash
+git commit --amend -m "Mensagem nova"
+```
 
 8. Renomear a Branch master para main
 

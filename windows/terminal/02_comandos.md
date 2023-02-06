@@ -164,6 +164,12 @@ Para acessar a pasta do usuário (home directory), utilize o comando:
 cd %USERPROFILE%
 ```
 
+%USERPROFILE% é uma variável de ambiente padrão do Windows. Para consultar todas as variáveis disponíveis no seu Sistema Operacional, utilize o comando:
+
+```bash
+set
+```
+
 <br />
 
 <img src="https://i.imgur.com/4kDRTbu.png" title="source: imgur.com" width="3%"/>**Exemplo 04:**
