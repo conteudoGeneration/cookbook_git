@@ -27,6 +27,8 @@ notepad .gitignore
 6. Será aberta a janela do **Notepad (Bloco de Notas)**, solicitando a criação do arquivo. Clique no botão **Sim**, para continuar.
 <div align="center"><img src="https://i.imgur.com/IkFtVpL.png" title="source: imgur.com" /></div>
 
+<br />
+
 > O Git enxerga cada arquivo no seu Repositório Remoto com um dos três estados abaixo:
 >
 > 1. **Rastreado** – Um arquivo que já passou pelo staging ou commit;
@@ -43,6 +45,8 @@ notepad .gitignore
 > - arquivos pessoais de configuração do IDE, como `.idea/workspace.xml`
 >
 > Os arquivos ignorados são rastreados em um arquivo especial chamado `.gitignore`, que é verificado na origem do seu repositório. Não há nenhum comando git ignore explícito: é preciso editar e fazer commit do arquivo `.gitignore` à mão quando você tiver novos arquivos que quer ignorar. Os arquivos `.gitignore` contêm padrões que são comparados com nomes de arquivos em seu repositório para determinar se devem ou não ser ignorados. Por isso adicionamos o arquivo .gitignore manualmente.
+
+<br />
 
 7. No arquivo **.gitignore**, adicione a linha **.metadata** e na sequência salve e feche o arquivo.
 
@@ -111,7 +115,7 @@ git push origin main
 
 <div align="center"><img src="https://i.imgur.com/HQANKTE.png" title="source: imgur.com" /></div>
 
-
+<br />
 
 <h1>Esqueci de criar o .gitignore</h1>
 
