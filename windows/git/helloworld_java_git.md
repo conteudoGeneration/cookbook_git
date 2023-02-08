@@ -1,4 +1,4 @@
-<h1>Enviando o primeiro Projeto Java para o Github</h1>
+<h1>1. Enviando o primeiro Projeto Java para o Github</h1>
 
 
 
@@ -117,7 +117,7 @@ git push origin main
 
 <br />
 
-<h1>Esqueci de criar o .gitignore</h1>
+<h1>2. Esqueci de criar o .gitignore</h1>
 
 
 
@@ -212,7 +212,7 @@ Observe que a pasta **.metadata** foi excluída do **Repositório Remoto**.
 
 
 
-<h1>Criei um novo Projeto na Workspace</h1>
+<h1>3. Criei um novo Projeto na Workspace</h1>
 
 
 
