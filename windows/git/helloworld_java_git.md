@@ -234,3 +234,7 @@ git push origin main
 ```
 
 4. Volte para o Github, atualize a página do seu **Repositório Remoto** e verifique se ele foi atualizado.
+
+<br /><br />
+
+<div align="left"><a href="../README.md"><img src="https://i.imgur.com/XMgF3gl.png" title="source: imgur.com" width="3%"/>Voltar</a></div>
