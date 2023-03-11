@@ -1,6 +1,8 @@
-<h1>1. Enviando o primeiro Projeto Java para o Github</h1>
+<h1>Enviando o Projeto Java para o Github</h1>
 
+Vamos configurar a pasta **Workspace** do Eclipse/STS para se tornar um Repositório Local do Git e conectá-la ao Repositório Remoto no Github. Desta forma, simplificaremos o processo de enviar os códigos criados em aula para o Github.
 
+<h2>1. Enviando o primeiro Projeto Java para o Github</h2>
 
 1. No Eclipse/STS, clique com o botão direito do mouse sobre a pasta do projeto (no exemplo abaixo, **helloworld**). No menu que será averto, clique na opção **Show in 🡒 System Explorer**, para exibir a pasta no Windows Explorer.
 
@@ -117,9 +119,7 @@ git push origin main
 
 <br />
 
-<h1>2. Esqueci de criar o .gitignore</h1>
-
-
+<h2>2. Esqueci de criar o .gitignore</h2>
 
 1. Caso você tenha esquecido de criar o **.gitignore**, o seu **Repositório Remoto** estará  semelhante a imagem abaixo:
 
@@ -210,11 +210,7 @@ Observe que a pasta **.metadata** foi excluída do **Repositório Remoto**.
 
 <br />
 
-
-
-<h1>3. Criei um novo Projeto na Workspace</h1>
-
-
+<h2>3. Criei um novo Projeto na Workspace</h2>
 
 No decorrer das aulas, serão criados vários projetos dentro da pasta Workspace. Para atualizar os Repositórios Local e Remoto, não será necessário criar um novo Repositório e fazer todo o processo acima. Para atualizar o Repositório atual, siga os passos abaixo:
 
