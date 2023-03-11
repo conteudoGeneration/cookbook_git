@@ -45,7 +45,11 @@
     </tr>
     <tr>
         <td width="10%"><img src="https://i.imgur.com/JACNZiR.png" title="source: imgur.com" /></td>
-        <td width="90%"><a href="git/04_git_review.md">05-Revisão - Fluxo git</a></td>
+        <td width="90%"><a href="git/helloworld_java_git.md">05-Enviando Projeto Java para o Github</a></td>
+    </tr>
+    <tr>
+        <td width="10%"><img src="https://i.imgur.com/JACNZiR.png" title="source: imgur.com" /></td>
+        <td width="90%"><a href="git/04_git_review.md">06-Revisão - Fluxo git</a></td>
     </tr>
 </table>
 
