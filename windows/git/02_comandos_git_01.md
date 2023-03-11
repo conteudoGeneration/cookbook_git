@@ -508,7 +508,14 @@ Vamos criar o repositório no Github:
 git remote add origin https://github.com/rafaelq80/aulagit.git
 ```
 
-*Observe que depois da palavra origin foi inserido o **endereço SSH do Repositório Remoto** que foi copiado do Github.*
+*Observe que depois da palavra origin foi inserido o **endereço HTTPS do Repositório Remoto** que foi copiado do Github.*
+
+<br />
+
+| <img src="https://i.imgur.com/RfjtOFi.png" title="source: imgur.com" width="100px"/> | <div align="left">**DICA:** *Para colar um conteúdo no Terminal do Windows, utilize o botão direito do mouse ou a combinação de teclas `SHIFT + INSERT` do seu teclado.* </div> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+
+<br />
 
 2. Para confirmar se o Repositório Local está conectado com o Repositório Remoto, utilize o comando:
 

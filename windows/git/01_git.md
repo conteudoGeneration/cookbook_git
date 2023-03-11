@@ -113,9 +113,7 @@ Uma das formas de mostrar o seu trabalho para outras pessoas, em  especial, empr
 
 <h2>4. Git Bash</h2>
 
-
-
-O Git for Windows fornece uma emulação **BASH - Terminal do Linux**, o **Git Bash**, para executar o Git a partir da linha de comando do Linux. A emulação do BASH, no Git Bash, se comporta exatamente como o comando "git" em ambientes LINUX. Na imagem abaixo, temos a tela do Git Bash:
+O Git for Windows fornece uma emulação do **Terminal BASH - Terminal padrão do Linux**, chamado de **Git Bash**, para executar os comandos Git a partir da linha de comando do Linux. O Git Bash se comporta exatamente como o Terminal BASH do ambientes LINUX. Na imagem abaixo, temos a tela do Git Bash:
 
 <div align="center"><img src="https://i.imgur.com/6zzIwgN.png" title="source: imgur.com" width="90%"/></div>
 
@@ -125,7 +123,7 @@ Observe que o prompt do Git Bash é diferente do CMD.
 
 <h3>4.1. Comandos equivalentes no Gitbash</h3>
 
-Como o **Git Bash** emula o BASH, ele utiliza os comandos padrão do Terminal Linux. Na tabela abaixo, vamos conhecer os comandos utilizados pelo Git Bash, que são equivalentes ao comandos do Terminal do Windows - CMD:
+Como o **Git Bash** emula o BASH, ele utiliza os comandos padrão do Terminal Linux. Na tabela abaixo, vamos conhecer os comandos utilizados pelo Git Bash, que são equivalentes aos comandos do Terminal do Windows - CMD:
 
 | Comando Windows      | Comando Gitbash   | Exemplo                           |
 | -------------------- | ----------------- | --------------------------------- |
