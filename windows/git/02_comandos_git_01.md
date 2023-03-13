@@ -93,7 +93,7 @@ git config --list
 12. Para utilizar a estratégia de mesclagem de repositórios padrão ao invés de usar a estratégia de mesclagem rebase, digite o comando:
 
 ```bash
-git config pull.rebase false
+git config --global pull.rebase false
 ```
 
 *Como a estratégia rebase pode afetar os commits do repositório remoto de outros usuários, aumentando a probabilidade de conflitos, é recomendado utilizar a estratégia padrão. O comando acima desativa a estratégia rebase como estratégia padrão.*
