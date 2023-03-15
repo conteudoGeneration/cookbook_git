@@ -123,7 +123,7 @@ git log
 
 <br />
 
-<h2>2. Atualizar o Repositório Remoto no Github</h2>
+<h2>3. Atualizar o Repositório Remoto no Github</h2>
 
 
 
