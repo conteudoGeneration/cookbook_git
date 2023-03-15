@@ -6,7 +6,7 @@ O que veremos por aqui:
 - Atualizar o Repositório Git Local
 - Atualizar o Repositório Remoto no Github
 
-<h2>1. Configurar o Windows Explorer para exibir arquivos ocultos</h2>
+<h2>1. Visualizar a pasta Workspace</h2>
 
 1. No Eclipse/STS, clique com o botão direito do mouse sobre a pasta do projeto (no exemplo abaixo, **helloworld**). No menu que será aberto, clique na opção **Show in 🡒 System Explorer**, para exibir a pasta no Windows Explorer.
 
