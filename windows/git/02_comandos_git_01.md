@@ -59,7 +59,7 @@ git config --global core.editor "code --wait"
 **Caso o VSCode não esteja abrindo, utilize o comando abaixo, para atualizar o editor:**
 
 ```bash
-git config --global --replace-all core.editor "code --wait"`
+git config --global --replace-all core.editor "code --wait"
 ```
 
 8. Para verificar se o seu **Editor de Código** foi configurado corretamente no Git, digite o comando:
