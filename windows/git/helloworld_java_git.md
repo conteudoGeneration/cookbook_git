@@ -4,7 +4,7 @@ Vamos configurar a pasta **Workspace** do Eclipse/STS para se tornar um Reposit�
 
 <h2>1. Enviando o primeiro Projeto Java para o Github</h2>
 
-1. No Eclipse/STS, clique com o botão direito do mouse sobre a pasta do projeto (no exemplo abaixo, **helloworld**). No menu que será averto, clique na opção **Show in 🡒 System Explorer**, para exibir a pasta no Windows Explorer.
+1. No Eclipse/STS, clique com o botão direito do mouse sobre a pasta do projeto (no exemplo abaixo, **helloworld**). No menu que será aberto, clique na opção **Show in 🡒 System Explorer**, para exibir a pasta no Windows Explorer.
 
 <div align="center"><img src="https://i.imgur.com/cR65mhl.png" title="source: imgur.com" /></div>
 
