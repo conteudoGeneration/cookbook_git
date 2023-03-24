@@ -53,6 +53,10 @@
     </tr>	
     <tr>
         <td width="10%"><img src="https://i.imgur.com/JACNZiR.png" title="source: imgur.com" /></td>
+        <td width="90%"><a href="git/criar_workspace.md">07-Criando uma nova Workspace no Eclipse/STS</a></td>
+    </tr>	
+    <tr>
+        <td width="10%"><img src="https://i.imgur.com/JACNZiR.png" title="source: imgur.com" /></td>
         <td width="90%"><a href="git/04_git_review.md">07-Revisão - Fluxo git</a></td>
     </tr>
 </table>
