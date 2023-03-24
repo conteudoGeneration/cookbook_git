@@ -16,7 +16,7 @@ Quando você inicia o Eclipse/STS pela primeira vez , uma tela semelhante a imag
 
 Para manter o Projeto Java separado dos outros projetos criados em aula, vamos criar uma Workspace exclusiva no Eclipse/STS.
 
-1. No Eclipse/STS, clique no Menu **Flile 🡪 Switch Workspace 🡪 Other...**
+1. No Eclipse/STS, clique no Menu **File 🡪 Switch Workspace 🡪 Other...**
 
 <div align="center"><img src="https://i.imgur.com/juxTdbL.gif" title="source: imgur.com" /></div>
 
@@ -56,7 +56,7 @@ Em caso de dúvidas, consulte os Guias:
 
 Para trocar de Workspace:
 
-1. No Eclipse/STS, clique no Menu **Flile 🡪 Switch Workspace **. No menu, clique na Workspace que você deseja abrir.
+1. No Eclipse/STS, clique no Menu **File 🡪 Switch Workspace**. No menu, clique na Workspace que você deseja abrir.
 
 <div align="center"><img src="https://i.imgur.com/IW3OjxX.gif" title="source: imgur.com" /></div>
 
