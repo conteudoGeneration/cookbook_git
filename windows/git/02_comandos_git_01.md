@@ -1,110 +1,6 @@
 <h1>Comandos do Git - Parte 01</h1>
 
-
-
-<h2>1.Configurando o Git</h2>
-
-1. Para verificar se o Git está instalado no sistema e a versão, digite o comando:
-
-```bash
-git version
-```
-
-2. Para listar todas as configurações do Git, digite o comando:
-
-```bash
-git config --list 
-```
-
-Para sair da listagem do comando, caso seja necessário, pressione a letra **q** do seu teclado.
-
-*Caso não apareça nenhuma configuração, você ainda não configurou o seu Git.*
-
-3. Para configurar o seu **nome** no Git, digite o comando:
-
-```bash
-git config --global user.name "Seu_Nome"
-```
-
-*Substitua Seu_Nome, pelo seu nome. Exemplo: João*
-
-4. Para verificar se o seu **nome** foi configurado corretamente no Git, digite o comando:
-
-```bash
-git config user.name
-```
-
-5. Para configurar o seu **e-mail** no Git, digite o comando:
-
-```bash
-git config --global user.email "seu_email@email.com"
-```
-
-*Substitua seu_email, pelo seu e-mail cadastrado no Github. Exemplo: joao@email.com*
-
-6. Para verificar se o seu **e-mail** foi configurado corretamente no Git, digite o comando:
-
-```bash
-git config user.email
-```
-
-7. Para configurar o **Editor de Código padrão** do Git, digite o comando:
-
-**Configurar o VSCode:**
-
-```bash
-git config --global core.editor "code --wait"
-```
-
-**Caso o VSCode não esteja abrindo, utilize o comando abaixo, para atualizar o editor:**
-
-```bash
-git config --global --replace-all core.editor "code --wait"
-```
-
-8. Para verificar se o seu **Editor de Código** foi configurado corretamente no Git, digite o comando:
-
-```bash
-git config core.editor
-```
-
-9. Para configurar o **nome padrão da branch principal** do repositório Git, digite o comando:
-
-```bash
-git config --global init.defaultBranch main
-```
-
-> Esta configuração é importante para que todes os seus repositórios, a branch principal seja definida como **main**.
-
-10. Para verificar se o **nome padrão da branch principal** foi configurado como main, digite o comando:
-
-```bash
-git config init.defaultBranch
-```
-
-11. Para listar todas as configurações do Git, digite o comando:
-
-```bash
-git config --list 
-```
-
-*Observe que desta vez será exibida uma lista com todas as configurações você fez no seu Git.*
-
-12. Para utilizar a estratégia de mesclagem de repositórios padrão ao invés de usar a estratégia de mesclagem rebase, digite o comando:
-
-```bash
-git config --global pull.rebase false
-```
-
-*Como a estratégia rebase pode afetar os commits do repositório remoto de outros usuários, aumentando a probabilidade de conflitos, é recomendado utilizar a estratégia padrão. O comando acima desativa a estratégia rebase como estratégia padrão.*
-
-<br />
-
-<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-config/pt_BR" target="_blank"><b>Documentação: <i>Git Config</i></b></a></div>
-
-<br />
-
-<h2>2.Criando o seu primeiro repositório local</h2>
+<h2>1.Criando o seu primeiro repositório local</h2>
 
 1. Vamos checar qual é a sua pasta atual. Digite o comando:
 
@@ -182,7 +78,7 @@ O comando acima exibirá que no momento, o **HEAD** do repositório está na bra
 
 <br />
 
-<h2>3.Versionando os arquivos no repositório local</h2>
+<h2>2.Versionando os arquivos no repositório local</h2>
 
 1. Antes começarmos a versionar, vamos criar alguns arquivos dentro do nosso repositório, através do VSCode, digitando o comando:
 
@@ -274,7 +170,7 @@ Para sair da listagem do comando **git log**, caso seja necessário, pressione a
 
 <br />
 
-<h2>4.Entendendo o fluxo de trabalho do Git</h2>
+<h2>3.Entendendo o fluxo de trabalho do Git</h2>
 
 Os seus repositórios locais consistem em três "árvores" mantidas pelo git:
 
@@ -349,7 +245,7 @@ git log
 
 <br />
 
-<h2>5.Atualizar o conteúdo de um arquivo</h2>
+<h2>4.Atualizar o conteúdo de um arquivo</h2>
 
 1. Volte para **VSCode**, abra o arquivo **spring.txt** e atualize o seu conteúdo:
 
@@ -426,7 +322,7 @@ git log
 
 <br />
 
-<h2>6.Desfazendo um commit</h2>
+<h2>5.Desfazendo um commit</h2>
 
 1. Vamos desfazer o commit **Meu terceiro commit**, através do comando:
 
@@ -476,9 +372,9 @@ git commit -a -m "Meu terceiro commit"
 
 <br />
 
-<h2>7.Publicando o Repositório Local no Github</h2>
+<h2>6.Publicando o Repositório Local no Github</h2>
 
-<h3>7.1.Criar o Repositório Remoto no Github</h3>
+<h3>6.1.Criar o Repositório Remoto no Github</h3>
 
 
 Vamos criar o repositório no Github:
@@ -500,7 +396,7 @@ Vamos criar o repositório no Github:
 
 6. Copie o endereço do Repositório indicado pela seta amarela. Observe que foi copiado o endereço **HTTPS**.
 
-<h3>7.2.Conectar o Repositório Local com o Repositório Remoto</h3>
+<h3>6.2.Conectar o Repositório Local com o Repositório Remoto</h3>
 
 1. Crie a conexão do Repositório Local com o Repositório Remoto, através do comando:
 
@@ -527,7 +423,7 @@ git remote -v
 
 <div align="left"><img src="https://i.imgur.com/rURPm9E.png" title="source: imgur.com" /></div>
 
-<h3>7.3.Enviar o conteúdo do Repositório Local para o Github</h3>
+<h3>6.3.Enviar o conteúdo do Repositório Local para o Github</h3>
 
 1. Envie o conteúdo do Repositório Local para o Repositório Remoto, através do comando:
 
