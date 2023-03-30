@@ -49,7 +49,7 @@
     </tr>
     <tr>
         <td width="10%"><img src="https://i.imgur.com/JACNZiR.png" title="source: imgur.com" /></td>
-        <td width="90%"><a href="git/04_git_review.md">04-Revisão - Fluxo git</a></td>
+        <td width="90%"><a href="git/04_git_review.md">06-Revisão - Fluxo git</a></td>
     </tr>
 </table>
 
@@ -77,17 +77,13 @@
 <h2><img src="https://i.imgur.com/cDPH4tl.png" title="source: imgur.com" width="35px"/>Redes de Computadores</h2>
 
 <table width="100%">
-	<tr>
-        <td width="10%"><img src="https://i.imgur.com/cDPH4tl.png" title="source: imgur.com" /></td>
-        <td width="90%"><a href="redes/01_introducao_redes.md">01-Introdução a Redes de Computadores</a></td>
-    </tr>
     <tr>
         <td width="10%"><img src="https://i.imgur.com/za4tPUA.png" title="source: imgur.com" /></td>
-        <td width="90%"><a href="redes/02_comandos_rede.md">02-Comandos do Terminal do Windows - Redes</a></td>
+        <td width="90%"><a href="redes/02_comandos_rede.md">01-Comandos do Terminal do Windows - Redes</a></td>
     </tr>
     <tr>
         <td width="10%"><img src="https://i.imgur.com/cDPH4tl.png" title="source: imgur.com" /></td>
-        <td width="90%"><a href="redes/03_ferramentas_dev.md">03-Ferramentas de Desenvolvimento</a></td>
+        <td width="90%"><a href="redes/03_ferramentas_dev.md">02-Ferramentas de Desenvolvimento</a></td>
     </tr>
 </table>
 
