@@ -5,7 +5,7 @@
 1. Vamos checar qual é a sua pasta atual. Digite o comando:
 
 ```bash
-echo %CD%
+pwd
 ```
 
 *Verifique se você está na pasta do seu usuário (Home Directory).* 
@@ -13,19 +13,19 @@ echo %CD%
 2. Caso não esteja na pasta do seu usuário, digite o comando:
 
 ```bash
-cd %USERPROFILE%
+cd ~
 ```
 
 3. Vamos criar o nosso primeiro repositório na pasta do usuário. Vamos criar a pasta **aulagit**, através do comando:
 
 ```bash
-md aulagit
+mkdir aula_git
 ```
 
 4. Na sequência vamos acessar esta pasta através do comando:
 
 ```bash
-cd aulagit
+cd aula_git
 ```
 
 5. Dentro da pasta **aulagit**, vamos criar o nosso **Repositório Git Local**, através do comando:
@@ -49,7 +49,7 @@ O comando **git status** mostra se a pasta atual é um repositório e qual é o 
 8. Uma outra forma de verificar se o repositório foi criado é através do comando:
 
 ```bash
-dir /a
+ls -a
 ```
 
 *Observe que dentro da pasta aula git, foi criada uma pasta oculta com chamada **.git***

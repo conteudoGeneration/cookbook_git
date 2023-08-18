@@ -153,7 +153,7 @@ produtividade, pois muitas tarefas podem ser automatizadas.
 
 <h3>5.1. Atalhos do Terminal</h3>
 
-Dentro do Terminal do Mac, 99% dos comandos são inseridos via teclado. O mouse praticamente não possui funcionalidade dentro do Terminal, no máximo selecionar o texto para copiar ou colar comandos. Todo o resto é feito via teclado. Abaixo, temos uma tabela contendo os principais atalhos do Terminal do Mac:
+Dentro do Terminal do Windows, 99% dos comandos são inseridos via teclado. O mouse praticamente não possui funcionalidade dentro do Terminal, no máximo selecionar o texto para copiar ou colar comandos. Todo o resto é feito via teclado. Abaixo, temos uma tabela contendo os principais atalhos do Terminal do Mac:
 
 | Atalho                           | Descrição                           |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -169,6 +169,43 @@ Dentro do Terminal do Mac, 99% dos comandos são inseridos via teclado. O mouse 
 | **Ctrl + 🠉 / 🠋**                | Move uma linha para cima ou para baixo no histórico do Prompt de Comando (é como usar a barra de rolagem). |
 | **Ctrl + Page Up / Page Down**  | Move uma página para cima ou para baixo na história do Prompt de Comando (é como rolar ainda mais longe). |
 | **Alt + F4**                    | Fecha a janela do prompt de comando.                         |
+
+
+
+<h2>6. Git Bash</h2>
+
+O Git for Windows fornece uma emulação do **Terminal BASH - Terminal padrão do Linux**, chamado de **Git Bash**, para executar os comandos Git a partir da linha de comando do Linux. O Git Bash se comporta exatamente como o Terminal BASH do ambientes LINUX. Na imagem abaixo, temos a tela do Git Bash:
+
+<div align="center"><img src="https://i.imgur.com/6zzIwgN.png" title="source: imgur.com" width="90%"/></div>
+
+Observe que o prompt do Git Bash é diferente do CMD.
+
+<br />
+
+<h3>6.1. Comandos equivalentes no Gitbash</h3>
+
+Como o **Git Bash** emula o BASH, ele utiliza os comandos padrão do Terminal Linux. Na tabela abaixo, vamos conhecer os comandos utilizados pelo Git Bash, que são equivalentes aos comandos do Terminal do Windows - CMD:
+
+| Comando Windows      | Comando Linux     | Exemplo                           |
+| -------------------- | ----------------- | --------------------------------- |
+| **date<br />time**   | date              | *date*                            |
+| **cls**              | clear             | *clear*                           |
+| **dir**              | ls                | *ls<br />ls -a<br />ls -la*       |
+| **cd**               | cd                | *cd pasta01*                      |
+| **cd %USERPROFILE%** | cd ~              | *cd ~*                            |
+| **md**               | mkdir             | *mkdir pasta02*                   |
+| **notepad**          | touch             | *touch arquivo1.txt arquivo2.txt* |
+| **copy**             | cp                | *cp arquivo1.txt pasta2*          |
+| **xcopy**            | cp -r             | *cp pasta1 pasta2*                |
+| **ren**              | mv                | *mv arquivo1.txt arquivo3.txt*    |
+| **move**             | mv                | *mv arquivo3.txt pasta2*          |
+| **del**              | rm                | *rm arquivo2.txt*                 |
+| **rd<br />rd /s**    | rmdir<br />rm -rf | *rmdir pasta1<br />rm -rf pasta2* |
+
+<br />
+
+| <img src="https://i.imgur.com/vVDBDG0.png" title="source: imgur.com" width="100px"/> | <div align="left"> **ALERTA DE BSM:** *Mantenha a Atenção aos Detalhes ao trabalhar com o Terminal. Em nosso treinamento vamos utilizar o Git Bash como Terminal, porque ele utiliza comandos Linux. A maioria dos Servidores WEB rodam o Sistema Operacional Linux, logo é importante conhecer os seus principais comandos* </div> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 <br /><br />
 

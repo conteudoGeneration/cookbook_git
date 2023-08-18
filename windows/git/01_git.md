@@ -109,38 +109,6 @@ Uma das formas de mostrar o seu trabalho para outras pessoas, em  especial, empr
 
 **Não há nada melhor do que provar suas habilidades através do código**. É como diria Linus Torvalds, criador do Linux: *“falar é fácil, me mostre o código”.*
 
-<br />
-
-<h2>4. Git Bash</h2>
-
-O Git for Windows fornece uma emulação do **Terminal BASH - Terminal padrão do Linux**, chamado de **Git Bash**, para executar os comandos Git a partir da linha de comando do Linux. O Git Bash se comporta exatamente como o Terminal BASH do ambientes LINUX. Na imagem abaixo, temos a tela do Git Bash:
-
-<div align="center"><img src="https://i.imgur.com/6zzIwgN.png" title="source: imgur.com" width="90%"/></div>
-
-Observe que o prompt do Git Bash é diferente do CMD.
-
-<br />
-
-<h3>4.1. Comandos equivalentes no Gitbash</h3>
-
-Como o **Git Bash** emula o BASH, ele utiliza os comandos padrão do Terminal Linux. Na tabela abaixo, vamos conhecer os comandos utilizados pelo Git Bash, que são equivalentes aos comandos do Terminal do Windows - CMD:
-
-| Comando Windows      | Comando Gitbash   | Exemplo                           |
-| -------------------- | ----------------- | --------------------------------- |
-| **date<br />time**   | date              | *date*                            |
-| **cls**              | clear             | *clear*                           |
-| **dir**              | ls                | *ls<br />ls -a<br />ls -la*       |
-| **cd**               | cd                | *cd pasta01*                      |
-| **cd %USERPROFILE%** | cd ~              | *cd ~*                            |
-| **md**               | mkdir             | *mkdir pasta02*                   |
-| **notepad**          | touch             | *touch arquivo1.txt arquivo2.txt* |
-| **copy**             | cp                | *cp arquivo1.txt pasta2*          |
-| **xcopy**            | cp -r             | *cp pasta1 pasta2*                |
-| **ren**              | mv                | *mv arquivo1.txt arquivo3.txt*    |
-| **move**             | mv                | *mv arquivo3.txt pasta2*          |
-| **del**              | rm                | *rm arquivo2.txt*                 |
-| **rd<br />rd /s**    | rmdir<br />rm -rf | *rmdir pasta1<br />rm -rf pasta2* |
-
 <br /><br />
 
 <div align="left"><a href="../README.md"><img src="https://i.imgur.com/XMgF3gl.png" title="source: imgur.com" width="3%"/>Voltar</a></div>

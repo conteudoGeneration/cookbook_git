@@ -10,13 +10,13 @@ Antes de clonarmos o repositório remoto, vamos apagar o nosso repositório loca
 1. Volte para a pasta do usuário, através do comando:
 
 ```bash
-cd %USERPROFILE%%
+cd ~
 ```
 
 3. Na sequência, vamos apagar a pasta **aulagit** através do comando:
 
 ```bash
-rd /s aulagit
+rm -Rf aula_git
 ```
 
 Será questionado se você tem certeza que deseja excluir a pasta? Responda SIM (**s**).
@@ -24,7 +24,7 @@ Será questionado se você tem certeza que deseja excluir a pasta? Responda SIM 
 4. Para confirmar que a pasta foi apagada, utilize o comando abaixo:
 
 ```bash
-dir
+ls
 ```
 
 5. Volte para o repositório remoto **aulagit** no Github e copie o endereço **HTTPS** do repositório, como indicado na imagem abaixo:
@@ -46,7 +46,7 @@ git clone https://github.com/rafaelq80/aulagit.git
 8. Para confirmar que a clonagem foi bem sucedida, utilize o comando abaixo:
 
 ```bash
-dir
+ls
 ```
 
 *Observe que a pasta **aulagit** foi restaurada.*
