@@ -12,15 +12,15 @@
 
 <table width="100%">
 	<tr>
-        <td width="10%"><img src="https://i.imgur.com/za4tPUA.png" title="source: imgur.com" /></td>
+        <td width="10%"><img src="https://i.imgur.com/za4tPUA.png" title="source: imgur.com" width="80%"/></td>
         <td width="90%"><a href="terminal/01_terminal.md">01-Introdução ao Terminal do Windows</a></td>
     </tr>
     <tr>
-        <td width="10%"><img src="https://i.imgur.com/cTKs5VQ.png" title="source: imgur.com" /></td>
+        <td width="10%"><img src="https://i.imgur.com/cTKs5VQ.png" title="source: imgur.com" width="80%"/></td>
         <td width="90%"><a href="terminal/02_comandos.md">02-Comandos do Git Bash</a></td>
     </tr>
     <tr>
-        <td width="10%"><img src="https://i.imgur.com/za4tPUA.png" title="source: imgur.com" /></td>
+        <td width="10%"><img src="https://i.imgur.com/za4tPUA.png" title="source: imgur.com" width="80%"/></td>
         <td width="90%"><a href="terminal/03_comandos.md">03-Comandos do Terminal do Windows (CMD)</a></td>
     </tr>
 </table>
