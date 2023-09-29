@@ -31,8 +31,8 @@
 
 <table width="100%">
     <tr>
-        <td width="15%"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" /></td>
-        <td width="85%"><a href="git/01_git.md">01-Introdução ao Git</a></td>
+        <td width="10%"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" /></td>
+        <td width="90%"><a href="git/01_git.md">01-Introdução ao Git</a></td>
     </tr>
     <tr>
         <td width="10%"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" /></td>
