@@ -1,6 +1,10 @@
 <h1>Comandos do Git - Parte 01</h1>
 
-<h2>1.Criando o seu primeiro repositório local</h2>
+<br />
+
+<h2>1.Criando o seu primeiro Repositório local</h2>
+
+
 
 1. Vamos checar qual é a sua pasta atual. Digite o comando:
 
@@ -16,7 +20,7 @@ pwd
 cd ~
 ```
 
-3. Vamos criar o nosso primeiro repositório na pasta do usuário. Vamos criar a pasta **aulagit**, através do comando:
+3. Vamos criar o nosso primeiro Repositório na pasta do usuário. Vamos criar a pasta **aulagit**, através do comando:
 
 ```bash
 mkdir aula_git
@@ -34,19 +38,19 @@ cd aula_git
 git init
 ```
 
-6. Para verificar se o repositório foi criado, utilize o comando:
+6. Para verificar se o Repositório foi criado, utilize o comando:
 
 ```bash
 git status
 ```
 
-O comando **git status** mostra se a pasta atual é um repositório e qual é o status atual (vazio, possui arquivos aguardando para serem versionados, entre outros).
+O comando **git status** mostra se a pasta atual é um Repositório e qual é o status atual (vazio, possui arquivos aguardando para serem versionados, entre outros).
 
-7. Observe na imagem abaixo, que o repositório foi criado, não existe nenhum commit e não existe nenhuma pasta ou arquivo para ser "commitada" 
+7. Observe na imagem abaixo, que o Repositório foi criado, não existe nenhum commit e não existe nenhuma pasta ou arquivo para ser "commitada" 
 
 <div align="center"><img src="https://i.imgur.com/ZI8l3R8.png" title="source: imgur.com" width="90%"/></div>
 
-8. Uma outra forma de verificar se o repositório foi criado é através do comando:
+8. Uma outra forma de verificar se o Repositório foi criado é através do comando:
 
 ```bash
 ls -a
@@ -62,9 +66,11 @@ O comando **git init** criou a pasta `.git` (oculta), contendo as subpastas `obj
 git branch --show-current
 ```
 
-O comando acima exibirá que no momento, o **HEAD** do repositório está na branch **main**, ou seja, a branch atual do repositório.
+O comando acima exibirá que no momento, o **HEAD** do Repositório está apontando para a Branch **main**, ou seja, a Branch atual do Repositório.
 
-| <img src="https://i.imgur.com/hOgWvSc.png" title="source: imgur.com" width="100px"/> | <div align="left"> **ATENÇÃO:** * O arquivo HEAD é um arquivo interno do Git, portanto, não deve ser manipulado manualmente.* </div> |
+<br />
+
+| <img src="https://i.imgur.com/hOgWvSc.png" title="source: imgur.com" width="100px"/> | <div align="left"> **ATENÇÃO:** O arquivo HEAD é um arquivo interno do Git, portanto, não deve ser manipulado manualmente.</div> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 <br />
@@ -78,46 +84,46 @@ O comando acima exibirá que no momento, o **HEAD** do repositório está na bra
 
 <br />
 
-<h2>2.Versionando os arquivos no repositório local</h2>
+<h2>2.Versionando os arquivos no Repositório local</h2>
 
-1. Antes começarmos a versionar, vamos criar alguns arquivos dentro do nosso repositório, através do VSCode, digitando o comando:
+
+
+1. Antes começarmos a versionar os nossos arquivos, precisamos criar alguns arquivos dentro do nosso Repositório Local, através do Visual Studio Code, digitando o comando:
 
 ```bash
 code .
 ```
 
-<br />
-
-2. A pasta **aulagit** será aberta no **VSCode**, como mostra a imagem abaixo:
+2. A pasta **aulagit** será aberta no **Visual Studio Code**, como mostra a imagem abaixo:
 
 <div align="center"><img src="https://i.imgur.com/z6LMMQn.png" title="source: imgur.com" width="90%"/></div>
 
-3. No VSCode, crie os 3 arquivos indicados abaixo e adicione as seguintes frases em cada arquivo:
+3. No Visual Studio Code, crie os 3 arquivos indicados abaixo e adicione as seguintes frases em cada arquivo:
 
 - **portugol.txt:** Portugol é uma pseudo linguagem.
 - **java.txt:** Java é uma Linguagem de programação.
 - **mysql.txt:** MySQL é um Sistema Gerenciador de Banco de dados.
 
-4. Na sequência, vamos adicionar os arquivos no índice do repositório (Staging), através do comando:
+4. Na sequência, vamos adicionar os arquivos no índice do Repositório Local (Staging), através do comando:
 
 ```bash
 git add .
 ```
 
-O comando **git add** atualiza o índice do repositório com o conteúdo atual encontrado na árvore de trabalho para preparar o conteúdo para o próximo commit. O **ponto** após o comando git add, indica que será adicionado todo o conteúdo atual, incluindo os arquivos e pastas.
+O comando **git add** atualiza o índice do Repositório Local com o conteúdo atual encontrado na árvore de trabalho para preparar o conteúdo para o próximo commit. O **ponto** após o comando git add, indica que será adicionado todo o conteúdo atual, incluindo os arquivos e pastas.
 
-O conteúdo adicionado é enviado para o **Staging**, que é um espaço temporário onde você determina quais mudanças serão adicionadas ao repositório. Utilizar o staging é muito simples com o comando **git add** você adiciona os arquivos para o staging, e quando estiver satisfeito com as alterações efetua um commit, que veremos na sequência.
+O conteúdo adicionado é enviado para o **Staging**, que é um espaço temporário onde você determina quais mudanças serão adicionadas ao Repositório Local. Utilizar o staging é muito simples com o comando **git add** você adiciona os arquivos para o staging, e quando estiver satisfeito com as alterações efetua um commit, que veremos na sequência.
 
 | <img src="https://i.imgur.com/RfjtOFi.png" title="source: imgur.com" width="120px"/> | <div align="left">**DICA:** O git não versiona pastas vazias. Para versionar uma pasta é necessário adicionar arquivos dentro dela.</div> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
-5. Para verificar as alterações no repositório, utilize o comando:
+5. Para verificar as alterações no Repositório Local, utilize o comando:
 
 ```bash
 git status
 ```
 
-6. O comando **git status** retornará que existem arquivos aguardando para serem "commitados" no índice do repositório, como mostra a imagem abaixo:
+6. O comando **git status** retornará que existem arquivos aguardando para serem "commitados" no índice do Repositório Local, como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/WpqHlSQ.png" title="source: imgur.com" /></div>
 
@@ -172,46 +178,48 @@ Para sair da listagem do comando **git log**, caso seja necessário, pressione a
 
 <h2>3.Entendendo o fluxo de trabalho do Git</h2>
 
+
+
 Os seus repositórios locais consistem em três "árvores" mantidas pelo git:
 
-- A primeira é o seu **Working Directory** (pasta de trabalho), ou seja, a pasta onde você criou o seu repositório e estão armazenados todos os arquivos do repositório (independente de estarem commitados). No nosso exemplo é a pasta **aulagit**, que foi criada na pasta do seu usuário (home directory) e inicializada como um repositório git.
-- A segunda é a **Index** (índice) ou Staging Area, que funciona como uma área temporária onde ficam armazenados os arquivos que foram criados, atualizados ou apagados, desde o ultimo commit. As alterações no Stage são simplesmente alterações no **working Directory**, em que se pretende “avisar” ao repositório sobre essas alterações que foram realizadas. 
+- A primeira é o seu **Working Directory** (pasta de trabalho), ou seja, a pasta onde você criou o seu Repositório Local e estão armazenados todos os arquivos do Repositório Local (independente de estarem commitados). No nosso exemplo é a pasta **aulagit**, que foi criada na pasta do seu usuário (home directory) e inicializada como um Repositório Local git.
+- A segunda é a **Index** (índice) ou Staging Area, que funciona como uma área temporária onde ficam armazenados os arquivos que foram criados, atualizados ou apagados, desde o ultimo commit. As alterações no Stage são simplesmente alterações no **working Directory**, em que se pretende “avisar” ao Repositório Local sobre essas alterações que foram realizadas. 
 - A terceira é a **HEAD**, que funciona como uma espécie de ponteiro, possui a função de apontar para o último *commit* (confirmação) que você fez.        
 
 <div align="left"><img src="https://i.imgur.com/GKHWuOW.png" title="source: imgur.com" /></div>
 
-A **HEAD** aponta para o **último commit**, que foi realizado no repositório, logo quando você executa o comando **git commit você está dizendo para a HEAD que este novo commit é o mais atual e será a nova HEAD** do seu repositório.
+A **HEAD** aponta para o **último commit**, que foi realizado no Repositório Local, logo quando você executa o comando **git commit você está dizendo para a HEAD que este novo commit é o mais atual e será a nova HEAD** do seu Repositório Local.
 
 Vamos entender o fluxo na prática! 
 
-1. Crie mais 2 arquivos dentro do nosso repositório, através do **VSCode** e adicione as seguintes frases em cada arquivo:
+1. Crie mais 2 arquivos dentro do nosso Repositório Local, através do **Visual Studio Code** e adicione as seguintes frases em cada arquivo:
 
 - **spring.txt:** Spring é um framework.
 - **docker.txt:** Docker é um gerenciador de containers.
 
-2. Para verificar as alterações no repositório, utilize o comando:
+2. Para verificar as alterações no Repositório Local, utilize o comando:
 
 ```bash
 git status
 ```
 
-3. O comando **git status** retornará que existem arquivos que não foram adicionados no índice do repositório, como mostra a imagem abaixo:
+3. O comando **git status** retornará que existem arquivos que não foram adicionados no índice do Repositório Local, como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/JIpTtvE.png" title="source: imgur.com" /></div>
 
-4. Na sequência, vamos adicionar os arquivos no índice do repositório, através do comando:
+4. Na sequência, vamos adicionar os arquivos no índice do Repositório Local, através do comando:
 
 ```bash
 git add .
 ```
 
-5. Para verificar as alterações no repositório, utilize o comando:
+5. Para verificar as alterações no Repositório Local, utilize o comando:
 
 ```bash
 git status
 ```
 
-6. O comando **git status** retornará que existem arquivos aguardando para serem "commitados" no índice do repositório, como mostra a imagem abaixo:
+6. O comando **git status** retornará que existem arquivos aguardando para serem "commitados" no índice do Repositório Local, como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/kAbUDmf.png" title="source: imgur.com" /></div>
 
@@ -221,7 +229,7 @@ git status
 git commit -m "Meu segundo commit"
 ```
 
-8. Para verificar as alterações no repositório, utilize o comando:
+8. Para verificar as alterações no Repositório Local, utilize o comando:
 
 ```bash
 git status
@@ -241,13 +249,15 @@ git log
 
 <div align="left"><img src="https://i.imgur.com/esS7wBR.png" title="source: imgur.com" /></div>
 
-*Observe que o **HEAD** do repositório passou a ser o **"Meu segundo commit"**.*
+*Observe que o **HEAD** do Repositório Local passou a ser o **"Meu segundo commit"**.*
 
 <br />
 
 <h2>4.Atualizar o conteúdo de um arquivo</h2>
 
-1. Volte para **VSCode**, abra o arquivo **spring.txt** e atualize o seu conteúdo:
+
+
+1. Volte para **Visual Studio Code**, abra o arquivo **spring.txt** e atualize o seu conteúdo:
 
 - **spring.txt:** Spring é um framework Java.
 
@@ -261,29 +271,29 @@ git diff
 
 <div align="left"><img src="https://i.imgur.com/bw6Sewy.png" title="source: imgur.com" /></div>
 
-4. Para verificar as alterações no repositório, utilize o comando:
+4. Para verificar as alterações no Repositório Local, utilize o comando:
 
 ```bash
 git status
 ```
 
-5. O comando **git status** retornará que o arquivo **spring.txt** foi atualizado e ainda não foi adicionado no índice do repositório, como mostra a imagem abaixo:
+5. O comando **git status** retornará que o arquivo **spring.txt** foi atualizado e ainda não foi adicionado no índice do Repositório Local, como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/xETINlK.png" title="source: imgur.com" /></div>
 
-6. Na sequência, vamos adicionar **apenas o arquivo spring.txt** no índice do repositório, através do comando:
+6. Na sequência, vamos adicionar **apenas o arquivo spring.txt** no índice do Repositório Local, através do comando:
 
 ```bash
 git add spring.txt
 ```
 
-7. Para verificar as alterações no repositório, utilize o comando:
+7. Para verificar as alterações no Repositório Local, utilize o comando:
 
 ```bash
 git status
 ```
 
-8. O comando **git status** retornará que o arquivo **spring.txt** está aguardando para ser "commitado" no índice do repositório, como mostra a imagem abaixo:
+8. O comando **git status** retornará que o arquivo **spring.txt** está aguardando para ser "commitado" no índice do Repositório Local, como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/XC8uxsD.png" title="source: imgur.com" /></div>
 
@@ -293,7 +303,7 @@ git status
 git commit -m "Meu terceiro commit"
 ```
 
-10. Para verificar as alterações no repositório, utilize o comando:
+10. Para verificar as alterações no Repositório Local, utilize o comando:
 
 ```bash
 git status
@@ -313,7 +323,7 @@ git log
 
 <div align="left"><img src="https://i.imgur.com/RtYyCxQ.png" title="source: imgur.com" /></div>
 
-14. Observe que o **HEAD** do repositório passou a ser o **"Meu terceiro commit"**.
+14. Observe que o **HEAD** do Repositório Local passou a ser o **"Meu terceiro commit"**.
 
 <br />
 
@@ -324,13 +334,20 @@ git log
 
 <h2>5.Desfazendo um commit</h2>
 
-1. Vamos desfazer o commit **Meu terceiro commit**, através do comando:
+
+
+Existem 2 comandos no Git para desfazer um Commit:
+
+- O **git reset**, que desfaz commit, alterando o histórico do Repositório. Em outras palavras, além de desfazer o commit, ele também remove a existência dele do histórico do Repositório. Ao utilizar este comando, deve-se tomar cuidado porque você vai modificar todo o histórico de commits, por isso o seu uso não é recomendado em branches compartilhadas com outros usuários.
+- O **git revert**, que desfaz as alterações de um commit e assim que ele for desfeito, o comando criará um novo commit, com os dados revertidos, ou seja, ele não modifica o histórico de nenhum dos commits anteriores. Ao utilizar este comando, recomenda-se indicar o commit que será revertido através do SHA (Código de identificação do commit).
+
+1. Vamos desfazer o commit **Meu terceiro commit**, através do comando **git reset**:
 
 ```bash
 git reset HEAD~1
 ```
 
-2. Para checar o status do repositório, utilize o comando:
+2. Para checar o status do Repositório Local, utilize o comando:
 
 ```bash
 git status
@@ -346,7 +363,7 @@ git status
 git log
 ```
 
-5. Observe na imagem abaixo, que o **HEAD** do repositório passou a ser o **"Meu segundo commit"**, após o **Meu terceiro commit** ser desfeito:
+5. Observe na imagem abaixo, que o **HEAD** do Repositório Local passou a ser o **"Meu segundo commit"**, após o **Meu terceiro commit** ser desfeito:
 
 <div align="left"><img src="https://i.imgur.com/esS7wBR.png" title="source: imgur.com" /></div>
 
@@ -368,16 +385,77 @@ git commit -a -m "Meu terceiro commit"
 
 <br />
 
+7. Vamos desfazer o commit **Meu terceiro commit** novamente, só que desta vez através do comando **git revert**:
+
+```bash
+git revert 1866
+```
+
+8. O código **1866** são os 4 primeiros caracteres do **SHA** do commit que será revertido, como vemos na imagem abaixo:
+
+<div align="left"><img src="https://i.imgur.com/zs7XYaE.png" title="source: imgur.com" /></div>
+
+9. Em seguida o **Git** abrirá o Visual Studio Code (Editor que foi selecionado como padrão do Git), para editar a mensagem do **commit** de reversão.
+10. Feche o arquivo que contém a mensagem no **Visual Studio Code** e volte par o Terminal.
+11. Será exibida uma mensagem semelhante a imagem abaixo, confirmando a reversão do commit:
+
+<div align="left"><img src="https://i.imgur.com/ntpTuRp.png" title="source: imgur.com" width="60%"/></div>
+
+12. Para checar o status do Repositório Local, utilize o comando:
+
+```bash
+git status
+```
+
+13. O comando **git status** retornará que não existem arquivos aguardando para serem "commitados", como mostra a imagem abaixo:
+
+<div align="left"><img src="https://i.imgur.com/BOIgZ5Y.png" title="source: imgur.com" /></div>
+
+<br />
+
+| <img src="https://i.imgur.com/hOgWvSc.png" title="source: imgur.com" width="100px"/> | <div align="left"> **ATENÇÃO:** Diferente do git reset, o git revert desfaz todas as alterações do commit desfeito. Por este motivo, que o comando git status informa que não existem novos arquivos ou arquivos modificados para serem "commitados".</div> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+
+<br />
+
+14. Para visualizar o histórico dos commits, utilize o comando:
+
+```bash
+git log
+```
+
+15. Observe na imagem abaixo, que o **HEAD** do Repositório Local passou a ser o **Revert Meu terceiro commit**, ou seja, o commit criado pelo comando **git revert**, que indica que o commit **Meu terceiro commit** foi desfeito:
+
+<div align="left"><img src="https://i.imgur.com/zRolqwV.png" title="source: imgur.com" /></div>
+
+16. Refaça a alteração no arquivo **spring.txt**
+
+<div align="left"><img src="https://i.imgur.com/N5txxOQ.png" title="source: imgur.com" /></div>
+
+17. Refaça o commit **Meu terceiro commit**, através do comando:
+
+```bash
+git commit -a -m "Meu terceiro commit"
+```
+
+<br/>
+
 <div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-reset/pt_BR" target="_blank"><b>Documentação: <i>Git Reset</i></b></a></div>
+
+<div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-revert/pt_BR" target="_blank"><b>Documentação: <i>Git Revert</i></b></a></div>
 
 <br />
 
 <h2>6.Publicando o Repositório Local no Github</h2>
 
+
+
 <h3>6.1.Criar o Repositório Remoto no Github</h3>
 
 
-Vamos criar o repositório no Github:
+
+
+Vamos criar o Repositório no Github:
 
 1. Acesse a sua conta do Github
 
@@ -396,7 +474,13 @@ Vamos criar o repositório no Github:
 
 6. Copie o endereço do Repositório indicado pela seta amarela. Observe que foi copiado o endereço **HTTPS**.
 
+
+
+<br />
+
 <h3>6.2.Conectar o Repositório Local com o Repositório Remoto</h3>
+
+
 
 1. Crie a conexão do Repositório Local com o Repositório Remoto, através do comando:
 
@@ -423,7 +507,11 @@ git remote -v
 
 <div align="left"><img src="https://i.imgur.com/rURPm9E.png" title="source: imgur.com" /></div>
 
+<br />
+
 <h3>6.3.Enviar o conteúdo do Repositório Local para o Github</h3>
+
+
 
 1. Envie o conteúdo do Repositório Local para o Repositório Remoto, através do comando:
 
