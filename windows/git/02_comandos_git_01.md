@@ -428,16 +428,6 @@ git log
 
 <div align="left"><img src="https://i.imgur.com/zRolqwV.png" title="source: imgur.com" /></div>
 
-16. Refaça a alteração no arquivo **spring.txt**
-
-<div align="left"><img src="https://i.imgur.com/N5txxOQ.png" title="source: imgur.com" /></div>
-
-17. Refaça o commit **Meu terceiro commit**, através do comando:
-
-```bash
-git commit -a -m "Meu terceiro commit"
-```
-
 <br/>
 
 <div align="left"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" width="25px"/> <a href="https://git-scm.com/docs/git-reset/pt_BR" target="_blank"><b>Documentação: <i>Git Reset</i></b></a></div>
