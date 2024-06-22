@@ -70,8 +70,9 @@ O comando acima exibirá que no momento, o **HEAD** do Repositório está aponta
 
 <br />
 
-| <img src="https://i.imgur.com/hOgWvSc.png" title="source: imgur.com" width="100px"/> | <div align="left"> **ATENÇÃO:** O arquivo HEAD é um arquivo interno do Git, portanto, não deve ser manipulado manualmente.</div> |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+> [!IMPORTANT]
+>
+> O arquivo **HEAD** é um arquivo interno do Git, portanto, não deve ser manipulado manualmente.
 
 <br />
 
@@ -114,8 +115,13 @@ O comando **git add** atualiza o índice do Repositório Local com o conteúdo a
 
 O conteúdo adicionado é enviado para o **Staging**, que é um espaço temporário onde você determina quais mudanças serão adicionadas ao Repositório Local. Utilizar o staging é muito simples com o comando **git add** você adiciona os arquivos para o staging, e quando estiver satisfeito com as alterações efetua um commit, que veremos na sequência.
 
-| <img src="https://i.imgur.com/RfjtOFi.png" title="source: imgur.com" width="120px"/> | <div align="left">**DICA:** O git não versiona pastas vazias. Para versionar uma pasta é necessário adicionar arquivos dentro dela.</div> |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+<br />
+
+> [!TIP]
+>
+> O git **não versiona pastas vazias**. Para versionar uma pasta é necessário adicionar arquivos dentro dela.
+
+<br />
 
 5. Para verificar as alterações no Repositório Local, utilize o comando:
 
@@ -367,10 +373,15 @@ git log
 
 <div align="left"><img src="https://i.imgur.com/esS7wBR.png" title="source: imgur.com" /></div>
 
-*O comando **git reset HEAD~1** redefiniu o `HEAD` atual para um commit anterior (~1) ao commit atual, desfazendo o mesmo.*
+*O comando **git reset HEAD~1** redefiniu o `HEAD` atual para um commit anterior (~1) ao commit atual, desfazendo o commit atual.*
 
-| <img src="https://i.imgur.com/RfjtOFi.png" title="source: imgur.com" width="120px"/> | <div align="left">**DICA:** Para desfazer o commit e apagar todos os arquivos e pastas que foram commitados, utilize o comando git reset HEAD~1 -- hard.</div> |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+<br />
+
+> [!TIP]
+>
+> Para desfazer o commit e apagar todos os arquivos e pastas que foram commitados, utilize o comando **git reset HEAD~1 -- hard**.
+
+<br />
 
 6. Vamos refazer o commit **Meu terceiro commit**, através do comando:
 
@@ -380,8 +391,11 @@ git commit -a -m "Meu terceiro commit"
 
 *A opção **-a** é o equivalente a fazer o **git add** . junto com o comando **git commit**.*
 
-| <img src="https://i.imgur.com/RfjtOFi.png" title="source: imgur.com" width="120px"/> | <div align="left">**DICA:** A opção -a funciona apenas se for um commit de atualização do arquivo. Para arquivos novos é necessário usar os comandos git add e na sequência o git commit.</div> |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+<br />
+
+> [!TIP]
+>
+> A opção **-a** funciona apenas se for um commit de atualização do arquivo. Para arquivos novos é necessário usar os comandos git add e na sequência o git commit.
 
 <br />
 
@@ -413,8 +427,9 @@ git status
 
 <br />
 
-| <img src="https://i.imgur.com/hOgWvSc.png" title="source: imgur.com" width="100px"/> | <div align="left"> **ATENÇÃO:** Diferente do git reset, o git revert desfaz todas as alterações do commit desfeito. Por este motivo, que o comando git status informa que não existem novos arquivos ou arquivos modificados para serem "commitados".</div> |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+> [!IMPORTANT]
+>
+> Diferente do **git reset**, o **git revert** desfaz todas as alterações do commit desfeito. Por este motivo, que o comando git status informa que não existem novos arquivos ou arquivos modificados para serem "commitados".
 
 <br />
 
@@ -464,8 +479,6 @@ Vamos criar o Repositório no Github:
 
 6. Copie o endereço do Repositório indicado pela seta amarela. Observe que foi copiado o endereço **HTTPS**.
 
-
-
 <br />
 
 <h3>6.2.Conectar o Repositório Local com o Repositório Remoto</h3>
@@ -482,8 +495,9 @@ git remote add origin https://github.com/rafaelq80/aulagit.git
 
 <br />
 
-| <img src="https://i.imgur.com/RfjtOFi.png" title="source: imgur.com" width="100px"/> | <div align="left">**DICA:** *Para colar um conteúdo no Terminal do Windows, utilize o botão direito do mouse ou a combinação de teclas `SHIFT + INSERT` do seu teclado.* </div> |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+> [!TIP]
+>
+> Para colar um conteúdo no Terminal do Windows, utilize o botão direito do mouse ou a combinação de teclas `SHIFT + INSERT` do seu teclado.
 
 <br />
 
