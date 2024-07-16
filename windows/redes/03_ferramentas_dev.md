@@ -14,15 +14,15 @@ Neste tutorial, iremos utilizar as Ferramentas de Desenvolvimento para visualiza
 
 
 
-Neste tutorial utilizaremos o Firefox, entretanto a forma de acessar é a mesma para os Navegadores  **Google Chrome** e  **Microsoft Edge**. 
+Neste tutorial utilizaremos o Firefox, entretanto a forma de acessar é semelhante para os Navegadores  **Google Chrome** e  **Microsoft Edge**. 
 
 1. Abra o seu Navegador favorito
 
 <div align="center"><img src="https://i.imgur.com/5rlBjgf.png" title="source: imgur.com" width="90%"/></div>
 
-2. Para abrir as Ferramentas do Desenvolvedor, pressione a Tecla <img src="https://i.imgur.com/01IooIo.jpg" title="source: imgur.com" width="40px"/> do seu teclado.
+2. Para abrir as Ferramentas do Desenvolvedor, pressione a Tecla **F12** do seu teclado (Firefox e Edge), ou a combinação de teclas **CTRL + SHIFT + I** (Chrome).
 
-3. Clique na **Guia Rede** para Visualizar as requisições
+3. Clique na **Guia Rede (Network)** para Visualizar as Requisições HTTP.
 
 <div align="center"><img src="https://i.imgur.com/oP1S25j.png" title="source: imgur.com" /></div>
 
