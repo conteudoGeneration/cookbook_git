@@ -46,7 +46,16 @@
         <td width="15%"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" /></td>
         <td width="85%"><a href="git/03_comandos_git_02.md">04-Comandos do Git - Parte 02</a></td>
     </tr>
+    <tr>
+        <td width="15%"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" /></td>
+        <td width="85%"><a href="git/04_git_review.md">05-Revisão do Git</a></td>
+    </tr>
+    <tr>
+        <td width="15%"><img src="https://i.imgur.com/fu9QxlT.png" title="source: imgur.com" /></td>
+        <td width="85%"><a href="git/05_git_fork.md">06-Fork</a></td>
+    </tr>
 </table>
+
 
 <br />
 
