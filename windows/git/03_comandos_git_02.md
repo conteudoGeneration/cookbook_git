@@ -18,7 +18,7 @@ cd ~
 3. Na sequência, vamos apagar a pasta **aulagit** através do comando:
 
 ```bash
-rm -Rf aula_git
+rm -rf aulagit
 ```
 
 Será questionado se você tem certeza que deseja excluir a pasta? Responda SIM (**s**).
@@ -128,7 +128,7 @@ git status
 
 <br/>
 
-> O comando **git fetch** é que chamamos de opção de atualização segura. O **git fetch** atualiza o conteúdo do Repositório Remoto, mas não altera o estado do Repositório Local. 
+> O comando **git fetch** é que chamamos de opção de atualização segura. O comando `git fetch` baixa os dados do repositório remoto, como branches e histórico de commits, mas **não os mescla automaticamente** com sua branch atual. Isso permite revisar as mudanças antes de aplicá-las com um `merge` ou `rebase`.
 >
 > Para atualizar o conteúdo e alterar o estado do Repositório Local de forma imediata, utilizaremos o comando **git pull**. O comando **git pull** deve ser usado com cuidado, porque no processo de atualização pode gerar conflitos no Repositório Local, como veremos adiante.
 
@@ -226,10 +226,14 @@ git status
 
 <div align="left"><img src="https://i.imgur.com/bcs7KDm.png" title="source: imgur.com" /></div>
 
-7. Faça o Commit das alterações, através do comando:
+7. Faça o Commit das alterações, através dos comandos abaixo:
 
 ```bash
-git commit -a -m "Atualizar a branch ramo1"
+git add .
+```
+
+```bash
+git commit -m "Atualizar a branch ramo1"
 ```
 
 8. Para enviar a branch **ramo1** para o Repositório Remoto no Github, utilize o comando:
@@ -333,7 +337,7 @@ Vamos analisar o que aconteceu no nosso exemplo:
 1. No exemplo acima, a branch **main** recebeu inicialmente 4 commits;
 2. No commit 4 da branch **main**, foi criada uma nova branch, chamada **ramo1**. A branch **ramo1** será uma cópia exata do conteúdo e do histórico da branch **main**, até o **commit 4**;
 3. A branch **ramo1** recebeu um novo commit contendo a atualização, que foi realizada no arquivo **docker.txt**;
-4. Neste momento, o novo commit efetuado na branch **ramao1** não está disponível na Branch **main**;
+4. Neste momento, o novo commit efetuado na branch **ramo1** não está disponível na Branch **main**;
 5. Ao executar o comando **git merge**, na branch **main**, ela receberá todas as atualizações e o histórico da branch **ramo1**
 
 O processo de fusão das branches exemplificado acima, fará com que a Branch main unifique os conteúdos e o histórico das duas branches, permitindo que o time de desenvolvimento visualize todas as alterações de ambas as branches, em ordem cronológica, mantendo o histórico completo do projeto.
@@ -367,7 +371,7 @@ Vamos simular um conflito e vermos na prática como resolver:
 
 <div align="left"><img src="https://i.imgur.com/9VHkfpP.png" title="source: imgur.com" /></div>
 
-3. Faça o , como mostra a imagem abaixo: clicando no botão **Commit changes**, como mostra a imagem abaixo:
+3. Faça o commit clicando no botão **Commit changes**, como mostra a imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/InJtaN6.png" title="source: imgur.com" /></div>
 
@@ -385,10 +389,14 @@ Vamos simular um conflito e vermos na prática como resolver:
 
 <div align="left"><img src="https://i.imgur.com/PWkYhqZ.png" title="source: imgur.com" /></div>
 
-3. Faça o **Commit das alterações**, através do comando:
+3. Faça o **Commit das alterações**, através dos comandos abaixo:
 
 ```bash
-git commit -a -m "Criar o conflito local!"
+git add .
+```
+
+```bash
+git commit -m "Criar o conflito local!"
 ```
 
 4. Para receber o conteúdo atualizado do Repositório Remoto no Github, utilize o comando:
@@ -419,10 +427,14 @@ Neste exemplo temos o conflito em apenas uma linha, entretanto, em um projeto po
 
 8. Clique na opção que melhor se encaixa com o seu objetivo e salve o arquivo.
 
-9. Faça o **Commit das alterações**, através do comando:
+9. Faça o **Commit das alterações**, através dos comandos abaixo:
 
 ```bash
-git commit -a -m "Resolver o conflito!"
+git add .
+```
+
+```bash
+git commit -m "Resolver o conflito!"
 ```
 
 10. Confirme se os arquivos foram “Commitados”
@@ -496,19 +508,7 @@ git branch -m novo_nome
 git branch -d nome_branch
 ```
 
-5. Forçar uma atualização no Repositório Remoto
-
-```bash
-git push -f origin main
-```
-
-6. Forçar uma atualização no Repositório Local
-
-```bash
-git pull -f origin main
-```
-
-7. Alterar a mensagem do ultimo commit
+5. Alterar a mensagem do ultimo commit
 
 ```bash
 git commit --amend
@@ -522,19 +522,29 @@ Outra opção, para não utilizar o editor, é utilizar o comando:
 git commit --amend -m "Mensagem nova"
 ```
 
-8. Renomear a Branch master para main
+6. Renomear a Branch master para main
 
 ```bash
 git branch -M master main
 ```
 
-9. Remover arquivos e/ou pasta da árvore, sem remover da pasta de trabalho.
+7. Renomear uma pasta do repsitório local:
+
+```bash
+git mv nome_antigo_da_past> novo_nome_da_pasta
+```
+
+*O comando `git mv` mantém o histórico do arquivo, garante que o Git rastreie as mudanças corretamente e atualiza o repositório remoto corretamente.*
+
+8. Remover arquivos e/ou pasta da árvore, sem remover da pasta de trabalho.
 
 ```bash
 git rm --cached <nome da pasta ou arquivo>
 ```
 
-Este comando é muito útil para resolver o problema da **"pasta presa"** no Github, ou seja, a pasta possui a pasta oculta .git, gerando uma duplicidade de Repositório. Quando isto acontece, a pasta fica inacessível e o ícone muda para <img src="https://i.imgur.com/OzRhQuP.png" title="source: imgur.com" width="30px"/> uma pasta com uma seta. Veja a representação gráfica na imagem abaixo:
+O comando `git rm --cached` remove o arquivo ou pasta do controle do Git (do índice), mas o mantém no diretório local. Se houver um `.git` dentro de uma subpasta, é necessário remover esse `.git` manualmente, pois isso caracteriza um repositório Git separado (submódulo ou pasta "presa").
+
+Este comando é especialmente útil para resolver o problema conhecido como **“pasta presa”** no GitHub. Esse problema ocorre quando uma subpasta contém um diretório oculto `.git`, o que a transforma, inadvertidamente, em um repositório Git separado. Isso gera uma duplicidade de repositórios dentro da mesma estrutura, tornando a pasta inacessível para operações no repositório principal. Nessa situação, o ícone da pasta muda para <img src="https://i.imgur.com/OzRhQuP.png" title="source: imgur.com" width="30px"/> — indicando que ela está vinculada como um sub-repositório. Veja a ilustração abaixo para entender visualmente o problema:
 
 <div align="center"><img src="https://i.imgur.com/s7VnPfi.png" title="source: imgur.com" /></div>
 
