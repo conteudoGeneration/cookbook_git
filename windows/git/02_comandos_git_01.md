@@ -46,7 +46,7 @@ git status
 
 O comando **git status** mostra se a pasta atual é um Repositório e qual é o status atual (vazio, possui arquivos aguardando para serem versionados, entre outros).
 
-7. Observe na imagem abaixo, que o Repositório foi criado, não existe nenhum commit e não existe nenhuma pasta ou arquivo para ser "commitada" 
+7. Observe na imagem abaixo, que o Repositório foi criado, não existe nenhum commit e não existem arquivos ou pastas prontos para commit.
 
 <div align="center"><img src="https://i.imgur.com/ZI8l3R8.png" title="source: imgur.com" width="90%"/></div>
 
@@ -56,9 +56,9 @@ O comando **git status** mostra se a pasta atual é um Repositório e qual é o 
 ls -a
 ```
 
-*Observe que dentro da pasta aula git, foi criada uma pasta oculta com chamada **.git***
+*Observe que dentro da pasta aulagit, foi criada uma pasta oculta com chamada **.git***
 
-O comando **git init** criou a pasta `.git` (oculta), contendo as subpastas `objects`, `refs/heads`, `refs/tags` e alguns arquivos modelo.  Também foi criado um arquivo inicial chamado `HEAD`, que guarda a referencia `HEAD` da branch principal. o Head funciona como um ponteiro, indicando qual é a branch atual. 
+O comando **git init** criou a pasta `.git` (oculta), contendo as subpastas `objects`, `refs/heads`, `refs/tags` e alguns arquivos modelo.  Também foi criado um arquivo inicial chamado `HEAD`, que guarda a referencia `HEAD` da branch principal. o HEADfunciona como um ponteiro, indicando qual é a branch atual. 
 
 9. Para descobrir qual é a sua branch atual, utilize o  comando:
 
@@ -67,6 +67,12 @@ git branch --show-current
 ```
 
 O comando acima exibirá que no momento, o **HEAD** do Repositório está apontando para a Branch **main**, ou seja, a Branch atual do Repositório.
+
+<br />
+
+> [!NOTE]
+>
+> Por padrão, o Git utiliza a branch `main` como principal. Porém, versões antigas do Git utilizavam `master`. Isso pode variar conforme a versão instalada ou configurações globais do Git.
 
 <br />
 
@@ -379,7 +385,9 @@ git log
 
 > [!TIP]
 >
-> Para desfazer o commit e apagar todos os arquivos e pastas que foram commitados, utilize o comando **git reset HEAD~1 -- hard**.
+> Para desfazer o commit e restaurar o conteúdo da pasta de trabalho (working directory) ao estado do commit anterior (perdendo modificações locais), use o comando `git reset HEAD~1 --hard`.
+>
+> Este comando é destrutivo. Utilize com cautela, pois alterações não commitadas serão perdidas
 
 <br />
 
@@ -395,7 +403,7 @@ git commit -a -m "Meu terceiro commit"
 
 > [!TIP]
 >
-> A opção **-a** funciona apenas se for um commit de atualização do arquivo. Para arquivos novos é necessário usar os comandos git add e na sequência o git commit.
+> A opção **-a** adiciona automaticamente arquivos modificados e rastreados ao commit, mas **não inclui arquivos novos**. Para novos arquivos, utilize `git add` explicitamente.
 
 <br />
 
@@ -408,6 +416,14 @@ git revert 1866
 8. O código **1866** são os 4 primeiros caracteres do **SHA** do commit que será revertido, como vemos na imagem abaixo:
 
 <div align="left"><img src="https://i.imgur.com/zs7XYaE.png" title="source: imgur.com" /></div>
+
+<br />
+
+> [!WARNING]
+>
+> O Git permite usar os primeiros caracteres do SHA (mínimo de 4) desde que sejam únicos entre os commits existentes. Caso não sejam, será necessário usar mais caracteres.
+
+<br />
 
 9. Em seguida o **Git** abrirá o Visual Studio Code (Editor que foi selecionado como padrão do Git), para editar a mensagem do **commit** de reversão.
 10. Feche o arquivo que contém a mensagem no **Visual Studio Code** e volte par o Terminal.
