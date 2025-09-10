@@ -22,9 +22,9 @@
 
 
 
-1. <a href="git/01_git.md">Introdução ao Git</a>
-2. <a href="git/02.md">Configurações</a>
-3. <a href="git/03">Git - Criando o Repositório local</a>
+1. <a href="git/01.md">Introdução ao Git</a>
+2. <a href="git/02.md">Git - Configurações</a>
+3. <a href="git/03.md">Git - Criando o Repositório local</a>
 4. <a href="git/04.md">Git - Versionando arquivos no Repositório local</a>
 5. <a href="git/05.md">Git - Entendendo o fluxo de trabalho do Git</a>
 6. <a href="git/06.md">Git - Atualizar o conteúdo de um arquivo</a>
