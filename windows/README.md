@@ -12,9 +12,12 @@
 
 
 
-1. <a href="terminal/01_terminal.md">Introdução ao Terminal do Windows</a>
-2. <a href="terminal/02_comandos.md">Comandos do Git Bash</a>
-3. <a href="terminal/03_comandos.md">Comandos do Terminal do Windows (CMD)</a>
+1. <a href="terminal/01.md">Introdução ao Terminal</a>
+2. <a href="terminal/02.md">Git Bash - Primeiros Passos</a>
+3. <a href="terminal/03.md">Git Bash - Manipulação de Pastas e Arquivos</a>
+1. <a href="terminal/04.md">Git Bash - Editando e Visualizando Arquivos</a>
+2. <a href="terminal/05.md">Git Bash - Navegação e Manipulação de Arquivos e Pastas</a>
+3. <a href="terminal/06.md">Git Bash - Remoção de Arquivos/Pastas e Comandos Utilitários</a>
 
 <br />
 
@@ -45,7 +48,7 @@
 
 
 
-1. <a href="redes/02_comandos_rede.md">Comandos do Terminal do Windows - Redes</a>
+1. <a href="redes/02_comandos_rede.md">Comandos do Terminal - Redes</a>
 2. <a href="redes/03_ferramentas_dev.md">Ferramentas de Desenvolvimento</a>
 
 <br /><br />
