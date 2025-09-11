@@ -40,7 +40,6 @@
 13. <a href="git/13.md">Git - Histórias não Relacionadas (Unrelated Histories)</a>
 14. <a href="git/14.md">Git - Trabalhando com Fork no GitHub</a>
 15. <a href="git/15.md">Git - Comandos úteis</a>
-16. <a href="git/16.md">Git - Revisão - Fluxo Git</a>
 
 <br />
 
